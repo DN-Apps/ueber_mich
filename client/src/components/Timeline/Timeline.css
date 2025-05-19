@@ -1,0 +1,186 @@
+/* Container */
+.timeline-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-company {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/* Kreise als Zeitpunkte */
+.timeline-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4caf50; /* Hauptfarbe */
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-circle:hover {
+  background-color: #81c784; /* Leichte Hover-Farbe */
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+
+/* Linie zwischen den Kreisen */
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  width: 320px;
+  height: 3px;
+  background-color: #ddd;
+  z-index: 1;
+  transform: translateX(-50%);
+}
+
+.timeline-item:last-child::after {
+  content: none; /* Entfernt die Linie beim letzten Element */
+}
+
+/* Inhalt */
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.timeline-year {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.timeline-title {
+  font-size: 1em;
+  color: #555;
+  margin-top: 5px;
+  max-width: 200px;
+}
+
+/* Animation beim Einblenden */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.timeline-item:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.timeline-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.timeline-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.timeline-item:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar Styling */
+.timeline-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.timeline-container::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 4px;
+}
+
+.timeline-container::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column-reverse; /* Reihenfolge umkehren: unten nach oben */
+    align-items: center;
+    position: relative;
+    gap: 50px;
+    padding: 20px 10px;
+    overflow-y: auto; /* Scrollbar bei Bedarf */
+    max-height: 70vh;
+  }
+
+  .timeline-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    transform: none; /* Keine Drehung */
+    opacity: 1; /* Animation aus */
+    animation: none;
+  }
+
+  /* Vertikale Linie */
+  .timeline-item::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: calc(100% - 40px);
+    background-color: #ddd;
+    z-index: 1;
+  }
+
+  .timeline-item:last-child::after {
+    content: none; /* Linie beim letzten Element entfernen */
+  }
+
+  /* Text normal */
+  .timeline-content,
+  .timeline-company,
+  .timeline-year,
+  .timeline-title {
+    transform: none;
+  }
+}

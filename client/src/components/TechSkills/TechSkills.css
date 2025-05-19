@@ -1,0 +1,28 @@
+.tech-skills ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .tech-skills li {
+    margin-bottom: 10px;
+  }
+  
+  .skill-bar {
+    background: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .skill-level {
+    background: #007bff;
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+
+  .tech-skills-component{
+    border: 3px solid black;
+    float: left;
+}
+  

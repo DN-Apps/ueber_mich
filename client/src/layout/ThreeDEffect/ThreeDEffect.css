@@ -1,0 +1,79 @@
+.three-d-container {
+  width: 30vw;
+  height: 60vh;
+  perspective: 1000px; /* Perspektivische Tiefe */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(135deg, #e8f5f8, #f0f4ff);
+}
+
+.three-d-container img {
+  width: 80%;
+  height: 80%;
+  transition: transform 0.1s ease-out; /* Weicher Übergang */
+  transform-style: preserve-3d; /* 3D-Effekt */
+  /*box-shadow: 0 20px 40px rgba(246, 215, 215, 0.2); /* Tiefe durch Schatten */
+  border-radius: 15%; /* Optionale Abrundung */
+  background-color: white;
+  box-shadow: 5px 10px 8px 10px #888888;
+}
+
+.text {
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  /*border: 3px solid red;*/
+  bottom: 0;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    position: sticky;
+    top: 0;
+    background-color: white; /* Falls transparent, besser weiß, damit Menü sichtbar bleibt */
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .three-d-container {
+    position: relative; /* Kein sticky! */
+    margin-top: 10px; /* Genug Abstand, damit es unter Menü bleibt */
+    width: 60vw;
+    height: 40vh;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1; /* niedriger als Menü */
+  }
+
+  .three-d-container img {
+    width: 100%;
+    height: 85%;
+    transition: transform 0.1s ease-out;
+    transform-style: preserve-3d;
+    border-radius: 15%;
+    background-color: white;
+    box-shadow: 5px 10px 8px 10px #888888;
+    margin-top: -5vh; /* Kann bleiben, optional anpassen */
+  }
+
+  .text {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    margin-top: none;
+  }
+}

@@ -1,0 +1,28 @@
+.lang-skills ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .lang-skills li {
+    margin-bottom: 10px;
+  }
+  
+  .lang-skill-bar {
+    background: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .lang-skill-level {
+    background: #007bff;
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+
+  .lang-skills-component{
+    border: 3px solid black;
+    float: left;
+}
+  

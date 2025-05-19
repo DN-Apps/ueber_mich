@@ -1,0 +1,20 @@
+.App-adminsidebarleft{
+    background-color: #282c34;
+    border: white 10px dotted;
+    font-size: calc(10px + 2vmin);
+    min-height: 70vh;
+    max-width: 15vw;
+    min-width: 15vw;
+    align-items: center;
+    float: left;
+  }
+  
+  .App-admincontent{
+    background-color: #282c34;
+    border: white 10px dotted;
+    font-size: calc(10px + 2vmin);
+    min-height: 70vh;
+    min-width: 80vw;
+    align-items: center;
+    float: left;
+  }
