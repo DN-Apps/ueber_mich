@@ -12,4 +12,3 @@ npm-debug.log
 
 # Build/Dist (optional, je nach Setup)
 client/build/
-client/dist/
