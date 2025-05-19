@@ -1,0 +1,15 @@
+# Node.js
+node_modules/
+npm-debug.log
+.env
+
+# MySQL Dumps (optional)
+*.sql
+
+# OS/Editor files
+.DS_Store
+*.swp
+
+# Build/Dist (optional, je nach Setup)
+client/build/
+client/dist/
