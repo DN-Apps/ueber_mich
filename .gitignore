@@ -10,5 +10,3 @@ npm-debug.log
 .DS_Store
 *.swp
 
-# Build/Dist (optional, je nach Setup)
-client/build/
