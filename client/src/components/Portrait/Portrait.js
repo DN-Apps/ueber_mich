@@ -1,19 +1,41 @@
-import React from 'react'
-import ThreeDEffect from '../../layout/ThreeDEffect/ThreeDEffect'
+// Portrait.js
+import React, { useState } from 'react';
+import './Portrait.css';
+import portraitSmall from './portrait.png'; // kleines Bild
+import portraitLarge from './portrait_transparent.png'; // großes Bild
 
 function Portrait() {
-  return (
-    <div>
-     
-      {/* Bild das sich der Bewegung des Mauszeigers zu neigt
-       <h1>Hier muss noch ein tolles Portait hin!</h1>
-      
-      */}
-      <ThreeDEffect></ThreeDEffect>
-      
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  return (
+    <div className="portrait-container">
+      <img
+        src={portraitLarge}
+        alt="Portrait"
+        className="portrait-thumbnail"
+        onClick={openModal}
+      />
+
+
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-button" onClick={closeModal}>
+              &times;
+            </button>
+            <img
+              src={portraitLarge}
+              alt="Großes Portrait"
+              className="portrait-large"
+            />
+          </div>
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
-export default Portrait
+export default Portrait;

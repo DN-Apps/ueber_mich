@@ -1,109 +1,208 @@
-/* -------- Portrait -------- */
-#portrait {
-  width: 65vmin;
-  height: 60vmin;
-  background-color: white;
-  border-radius: 0%;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  background: linear-gradient(135deg, #e8f5f8, #f0f4ff);
+.page-container {
+  background: linear-gradient(to top, #7fa8bc, #bfc0c2, #7fa8bc);
+  background-size: cover;
+  min-height: 100vh;
 }
 
-/* -------- Menü -------- */
-.menu {
-  position: absolute;
+/* -------- Header -------- */
+.header {
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.menu-item {
-  position: absolute;
-  width: 10vw;
-  height: 10vw;
-  background-color: #216477;
-  color: white;
+  z-index: 800;
   display: flex;
   align-items: center;
   justify-content: center;
-  pointer-events: auto;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  font-size: 1.5vw;
-  text-align: center;
-  line-height: 1.2;
-  border-radius: 0;
+  padding: 40px 20px;
+  border-bottom: 3px solid #333;
+  background-color: #e9eaf0;
+  overflow: hidden;
 }
 
-.menu-item:hover {
-  transform: scale(1.01);
+.header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 70%;
+  height: 100%;
+  background: url("../assets/logos/header-bg.jpg") no-repeat center/cover;
+  opacity: 0.3;
+  filter: blur(2px);
+  z-index: 1;
+}
+
+.header-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.portrait-wrapper {
+  width: 150px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.intro-text .portfolio-label {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+}
+
+.intro-text .developer-name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+}
+
+.intro-text .role-description {
+  font-size: 1.4rem;
+  color: #34778a;
+  margin: 0;
+}
+
+/* -------- Language Dropdown -------- */
+.languages-mobile-dropdown {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.languages-toggle-btn {
   background-color: #34778a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
 }
 
-.top-left {
-  top: 0;
-  left: 0;
-  border-bottom-right-radius: 50%;
-  position: fixed;
-  z-index: 1000;
+.languages-list {
+  margin-top: 0px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 180px;
+  float: right;
 }
 
-.top-right {
-  top: 0;
-  right: 0;
-  border-bottom-left-radius: 50%;
-  position: fixed;
-  z-index: 1000;
+.language-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 4px 8px;
+  gap: 10px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
 }
 
-.bottom-left {
-  bottom: 0;
-  left: 0;
-  border-top-right-radius: 50%;
-  position: fixed;
-  z-index: 1000;
+.language-item:hover {
+  background-color: #f0f0f0;
 }
 
-.bottom-right {
-  bottom: 0;
-  right: 0;
-  border-top-left-radius: 50%;
-  position: fixed;
-  z-index: 1000;
+.language-flag {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  flex-shrink: 0;
 }
 
-/* -------- Dynamischer Content -------- */
+.language-name {
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* Sprachliste horizontal im Desktop-View */
+.languages-fixed {
+  position: absolute;
+  top: 20px;
+  right: 15%;
+  z-index: 999;
+}
+
+.languages-list.languages-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 15px;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+}
+
+.languages-horizontal .language-item {
+  background: none;
+  padding: 0;
+}
+
+.languages-horizontal .language-item:hover {
+  background: none;
+  cursor: default;
+}
+
+/* -------- Menü -------- */
+.menu-horizontal {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #555454;
+  padding: 10px 0;
+  position: sticky;
+  top: 300px;
+  z-index: 300;
+}
+
+.menu-horizontal .menu-item {
+  color: white;
+  background-color: #34778a;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-horizontal .menu-item:hover {
+  background-color: #4595a6;
+}
+
+/* -------- Content -------- */
 #dynamic-content {
   font-size: small;
   text-align: center;
-  max-width: 50vw;
+  max-width: 90vw;
   min-width: 40vw;
   max-height: 80vh;
   padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3vh;
-  /* margin-bottom: 5vh; */
-  padding-top: 0;
+  margin: 3vh auto 0;
   box-shadow: 5px 8px 8px 8px #888888;
 }
 
-/* -------- Header/Footer -------- */
-.header {
-  color: black;
-  text-align: center;
-  background-color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1100;
-  padding: 10px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
+/* -------- Footer -------- */
 .footer {
   position: fixed;
   left: 0;
@@ -116,115 +215,48 @@
 
 /* -------- Responsive -------- */
 @media (max-width: 768px) {
-  #portrait {
-    width: 70vmin;
-    height: 90vmin;
-    position: relative;
-    z-index: 1;
+  .portrait-wrapper {
+    width: 100px;
+    height: 125px;
   }
 
-  .menu {
-    position: sticky;
-    top: 85px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 20px;
-    background-color: white;
-    z-index: 1000;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  #portrait img {
+    object-fit: contain;
   }
 
-  .menu-item {
-    position: static;
-    width: 45vw;
-    height: auto;
-    font-size: 4vw;
-    margin: 5px;
-    border-radius: 10px;
-  }
-
-  .top-left,
-  .top-right,
-  .bottom-left,
-  .bottom-right {
-    border-radius: 10px;
-  }
-
-  #dynamic-content {
-    max-width: 90vw;
-    min-width: 80vw;
-    font-size: 4vw;
-    box-shadow: none;
-    margin-top: 10px;
-  }
-
-  .content {
-    padding-top: 800px;
-  }
-
-  .header h1 {
+  .intro-text .developer-name {
     font-size: 6vw;
   }
 
-  .header p {
+  .intro-text .role-description {
     font-size: 4vw;
+  }
+
+  .languages-list {
+    max-width: 90vw;
+  }
+
+  .menu-horizontal {
+    flex-wrap: wrap;
+    gap: 10px;
+    top: 0;
+  }
+
+  .menu-horizontal .menu-item {
+    font-size: 3vw;
+    padding: 8px 12px;
+    width: 40%;
+    text-align: center;
+  }
+
+  #dynamic-content {
+    max-width: 100%;
+    font-size: 4vw;
+    box-shadow: none;
   }
 
   .footer {
     font-size: 3vw;
-    padding: 2px;
-  }
-}
-
-/* -------- Animierter Hintergrund (dezent, außerhalb des Zentrums) -------- */
-.page-container {
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, #e8f5f8, #f0f4ff);
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-.page-container.animated-background::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(
-      circle at 20% 30%,
-      rgba(255, 255, 255, 0.07) 0%,
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 80% 70%,
-      rgba(255, 255, 255, 0.06) 0%,
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 50% 120%,
-      rgba(255, 255, 255, 0.05) 0%,
-      transparent 30%
-    );
-  animation: gentleMovement 30s ease-in-out infinite;
-  z-index: -1;
-  pointer-events: none;
-  filter: blur(60px);
-}
-
-/* Sanfte Animation */
-@keyframes gentleMovement {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  50% {
-    transform: translate(-30px, 20px) scale(1.01);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
+    padding: 5px;
   }
 }

@@ -6,12 +6,13 @@
   color: white;
   border: none;
   cursor: pointer;
-  top: 25vh;
+  top: 0vh;
   left: 0;
   width: 5vw;
   height: 50vh;
   position: fixed;
   font-size: 1.5vw;
+  box-shadow: 5px 8px 8px 8px #888888;
 }
 
 .toggle-button:hover {
@@ -20,9 +21,10 @@
 
 .toggle-button h1 {
   transform: rotate(270deg);
+  margin: 0;
 }
 
-/* Ausfahrbarer Bereich */
+/* Drawer */
 .portfolio-drawer {
   position: fixed;
   top: 0;
@@ -32,35 +34,43 @@
   background-color: #f3f3f3;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   transition: transform 0.5s ease;
-  opacity: 0.8;
+  opacity: 0.9;
   z-index: 999;
+  padding-top: 60px;
 }
 
 .portfolio-drawer.open {
   transform: translateX(116.7%);
 }
 
-/* Kacheln-Container */
+/* Kachel-Container */
 .tiles-container {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  width: 80%;
-  margin: auto auto;
+  width: 100%;
   padding: 20px;
-  gap: 20px;
+  padding-left: 260px; /* eine Kachelbreite rechts verschoben */
+  gap: 100px;
 }
 
 .tile {
   min-width: 200px;
-  margin: auto auto;
-  text-align: center;
   background: white;
   border: 3px solid navy;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.tile:hover {
+  transform: scale(1.03);
+  border-color: #004080;
 }
 
 .tile img {
@@ -75,7 +85,29 @@
   font-size: 14px;
 }
 
-/* Pfeil-Buttons */
+/* Dynamischer Inhalt unter Kacheln */
+.tile-content {
+  padding: 20px 40px;
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 2px solid navy;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tile-content h2 {
+  margin-bottom: 10px;
+  color: navy;
+}
+
+.tile-content p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Scroll Button */
 .scroll-button {
   position: absolute;
   top: 80vh;
@@ -95,46 +127,23 @@
   border: 3px red solid;
 }
 
-.scroll-button.right {
-  left: 0;
-  border: 3px red solid;
-  width: 10vw;
-}
-
-/* Schließen-Button im Desktop ausblenden */
+/* Close Button Mobile */
 .close-button-mobile {
   display: none;
 }
 
-/* -----------------------------------
-   MOBILE ANPASSUNGEN (max-width: 768px)
------------------------------------- */
 @media (max-width: 768px) {
   .toggle-button {
-    z-index: 1000;
-    padding: 10px 20px;
-    background-color: #216477;
-    color: white;
-    border: none;
-    cursor: pointer;
-    top: 25vh;
-    margin-left: 0;
+    top: 50vh;
     width: 10vw;
     height: 27vh;
-    position: fixed;
     font-size: 5vw;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    text-align: center;
+    border-radius: 15px;
   }
 
   .toggle-button h1 {
-    margin: 0;
-    font-size: inherit;
     white-space: nowrap;
+    margin-top: 140px;
   }
 
   .portfolio-drawer {
@@ -146,19 +155,20 @@
   }
 
   .tiles-container {
+    margin-top: 5vh;
+    border: 2px red dotted;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: center;
     overflow-x: hidden;
     width: 100%;
     padding: 10px;
     gap: 10px;
+    padding-left: 10px; /* weniger padding auf Mobilgeräten */
   }
 
   .tile {
     width: 45%;
     min-width: unset;
-    height: auto;
     min-height: 200px;
   }
 
@@ -177,7 +187,7 @@
   .close-button-mobile {
     display: block;
     position: absolute;
-    top: 160px;
+    top: 5vh;
     right: 5px;
     background-color: transparent;
     border: none;
@@ -185,5 +195,10 @@
     color: #333;
     z-index: 1001;
     cursor: pointer;
+  }
+
+  .tile-content {
+    padding: 15px;
+    width: 90%;
   }
 }

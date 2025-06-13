@@ -5,7 +5,6 @@ import CategoryContent from '../CategoryContent/CategoryContent';
 function AboutMe() {
   return (
     <div className="about-me">
-      <h2>Über mich:</h2>
       <CategoryContent category='aboutme'></CategoryContent>
     </div>
   );

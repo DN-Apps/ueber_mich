@@ -1,28 +1,81 @@
-.lang-skills ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .lang-skills li {
-    margin-bottom: 10px;
-  }
-  
-  .lang-skill-bar {
-    background: #e0e0e0;
-    height: 10px;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .lang-skill-level {
-    background: #007bff;
-    height: 100%;
-    transition: width 0.3s ease;
+/* Updated Languages.css */
+.languages {
+  text-align: center;
+  padding: 20px;
+}
+
+.languages h2 {
+  font-size: large;
+  font-weight: bolder;
+}
+
+.donut-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 30px;
+}
+
+.donut-chart {
+  position: relative;
+  width: 140px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.donut-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.flag-icon {
+  width: 24px;
+  height: 18px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.language-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.donut-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.donut-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .donut-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+    justify-items: center;
   }
 
-  .lang-skills-component{
-    border: 3px solid black;
-    float: left;
+  .donut-chart {
+    width: 100%;
+    max-width: 140px;
+  }
 }
-  

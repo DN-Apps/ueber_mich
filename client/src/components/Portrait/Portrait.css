@@ -1,0 +1,68 @@
+.portrait-container {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portrait-thumbnail {
+  width: 90%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.portrait-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  /* border-radius: 12px; */
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.portrait-large {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  width: 40%;
+  height: auto;
+  /* border-radius: 12px; */
+}
+
+.close-button {
+  position: relative;
+  top: 5px;
+  margin: auto auto;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .portrait-thumbnail {
+    width: 20vw;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+}

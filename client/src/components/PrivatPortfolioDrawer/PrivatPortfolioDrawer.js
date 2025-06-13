@@ -3,22 +3,41 @@ import './PrivatPortfolioDrawer.css';
 
 const PrivatPortfolioDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeTileId, setActiveTileId] = useState(null);
 
   const tiles = [
-    { id: 1, title: 'Sport', image: '/sport_laufen.jpg' },
-    { id: 2, title: 'Wald', image: '/wald_kettensaege.jpg' },
-    { id: 3, title: 'Heimwerken', image: '/werkzeugkoffer.png' },
-    { id: 4, title: 'Aktivitäten', image: '/skydive.jpg' },
+    {
+      id: 1,
+      title: 'Sport',
+      image: '/sport_laufen.jpg',
+      content: 'Ich betreibe regelmäßig Ausdauersport wie Laufen und Radfahren, um fit zu bleiben.',
+    },
+    {
+      id: 2,
+      title: 'Waldarbeiten',
+      image: '/wald_kettensaege.jpg',
+      content: 'Arbeiten mit der Motorsäge und in der Natur sind für mich ein schöner Ausgleich zum Büroalltag.',
+    },
+    {
+      id: 3,
+      title: 'Heimwerken',
+      image: '/werkzeugkoffer.png',
+      content: 'Ich baue gerne Möbel selbst, repariere Dinge im Haushalt und liebe es, handwerklich aktiv zu sein.',
+    },
+    {
+      id: 4,
+      title: 'Action & Abenteuer',
+      image: '/skydive.jpg',
+      content: 'Ich liebe Abenteuer wie Fallschirmspringen oder Klettern – Adrenalin ist mein Freund!',
+    },
   ];
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
   };
 
-  const scrollTiles = (direction) => {
-    const container = document.querySelector('.privat-tiles-container');
-    const scrollAmount = direction === 'left' ? -300 : 300;
-    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  const handleTileClick = (id) => {
+    setActiveTileId(id === activeTileId ? null : id); // Toggle-Mechanismus
   };
 
   return (
@@ -27,7 +46,6 @@ const PrivatPortfolioDrawer = () => {
         <h1>Privat</h1>
       </button>
       <div className={`privat-portfolio-drawer ${isOpen ? 'open' : ''}`}>
-        {/* Mobile Close Button */}
         {isOpen && (
           <button className="privat-close-button-mobile" onClick={toggleDrawer}>
             ✕
@@ -36,14 +54,24 @@ const PrivatPortfolioDrawer = () => {
 
         <div className="privat-tiles-container">
           {tiles.map((tile) => (
-            <div className="privat-tile" key={tile.id}>
+            <div
+              className={`privat-tile ${activeTileId === tile.id ? 'active' : ''}`}
+              key={tile.id}
+              onClick={() => handleTileClick(tile.id)}
+            >
               <img src={tile.image} alt={tile.title} />
               <p>{tile.title}</p>
             </div>
           ))}
         </div>
 
-        {/* Desktop Close Button */}
+        {activeTileId && (
+          <div className="privat-tiles-content">
+            <h2>{tiles.find((tile) => tile.id === activeTileId).title}</h2>
+            <p>{tiles.find((tile) => tile.id === activeTileId).content}</p>
+          </div>
+        )}
+
         <button className="privat-scroll-button right" onClick={toggleDrawer}>
           ➡
         </button>

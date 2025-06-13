@@ -1,7 +1,7 @@
 /* Hauptbutton */
 .privat-toggle-button {
   position: fixed;
-  top: 25vh;
+  top: 0vh;
   margin-left: 95vw;
   z-index: 1000;
   width: 5vw;
@@ -13,6 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 5px 8px 8px 8px #888888;
 }
 
 .privat-toggle-button:hover {
@@ -37,8 +38,9 @@
   z-index: 999;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  opacity: 0.8;
+  opacity: 0.95;
 }
 
 .privat-portfolio-drawer.open {
@@ -50,21 +52,32 @@
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
+  width: 100%;
   padding: 20px;
-  width: 80%;
-  margin: auto auto;
-  gap: 20px;
+  padding-left: 260px; /* eine Kachelbreite rechts verschoben */
+  gap: 100px;
+  margin-top: 6.5vh;
 }
 
 .privat-tile {
   min-width: 200px;
-  height: 250px;
-  margin: auto auto;
   background: white;
   border: 3px solid navy;
-  text-align: center;
   border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.privat-tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.privat-tile.active {
+  border: 3px solid #ff9900;
+  background-color: #fffaf0;
 }
 
 .privat-tile img {
@@ -79,10 +92,34 @@
   font-size: 14px;
 }
 
-/* Pfeil-Buttons */
+/* Inhalt unterhalb der Kacheln */
+.privat-tiles-content {
+  padding: 20px 40px;
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 2px solid #ff9900;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.privat-tiles-content h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.privat-tiles-content p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Pfeil-Button */
 .privat-scroll-button {
   position: absolute;
   top: 80vh;
+  left: 10%;
   transform: translateY(-50%);
   background-color: navy;
   color: white;
@@ -91,14 +128,9 @@
   padding: 10px;
   font-size: 18px;
   z-index: 10;
-}
-
-.privat-scroll-button.right {
-  left: 10%;
   width: 10vw;
 }
 
-/* Mobile-Schließen-Button */
 .privat-close-button-mobile {
   display: none;
 }
@@ -106,7 +138,7 @@
 @media (max-width: 768px) {
   .privat-toggle-button {
     position: fixed;
-    top: 25vh;
+    top: 50vh;
     margin-left: 88vw;
     z-index: 1000;
     width: 10vw;
@@ -115,7 +147,7 @@
     color: white;
     cursor: pointer;
     font-size: 5vw;
-    border-radius: 20px;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,19 +170,20 @@
   }
 
   .privat-tiles-container {
+    margin-top: 5vh;
+    border: 2px red dotted;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: center;
     overflow-x: hidden;
     width: 100%;
     padding: 10px;
     gap: 10px;
+    padding-left: 10px; /* weniger padding auf Mobilgeräten */
   }
 
   .privat-tile {
     width: 45%;
     min-width: unset;
-    height: auto;
     min-height: 200px;
   }
 
@@ -169,7 +202,7 @@
   .privat-close-button-mobile {
     display: block;
     position: absolute;
-    top: 160px;
+    top: 5vh;
     right: 5px;
     background-color: transparent;
     border: none;

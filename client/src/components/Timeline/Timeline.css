@@ -6,6 +6,7 @@
   margin: 20px;
   padding: 10px;
   overflow-x: auto;
+  background-color: #333;
 }
 
 /* Timeline */
@@ -26,7 +27,14 @@
 
 .timeline-company {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
+  color: white;
+  font-size: medium;
+}
+
+.timeline-location {
+  position: relative;
+  color: white;
 }
 
 /* Kreise als Zeitpunkte */
@@ -38,7 +46,8 @@
   border: 3px solid #ffffff;
   box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
   position: relative;
-  z-index: 2;
+  z-index: 1;
+  margin-top: 8px;
 }
 
 .timeline-circle:hover {
@@ -48,16 +57,20 @@
 }
 
 /* Linie zwischen den Kreisen */
-.timeline-item::after {
+.timeline::before {
   content: "";
   position: absolute;
-  top: 60px;
-  left: 50%;
-  width: 320px;
+  top: 85px;
+  left: 0;
+  right: 0;
   height: 3px;
   background-color: #ddd;
-  z-index: 1;
-  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline-circle {
+  position: relative;
+  z-index: 2;
 }
 
 .timeline-item:last-child::after {
@@ -77,11 +90,12 @@
   font-size: 1.2em;
   font-weight: bold;
   color: #333;
+  color: white;
 }
 
 .timeline-title {
   font-size: 1em;
-  color: #555;
+  color: white;
   margin-top: 5px;
   max-width: 200px;
 }
@@ -144,6 +158,11 @@
     padding: 20px 10px;
     overflow-y: auto; /* Scrollbar bei Bedarf */
     max-height: 70vh;
+    content: none;
+  }
+
+  .timeline::before {
+    content: none;
   }
 
   .timeline-item {
@@ -157,19 +176,21 @@
     transform: none; /* Keine Drehung */
     opacity: 1; /* Animation aus */
     animation: none;
+    content: none;
   }
 
   /* Vertikale Linie */
   .timeline-item::after {
-    content: "";
+    content: none;
     position: absolute;
-    top: 40px;
+    top: -150px;
     left: 50%;
     transform: translateX(-50%);
     width: 3px;
-    height: calc(100% - 40px);
+    height: 200%;
     background-color: #ddd;
-    z-index: 1;
+    z-index: 0;
+    content: none;
   }
 
   .timeline-item:last-child::after {

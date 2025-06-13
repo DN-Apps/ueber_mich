@@ -7,7 +7,6 @@ function OtherSkills() {
 
   return (
     <div className="other-skills">
-      <h2>Sonstige Fähigkeiten:</h2>
       <CategoryContent category='otherskills'></CategoryContent>
     </div>
   );

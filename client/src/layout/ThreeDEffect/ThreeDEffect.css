@@ -5,11 +5,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10%;
-  background-color: white;
+  /* border-radius: 10%; */
+  /* background-color: white; */
   margin-left: auto;
   margin-right: auto;
-  background: linear-gradient(135deg, #e8f5f8, #f0f4ff);
+  /* background: linear-gradient(135deg, #e8f5f8, #f0f4ff); */
 }
 
 .three-d-container img {
@@ -18,8 +18,7 @@
   transition: transform 0.1s ease-out; /* Weicher Übergang */
   transform-style: preserve-3d; /* 3D-Effekt */
   /*box-shadow: 0 20px 40px rgba(246, 215, 215, 0.2); /* Tiefe durch Schatten */
-  border-radius: 15%; /* Optionale Abrundung */
-  background-color: white;
+  /* background-color: white; */
   box-shadow: 5px 10px 8px 10px #888888;
 }
 
@@ -64,7 +63,7 @@
     transition: transform 0.1s ease-out;
     transform-style: preserve-3d;
     border-radius: 15%;
-    background-color: white;
+    /* background-color: white; */
     box-shadow: 5px 10px 8px 10px #888888;
     margin-top: -5vh; /* Kann bleiben, optional anpassen */
   }
