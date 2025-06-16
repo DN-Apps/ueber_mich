@@ -211,74 +211,73 @@
     ]
   },
   "languages": {
-    "title": "Језици",
+    "title": "Jezici",
     "skills": [
-      { "name": "Немачки", "level": 100, "flag": "https://flagcdn.com/de.svg" },
+      { "name": "Nemački", "level": 100, "flag": "https://flagcdn.com/de.svg" },
       {
-        "name": "Српски (ћирилица)",
+        "name": "Srpski (latinica)",
         "level": 90,
         "flag": "https://flagcdn.com/rs.svg"
       },
-      { "name": "Енглески", "level": 90, "flag": "https://flagcdn.com/gb.svg" },
+      { "name": "Engleski", "level": 90, "flag": "https://flagcdn.com/gb.svg" },
       {
-        "name": "Француски",
+        "name": "Francuski",
         "level": 40,
         "flag": "https://flagcdn.com/fr.svg"
       },
       {
-        "name": "Италијански",
+        "name": "Italijanski",
         "level": 20,
         "flag": "https://flagcdn.com/it.svg"
       }
     ]
   },
-
   "layout": {
-    "portfolioLabel": "Мој Портфолио",
-    "role": "Фулстек софтверски инжењер"
+    "portfolioLabel": "Zdravo! Moje ime:",
+    "role": "Moja strast: razvoj softvera"
   },
   "menu": {
-    "career": "Каријера",
-    "techSkills": "Техничке вештине",
-    "otherSkills": "Остале вештине",
-    "languages": "Језици"
+    "career": "Karijera",
+    "techSkills": "Tehničke veštine",
+    "otherSkills": "Ostale veštine",
+    "languages": "Jezici"
   },
   "privat": {
-    "button": "Приватно",
+    "button": "Privatno",
     "sport": {
-      "title": "Спорт",
-      "content": "Редовно се бавим спортовима издржљивости као што су трчање и вожња бицикла да бих остао у форми."
+      "title": "Sport",
+      "content": "Redovno se bavim sportovima izdržljivosti kao što su trčanje i vožnja bicikla da bih ostao u formi."
     },
     "woods": {
-      "title": "Рад у шуми",
-      "content": "Рад са моторном тестером и у природи ми представља одличну равнотежу у односу на канцеларијски посао."
+      "title": "Rad u šumi",
+      "content": "Rad sa motornom testerom i u prirodi mi predstavlja odličnu ravnotežu u odnosu na kancelarijski posao."
     },
     "diy": {
-      "title": "Сам свој мајстор",
-      "content": "Волим сам да правим намештај, поправљам ствари у кући и уживам у ручном раду."
+      "title": "Sam svoj majstor",
+      "content": "Volim sam da pravim nameštaj, popravljam stvari u kući i uživam u ručnom radu."
     },
     "adventure": {
-      "title": "Акција и авантура",
-      "content": "Волим авантуре попут падобранства и пењања – адреналин ми прија!"
+      "title": "Akcija i avantura",
+      "content": "Volim avanture poput padobranstva i penjanja – adrenalin mi prija!"
     }
   },
   "portfolio": {
-    "button": "Портфолио пројеката",
+    "button": "Projekti",
     "monteur": {
-      "title": "Собе за раднике Недић",
-      "description": "Пројекат за пружање модерног смештаја за раднике са једноставном могућношћу резервације."
+      "title": "Sobe za radnike Nedić",
+      "description": "Projekat za pružanje modernog smeštaja za radnike sa jednostavnom mogućnošću rezervacije."
     },
     "dgv": {
-      "title": "Дигитална визит карта",
-      "description": "Дигитална визит карта за модерно умрежавање – брза, елегантна и паметна."
+      "title": "Digitalna vizit karta",
+      "description": "Digitalna vizit karta za moderno umrežavanje – brza, elegantna i pametna."
     },
     "portal": {
-      "title": "Портал за пријаву",
-      "description": "Портал за централизовано управљање и преглед пријава."
+      "title": "U razvoju: Portal za prijavu",
+      "description": "Aplikacioni portal koji centralizovano nadgleda bazu aplikacija gde možete dodavati, čitati, ažurirati i brisati vrednosti."
     },
     "chogan": {
-      "title": "Чоган парфем",
-      "description": "Е-комерц пројекат за представљање и промоцију ексклузивних парфема марке Чоган."
+      "title": "Planirano: PWA, native aplikacije, AI...",
+      "description": "Moj cilj je da se posvetim najsavremenijim tehnologijama za razvoj inovativnih digitalnih rešenja."
     }
   }
 }

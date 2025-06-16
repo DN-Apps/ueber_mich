@@ -29,7 +29,7 @@ const PortfolioDrawer = () => {
     {
       id: 4,
       title: t('portfolio.chogan.title'),
-      image: '/chogan.jpeg',
+      image: '/geplant.jpg',
       description: t('portfolio.chogan.description')
     },
   ];

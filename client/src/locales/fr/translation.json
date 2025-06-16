@@ -230,8 +230,8 @@
   },
 
   "layout": {
-    "portfolioLabel": "Mon Portfolio",
-    "role": "Développeur Fullstack"
+    "portfolioLabel": "Salut! Mon nom:",
+    "role": "Ma passion: le développement logiciel."
   },
   "menu": {
     "career": "Parcours",
@@ -259,7 +259,7 @@
     }
   },
   "portfolio": {
-    "button": "Portfolio de projets",
+    "button": "Projets",
     "monteur": {
       "title": "Chambres pour ouvriers Nedic",
       "description": "Un projet pour proposer des hébergements modernes aux ouvriers avec une option de réservation simple."
@@ -269,12 +269,12 @@
       "description": "La carte de visite numérique pour un réseautage moderne – rapide, élégante et intelligente."
     },
     "portal": {
-      "title": "Portail de candidature",
-      "description": "Un portail centralisé pour la gestion et le suivi des dossiers de candidature."
+      "title": "En développement: Gestionnaire d'applications",
+      "description": "Un portail d'application qui surveille centralement un pool d'applications, où vous pouvez ajouter, lire, mettre à jour et supprimer des valeurs."
     },
     "chogan": {
-      "title": "Parfum Chogan",
-      "description": "Un projet e-commerce pour présenter et promouvoir les parfums exclusifs de Chogan."
+      "title": "Prévu : PWA, natif, IA...",
+      "description": "Mon objectif est de me consacrer aux technologies de pointe pour développer des solutions numériques innovantes."
     }
   }
 }

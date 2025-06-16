@@ -234,8 +234,8 @@
   },
 
   "layout": {
-    "portfolioLabel": "Mein Portfolio",
-    "role": "Fullstack Software-Entwickler"
+    "portfolioLabel": "Hi! Mein Name:",
+    "role": "Meine Leidenschaft: Softwareentwicklung"
   },
   "menu": {
     "career": "Werdegang",
@@ -263,7 +263,7 @@
     }
   },
   "portfolio": {
-    "button": "Projekte-Portfolio",
+    "button": "Projekte",
     "monteur": {
       "title": "Monteurzimmer Nedic",
       "description": "Ein Projekt zur Bereitstellung von Monteurunterkünften mit moderner Ausstattung und einfacher Buchungsoption."
@@ -273,12 +273,12 @@
       "description": "Die digitale Visitenkarte für modernes Netzwerken – schnell, stilvoll und smart."
     },
     "portal": {
-      "title": "Application Portal",
-      "description": "Ein Bewerbungsportal zur zentralen Verwaltung und Übersicht von Bewerbungsunterlagen."
+      "title": "In Entwicklung: Applicationmanager",
+      "description": "Ein Applikationsportal, das zentralisiert über einen Apllikationspool wacht, in dem man Werte hinzufügen, lesen, aktualisieren und löschen kann."
     },
     "chogan": {
-      "title": "Chogan Parfum",
-      "description": "Ein E-Commerce-Projekt zur Darstellung und Vermarktung exklusiver Parfümprodukte von Chogan."
+      "title": "Geplant: PWA, native, KI...",
+      "description": "Mein Ziel ist es, mich intensiv mit zukunftsweisenden Technologien auseinanderzusetzen, um innovative digitale Lösungen zu entwickeln"
     }
   }
 }

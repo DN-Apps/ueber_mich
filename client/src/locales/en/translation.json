@@ -226,8 +226,8 @@
   },
 
   "layout": {
-    "portfolioLabel": "My Portfolio",
-    "role": "Fullstack Software Developer"
+    "portfolioLabel": "Hi! My name:",
+    "role": "My passion: software development."
   },
   "menu": {
     "career": "Career",
@@ -255,7 +255,7 @@
     }
   },
   "portfolio": {
-    "button": "Project Portfolio",
+    "button": "Projects",
     "monteur": {
       "title": "Monteur Rooms Nedic",
       "description": "A project providing worker accommodations with modern facilities and easy booking."
@@ -265,12 +265,12 @@
       "description": "The digital business card for modern networking – fast, stylish, and smart."
     },
     "portal": {
-      "title": "Application Portal",
-      "description": "An application portal for centralized management and overview of application documents."
+      "title": "In developmet: Application Manager",
+      "description": "An application portal that centrally monitors an application pool, where you can add, read, update, and delete values."
     },
     "chogan": {
-      "title": "Chogan Perfume",
-      "description": "An e-commerce project for showcasing and marketing exclusive perfume products from Chogan."
+      "title": "Planned: PWA, native, AI...",
+      "description": "My goal is to deeply engage with cutting-edge technologies to develop innovative digital solutions."
     }
   }
 }
