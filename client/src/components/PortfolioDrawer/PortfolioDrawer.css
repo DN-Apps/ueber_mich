@@ -53,7 +53,7 @@
   scroll-behavior: smooth;
   width: 100%;
   padding: 20px;
-  padding-left: 260px; /* eine Kachelbreite rechts verschoben */
+  padding-left: 260px;
   gap: 100px;
 }
 
@@ -93,7 +93,7 @@
   background-color: #ffffff;
   border-radius: 10px;
   border: 2px solid navy;
-  margin-top: 20px;
+  margin-top: 150px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -124,7 +124,6 @@
 .scroll-button.left {
   right: 0;
   width: 10vw;
-  border: 3px red solid;
 }
 
 /* Close Button Mobile */
@@ -132,7 +131,7 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: portrait) {
   .toggle-button {
     top: 50vh;
     width: 10vw;
@@ -142,8 +141,13 @@
   }
 
   .toggle-button h1 {
-    white-space: nowrap;
-    margin-top: 140px;
+    transform: rotate(270deg);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(270deg);
+    width: max-content;
   }
 
   .portfolio-drawer {
@@ -156,14 +160,17 @@
 
   .tiles-container {
     margin-top: 5vh;
-    border: 2px red dotted;
     flex-wrap: wrap;
     justify-content: center;
     overflow-x: hidden;
     width: 100%;
     padding: 10px;
     gap: 10px;
-    padding-left: 10px; /* weniger padding auf Mobilgeräten */
+    padding-left: 10px;
+  }
+
+  .tile-content {
+    margin-top: 50px;
   }
 
   .tile {
@@ -193,12 +200,62 @@
     border: none;
     font-size: 50px;
     color: #333;
-    z-index: 1001;
     cursor: pointer;
   }
 
   .tile-content {
     padding: 15px;
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+  .portfolio-drawer {
+    padding-top: 5px;
+    overflow-y: auto;
+  }
+
+  .tiles-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    column-gap: 5px !important; /* Horizontaler Abstand reduziert */
+    row-gap: 5px !important; /* Vertikaler Abstand bleibt etwas größer */
+    width: 95% !important; /* Container etwas breiter machen */
+    margin: 0 115px !important;
+    padding: 5px !important; /* Innenabstand reduziert */
+    overflow-x: hidden !important;
+  }
+
+  .tile {
+    width: calc(20% - 3px) !important; /* Breite leicht reduziert */
+    height: auto !important;
+    min-height: 150px !important;
+    margin: 0 !important;
+    border: 3px solid navy !important;
+    transform: scale(0.98); /* Kacheln leicht verkleinern */
+    transition: transform 0.2s;
+  }
+
+  .tile:hover {
+    transform: scale(1); /* Originalgröße beim Hover */
+  }
+
+  .tile img {
+    height: 110px !important; /* Bildhöhe leicht reduziert */
+    width: 100% !important;
+  }
+
+  .tile-content {
+    margin-top: 15px !important;
+    width: 95% !important; /* Content-Breite angepasst */
+    padding: 10px !important; /* Innenabstand reduziert */
+    border: 2px solid navy !important;
+  }
+
+  .toggle-button {
+    width: 5vw; /* Button schmaler */
+    height: 50vh;
+    font-size: 1.5vw;
+    top: 0;
   }
 }

@@ -1,0 +1,284 @@
+{
+  "timeline": {
+    "positions": [
+      {
+        "year": "2015 - 2018",
+        "location": "Bad Friedrichshall, DE",
+        "title": "Pripravnik za IT menadžera",
+        "company": "Valmet Automotive Holding GmbH & Co. KG"
+      },
+      {
+        "year": "2018 - 2019",
+        "location": "Bad Friedrichshall, DE",
+        "title": "IT sistem administrator",
+        "company": "Valmet Automotive Holding GmbH & Co. KG"
+      },
+      {
+        "year": "2019 - 2021",
+        "location": "Neckarsulm, DE",
+        "title": "IT podrška",
+        "company": "Lidl Dienstleistung Dienstleistung GmbH & Co. KG"
+      },
+      {
+        "year": "2021 - danas",
+        "location": "Bad Wimpfen, DE",
+        "title": "Jr. Profesionalac IT",
+        "company": "Lidl Dienstleistung Dienstleistung GmbH & Co. KG"
+      }
+    ]
+  },
+  "techStacksTitle": "TEHNIČKI STACK-ovi",
+  "techStacks": [
+    {
+      "category": "MERN",
+      "layers": [
+        {
+          "title": "Frontend",
+          "technologies": ["ReactJS"]
+        },
+        {
+          "title": "Backend",
+          "technologies": ["NodeJS", "Express"]
+        },
+        {
+          "title": "Baza podataka",
+          "technologies": ["MySQL", "MongoDB"]
+        }
+      ]
+    },
+    {
+      "category": "OutSystems 11",
+      "layers": [
+        {
+          "title": "IDE",
+          "technologies": ["Service Studio"]
+        },
+        {
+          "title": "Upravljanje okruženjem",
+          "technologies": ["Service Center"]
+        },
+        {
+          "title": "Upravljanje aplikacijama",
+          "technologies": ["LifeTime"]
+        }
+      ]
+    },
+    {
+      "category": "Mendix 10",
+      "layers": [
+        {
+          "title": "IDE",
+          "technologies": ["Studio Pro"]
+        },
+        {
+          "title": "Baza podataka",
+          "technologies": ["PostgreSQL"]
+        },
+        {
+          "title": "Kontrola verzija",
+          "technologies": ["GIT", "Azure DevOps"]
+        }
+      ]
+    }
+  ],
+  "techLabels": {
+    "ReactJS": "ReactJS",
+    "NodeJS": "NodeJS",
+    "Express": "Express",
+    "MySQL": "MySQL",
+    "MongoDB": "MongoDB",
+    "Service Studio": "Service Studio",
+    "Service Center": "Service Center",
+    "LifeTime": "LifeTime",
+    "Studio Pro": "Studio Pro",
+    "PostgreSQL": "PostgreSQL",
+    "GIT": "GIT",
+    "Azure DevOps": "Azure DevOps"
+  },
+  "agileMethods": {
+    "title": "AGILNE METODE",
+    "stacks": [
+      {
+        "title": "Vizija proizvoda i kreiranje backlog-a",
+        "technologies": [
+          {
+            "name": "Definisanje ciljeva",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg"
+          },
+          {
+            "name": "Epici",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
+          },
+          {
+            "name": "Korisničke priče",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg"
+          },
+          {
+            "name": "Postavljanje prioriteta",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
+          }
+        ]
+      },
+      {
+        "title": "Planiranje sprinta, pregled i retrospektiva",
+        "technologies": [
+          {
+            "name": "Backlog proizvoda",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
+          },
+          {
+            "name": "Podela zadataka",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
+          },
+          {
+            "name": "Prezentacija rezultata",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+          },
+          {
+            "name": "Prikupljanje povratnih informacija",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+          },
+          {
+            "name": "Refleksija o saradnji",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg"
+          }
+        ]
+      },
+      {
+        "title": "Implementacija i povratne informacije (sprintovi)",
+        "technologies": [
+          {
+            "name": "Implementacija korisničkih priča sa čistim kodom",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+          },
+          {
+            "name": "Testiranje",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
+          },
+          {
+            "name": "Kontinuirana integracija",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+          }
+        ]
+      },
+      {
+        "title": "Dnevni stand-up (svakodnevno)",
+        "technologies": [
+          {
+            "name": "Šta je urađeno",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg"
+          },
+          {
+            "name": "Šta sledi",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
+          },
+          {
+            "name": "Gde su prepreke",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+          }
+        ]
+      },
+      {
+        "title": "Izdavanje / Uvođenje (kontinuirano ili po sprintu)",
+        "technologies": [
+          {
+            "name": "Isporuka softvera po potrebi",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+          },
+          {
+            "name": "Automatizovano",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-plain.svg"
+          }
+        ]
+      },
+      {
+        "title": "Održavanje i dalji razvoj (kontinuirano)",
+        "technologies": [
+          {
+            "name": "Ispravka grešaka",
+            "logo": "https://raw.githubusercontent.com/primer/octicons/main/icons/bug-16.svg"
+          },
+          {
+            "name": "Novi zahtevi",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg"
+          },
+          {
+            "name": "Tehnička poboljšanja",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "title": "Језици",
+    "skills": [
+      { "name": "Немачки", "level": 100, "flag": "https://flagcdn.com/de.svg" },
+      {
+        "name": "Српски (ћирилица)",
+        "level": 90,
+        "flag": "https://flagcdn.com/rs.svg"
+      },
+      { "name": "Енглески", "level": 90, "flag": "https://flagcdn.com/gb.svg" },
+      {
+        "name": "Француски",
+        "level": 40,
+        "flag": "https://flagcdn.com/fr.svg"
+      },
+      {
+        "name": "Италијански",
+        "level": 20,
+        "flag": "https://flagcdn.com/it.svg"
+      }
+    ]
+  },
+
+  "layout": {
+    "portfolioLabel": "Мој Портфолио",
+    "role": "Фулстек софтверски инжењер"
+  },
+  "menu": {
+    "career": "Каријера",
+    "techSkills": "Техничке вештине",
+    "otherSkills": "Остале вештине",
+    "languages": "Језици"
+  },
+  "privat": {
+    "button": "Приватно",
+    "sport": {
+      "title": "Спорт",
+      "content": "Редовно се бавим спортовима издржљивости као што су трчање и вожња бицикла да бих остао у форми."
+    },
+    "woods": {
+      "title": "Рад у шуми",
+      "content": "Рад са моторном тестером и у природи ми представља одличну равнотежу у односу на канцеларијски посао."
+    },
+    "diy": {
+      "title": "Сам свој мајстор",
+      "content": "Волим сам да правим намештај, поправљам ствари у кући и уживам у ручном раду."
+    },
+    "adventure": {
+      "title": "Акција и авантура",
+      "content": "Волим авантуре попут падобранства и пењања – адреналин ми прија!"
+    }
+  },
+  "portfolio": {
+    "button": "Портфолио пројеката",
+    "monteur": {
+      "title": "Собе за раднике Недић",
+      "description": "Пројекат за пружање модерног смештаја за раднике са једноставном могућношћу резервације."
+    },
+    "dgv": {
+      "title": "Дигитална визит карта",
+      "description": "Дигитална визит карта за модерно умрежавање – брза, елегантна и паметна."
+    },
+    "portal": {
+      "title": "Портал за пријаву",
+      "description": "Портал за централизовано управљање и преглед пријава."
+    },
+    "chogan": {
+      "title": "Чоган парфем",
+      "description": "Е-комерц пројекат за представљање и промоцију ексклузивних парфема марке Чоган."
+    }
+  }
+}

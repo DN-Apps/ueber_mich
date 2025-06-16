@@ -1,55 +1,50 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './PrivatPortfolioDrawer.css';
 
 const PrivatPortfolioDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeTileId, setActiveTileId] = useState(null);
+  const { t } = useTranslation();
 
   const tiles = [
     {
       id: 1,
-      title: 'Sport',
+      title: t('privat.sport.title'),
       image: '/sport_laufen.jpg',
-      content: 'Ich betreibe regelmäßig Ausdauersport wie Laufen und Radfahren, um fit zu bleiben.',
+      content: t('privat.sport.content'),
     },
     {
       id: 2,
-      title: 'Waldarbeiten',
+      title: t('privat.woods.title'),
       image: '/wald_kettensaege.jpg',
-      content: 'Arbeiten mit der Motorsäge und in der Natur sind für mich ein schöner Ausgleich zum Büroalltag.',
+      content: t('privat.woods.content'),
     },
     {
       id: 3,
-      title: 'Heimwerken',
+      title: t('privat.diy.title'),
       image: '/werkzeugkoffer.png',
-      content: 'Ich baue gerne Möbel selbst, repariere Dinge im Haushalt und liebe es, handwerklich aktiv zu sein.',
+      content: t('privat.diy.content'),
     },
     {
       id: 4,
-      title: 'Action & Abenteuer',
+      title: t('privat.adventure.title'),
       image: '/skydive.jpg',
-      content: 'Ich liebe Abenteuer wie Fallschirmspringen oder Klettern – Adrenalin ist mein Freund!',
+      content: t('privat.adventure.content'),
     },
   ];
 
-  const toggleDrawer = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleTileClick = (id) => {
-    setActiveTileId(id === activeTileId ? null : id); // Toggle-Mechanismus
-  };
+  const toggleDrawer = () => setIsOpen(!isOpen);
+  const handleTileClick = (id) => setActiveTileId(id === activeTileId ? null : id);
 
   return (
     <div>
       <button onClick={toggleDrawer} className="privat-toggle-button">
-        <h1>Privat</h1>
+        <h1>{t('privat.button')}</h1>
       </button>
       <div className={`privat-portfolio-drawer ${isOpen ? 'open' : ''}`}>
         {isOpen && (
-          <button className="privat-close-button-mobile" onClick={toggleDrawer}>
-            ✕
-          </button>
+          <button className="privat-close-button-mobile" onClick={toggleDrawer}>✕</button>
         )}
 
         <div className="privat-tiles-container">
@@ -72,9 +67,7 @@ const PrivatPortfolioDrawer = () => {
           </div>
         )}
 
-        <button className="privat-scroll-button right" onClick={toggleDrawer}>
-          ➡
-        </button>
+        <button className="privat-scroll-button right" onClick={toggleDrawer}>➡</button>
       </div>
     </div>
   );

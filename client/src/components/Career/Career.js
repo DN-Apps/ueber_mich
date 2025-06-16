@@ -12,7 +12,6 @@ function Career() {
 
   return (
     <div className="career">
-      <h2>Werdegang:</h2>
       {/*<CategoryContent category='career'></CategoryContent>*/}
       <Timeline></Timeline>
 

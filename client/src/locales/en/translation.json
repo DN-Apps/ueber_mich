@@ -1,0 +1,276 @@
+{
+  "timeline": {
+    "positions": [
+      {
+        "year": "2015 - 2018",
+        "location": "Bad Friedrichshall, DE",
+        "title": "IT Management Assistant Apprentice",
+        "company": "Valmet Automotive Holding GmbH & Co. KG"
+      },
+      {
+        "year": "2018 - 2019",
+        "location": "Bad Friedrichshall, DE",
+        "title": "IT System Administrator",
+        "company": "Valmet Automotive Holding GmbH & Co. KG"
+      },
+      {
+        "year": "2019 - 2021",
+        "location": "Neckarsulm, DE",
+        "title": "IT Support Specialist",
+        "company": "Lidl Dienstleistung Dienstleistung GmbH & Co. KG"
+      },
+      {
+        "year": "2021 - present",
+        "location": "Bad Wimpfen, DE",
+        "title": "Jr. Professional IT",
+        "company": "Lidl Dienstleistung Dienstleistung GmbH & Co. KG"
+      }
+    ]
+  },
+  "techStacksTitle": "TECH STACKs",
+  "techStacks": [
+    {
+      "category": "MERN",
+      "layers": [
+        {
+          "title": "Frontend",
+          "technologies": ["ReactJS"]
+        },
+        {
+          "title": "Backend",
+          "technologies": ["NodeJS", "Express"]
+        },
+        {
+          "title": "Database",
+          "technologies": ["MySQL", "MongoDB"]
+        }
+      ]
+    },
+    {
+      "category": "OutSystems 11",
+      "layers": [
+        {
+          "title": "IDE",
+          "technologies": ["Service Studio"]
+        },
+        {
+          "title": "Environment Management",
+          "technologies": ["Service Center"]
+        },
+        {
+          "title": "Application Management",
+          "technologies": ["LifeTime"]
+        }
+      ]
+    },
+    {
+      "category": "Mendix 10",
+      "layers": [
+        {
+          "title": "IDE",
+          "technologies": ["Studio Pro"]
+        },
+        {
+          "title": "Database",
+          "technologies": ["PostgreSQL"]
+        },
+        {
+          "title": "Version Control",
+          "technologies": ["GIT", "Azure DevOps"]
+        }
+      ]
+    }
+  ],
+  "techLabels": {
+    "ReactJS": "ReactJS",
+    "NodeJS": "NodeJS",
+    "Express": "Express",
+    "MySQL": "MySQL",
+    "MongoDB": "MongoDB",
+    "Service Studio": "Service Studio",
+    "Service Center": "Service Center",
+    "LifeTime": "LifeTime",
+    "Studio Pro": "Studio Pro",
+    "PostgreSQL": "PostgreSQL",
+    "GIT": "GIT",
+    "Azure DevOps": "Azure DevOps"
+  },
+  "agileMethods": {
+    "title": "AGILE METHODS",
+    "stacks": [
+      {
+        "title": "Product Vision & Backlog Creation",
+        "technologies": [
+          {
+            "name": "High-level goal definition",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg"
+          },
+          {
+            "name": "Epics",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
+          },
+          {
+            "name": "User Stories",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg"
+          },
+          {
+            "name": "Prioritization",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
+          }
+        ]
+      },
+      {
+        "title": "Sprint Planning, Review & Retrospective",
+        "technologies": [
+          {
+            "name": "Product Backlog",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
+          },
+          {
+            "name": "Task Breakdown",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
+          },
+          {
+            "name": "Presentation of results",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+          },
+          {
+            "name": "Gathering feedback",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+          },
+          {
+            "name": "Team collaboration reflection",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg"
+          }
+        ]
+      },
+      {
+        "title": "Implementation & Feedback (Sprints)",
+        "technologies": [
+          {
+            "name": "Implementing user stories with clean code",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+          },
+          {
+            "name": "Testing",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
+          },
+          {
+            "name": "Continuous Integration",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+          }
+        ]
+      },
+      {
+        "title": "Daily Stand-up (daily)",
+        "technologies": [
+          {
+            "name": "What was done",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg"
+          },
+          {
+            "name": "What’s next",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
+          },
+          {
+            "name": "Any blockers",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+          }
+        ]
+      },
+      {
+        "title": "Release / Deployment (continuous or per sprint)",
+        "technologies": [
+          {
+            "name": "Software delivery as needed",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+          },
+          {
+            "name": "Automated",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-plain.svg"
+          }
+        ]
+      },
+      {
+        "title": "Maintenance & Further Development (ongoing)",
+        "technologies": [
+          {
+            "name": "Bug fixing",
+            "logo": "https://raw.githubusercontent.com/primer/octicons/main/icons/bug-16.svg"
+          },
+          {
+            "name": "New requirements",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg"
+          },
+          {
+            "name": "Technical improvements",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "title": "Languages",
+    "skills": [
+      { "name": "German", "level": 100, "flag": "https://flagcdn.com/de.svg" },
+      {
+        "name": "Serbian (Cyrillic)",
+        "level": 90,
+        "flag": "https://flagcdn.com/rs.svg"
+      },
+      { "name": "English", "level": 90, "flag": "https://flagcdn.com/gb.svg" },
+      { "name": "French", "level": 40, "flag": "https://flagcdn.com/fr.svg" },
+      { "name": "Italian", "level": 20, "flag": "https://flagcdn.com/it.svg" }
+    ]
+  },
+
+  "layout": {
+    "portfolioLabel": "My Portfolio",
+    "role": "Fullstack Software Developer"
+  },
+  "menu": {
+    "career": "Career",
+    "techSkills": "Tech Skills",
+    "otherSkills": "Other Skills",
+    "languages": "Languages"
+  },
+  "privat": {
+    "button": "Private",
+    "sport": {
+      "title": "Sports",
+      "content": "I regularly do endurance sports like running and cycling to stay fit."
+    },
+    "woods": {
+      "title": "Forestry Work",
+      "content": "Working with chainsaws and being in nature is a great balance to office life for me."
+    },
+    "diy": {
+      "title": "DIY",
+      "content": "I enjoy building furniture myself, fixing things around the house, and being hands-on."
+    },
+    "adventure": {
+      "title": "Action & Adventure",
+      "content": "I love adventures like skydiving or climbing – adrenaline is my friend!"
+    }
+  },
+  "portfolio": {
+    "button": "Project Portfolio",
+    "monteur": {
+      "title": "Monteur Rooms Nedic",
+      "description": "A project providing worker accommodations with modern facilities and easy booking."
+    },
+    "dgv": {
+      "title": "Digital Business Card",
+      "description": "The digital business card for modern networking – fast, stylish, and smart."
+    },
+    "portal": {
+      "title": "Application Portal",
+      "description": "An application portal for centralized management and overview of application documents."
+    },
+    "chogan": {
+      "title": "Chogan Perfume",
+      "description": "An e-commerce project for showcasing and marketing exclusive perfume products from Chogan."
+    }
+  }
+}

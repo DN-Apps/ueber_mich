@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import AboutMe from '../components/AboutMe/AboutMe';
 import Career from '../components/Career/Career';
 import TechSkills from '../components/TechSkills/TechSkills';
@@ -12,79 +13,96 @@ import './DefaultLayout.css';
 function Defaultlayout() {
   const [activeSection, setActiveSection] = useState('about-me');
   const [showLanguagesMobile, setShowLanguagesMobile] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(
+    window.innerWidth <= 768 ||
+    (window.innerWidth <= 1024 && window.matchMedia("(orientation: landscape)").matches)
+  );
+  const [currentLanguage, setCurrentLanguage] = useState('de');
+  const { i18n, t } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    setCurrentLanguage(lng);
+    setShowLanguagesMobile(false);
+  };
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    const handleResize = () => {
+      const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+      setIsMobile(
+        window.innerWidth <= 768 ||
+        (window.innerWidth <= 1024 && !isPortrait)
+      );
+    };
+
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const renderContent = () => {
-    switch (activeSection) {
-      case 'about-me':
-        return <AboutMe />;
-      case 'career':
-        return <Career />;
-      case 'tech-skills':
-        return <TechSkills />;
-      case 'other-skills':
-        return <OtherSkills />;
-      case 'languages':
-        return <Languages />;
-      default:
-        return <AboutMe />;
+  const getLanguageLabel = (lng) => {
+    switch (lng) {
+      case 'de': return { label: 'Deutsch', flag: 'https://flagcdn.com/de.svg' };
+      case 'en': return { label: 'English', flag: 'https://flagcdn.com/gb.svg' };
+      case 'sr': return { label: 'Српски', flag: 'https://flagcdn.com/rs.svg' };
+      case 'fr': return { label: 'Français', flag: 'https://flagcdn.com/fr.svg' };
+      default: return { label: 'Sprache', flag: '' };
     }
   };
 
   const languageList = (
     <ul className={`languages-list ${isMobile ? '' : 'languages-horizontal'}`}>
-      <li className="language-item">
-        <img src="https://flagcdn.com/de.svg" alt="Deutsch" className="language-flag" />
-        <span className="language-name">Deutsch</span>
-      </li>
-      <li className="language-item">
-        <img src="https://flagcdn.com/gb.svg" alt="Englisch" className="language-flag" />
-        <span className="language-name">Englisch</span>
-      </li>
-      <li className="language-item">
-        <img src="https://flagcdn.com/rs.svg" alt="Serbisch" className="language-flag" />
-        <span className="language-name">Serbisch</span>
-      </li>
-      <li className="language-item">
-        <img src="https://flagcdn.com/fr.svg" alt="Französisch" className="language-flag" />
-        <span className="language-name">Französisch</span>
-      </li>
+      {['de', 'en', 'sr', 'fr'].map((lng) => {
+        const { label, flag } = getLanguageLabel(lng);
+        const isSelected = currentLanguage === lng;
+        return (
+          <li
+            key={lng}
+            className={`language-item ${isSelected ? 'selected-language' : ''}`}
+            onClick={() => changeLanguage(lng)}
+          >
+            <img src={flag} alt={label} className="language-flag" />
+            <span className="language-name">{label}</span>
+          </li>
+        );
+      })}
     </ul>
   );
+
+  const renderContent = () => {
+    switch (activeSection) {
+      case 'about-me': return <AboutMe />;
+      case 'career': return <Career />;
+      case 'tech-skills': return <TechSkills />;
+      case 'other-skills': return <OtherSkills />;
+      case 'languages': return <Languages />;
+      default: return <AboutMe />;
+    }
+  };
 
   return (
     <div className="page-container animated-background">
       <header className="header">
-        {!isMobile && (
-          <div className="languages-fixed">
-            {languageList}
-          </div>
-        )}
+        {!isMobile && <div className="languages-fixed">{languageList}</div>}
 
         <div className="header-inner">
-          <div className="portrait-wrapper">
-            <Portrait />
-          </div>
+          <div className="portrait-wrapper"><Portrait /></div>
           <section className="intro-text">
-            <p className="portfolio-label">Mein Portfolio</p>
+            <p className="portfolio-label">{t('layout.portfolioLabel')}</p>
             <h1 className="developer-name">Daniel Nedic</h1>
-            <p className="role-description">Fullstack Software-Entwickler</p>
+            <p className="role-description">{t('layout.role')}</p>
           </section>
         </div>
 
         {isMobile && (
           <div className="languages-mobile-dropdown">
-            <button
-              className="dropdown-toggle"
-              onClick={() => setShowLanguagesMobile(!showLanguagesMobile)}
-            >
-              Sprache(n) ▼
+            <button className="dropdown-toggle" onClick={() => setShowLanguagesMobile(!showLanguagesMobile)}>
+              <img
+                src={getLanguageLabel(currentLanguage).flag}
+                alt={getLanguageLabel(currentLanguage).label}
+                className="language-flag"
+              />
+              <span className="language-name">{getLanguageLabel(currentLanguage).label}</span>
+              <span className="dropdown-arrow">▼</span>
             </button>
             {showLanguagesMobile && languageList}
           </div>
@@ -92,10 +110,18 @@ function Defaultlayout() {
       </header>
 
       <div className="menu-horizontal">
-        <div className="menu-item" onClick={() => setActiveSection('career')}>Werdegang</div>
-        <div className="menu-item" onClick={() => setActiveSection('tech-skills')}>Tech-Skills</div>
-        <div className="menu-item" onClick={() => setActiveSection('other-skills')}>Sonstige Fähigkeiten</div>
-        <div className="menu-item" onClick={() => setActiveSection('languages')}>Sprachen</div>
+        <div className="menu-item" onClick={() => setActiveSection('career')}>
+          {t('menu.career')}
+        </div>
+        <div className="menu-item" onClick={() => setActiveSection('tech-skills')}>
+          {t('menu.techSkills')}
+        </div>
+        <div className="menu-item" onClick={() => setActiveSection('other-skills')}>
+          {t('menu.otherSkills')}
+        </div>
+        <div className="menu-item" onClick={() => setActiveSection('languages')}>
+          {t('menu.languages')}
+        </div>
       </div>
 
       <main className="content">

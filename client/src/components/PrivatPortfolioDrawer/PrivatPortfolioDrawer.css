@@ -100,7 +100,7 @@
   background-color: #ffffff;
   border-radius: 10px;
   border: 2px solid #ff9900;
-  margin-top: 20px;
+  margin-top: 150px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -171,7 +171,6 @@
 
   .privat-tiles-container {
     margin-top: 5vh;
-    border: 2px red dotted;
     flex-wrap: wrap;
     justify-content: center;
     overflow-x: hidden;
@@ -195,6 +194,10 @@
     font-size: 14px;
   }
 
+  .privat-tiles-content {
+    margin-top: 50px;
+  }
+
   .privat-scroll-button {
     display: none;
   }
@@ -210,5 +213,60 @@
     color: #333;
     z-index: 1001;
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+  .privat-portfolio-drawer {
+    padding-top: 5px;
+    overflow-y: auto;
+  }
+
+  .privat-tiles-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    column-gap: 5px !important; /* Horizontaler Abstand reduziert */
+    row-gap: 5px !important; /* Vertikaler Abstand bleibt etwas größer */
+    width: 95% !important; /* Container etwas breiter machen */
+    margin: 0 115px !important;
+    padding: 5px !important; /* Innenabstand reduziert */
+    overflow-x: hidden !important;
+  }
+
+  .privat-tile {
+    width: calc(20% - 3px) !important; /* Breite leicht reduziert */
+    height: auto !important;
+    min-height: 150px !important;
+    margin: 0 !important;
+    border: 3px solid navy !important;
+    transform: scale(0.98); /* Kacheln leicht verkleinern */
+    transition: transform 0.2s;
+  }
+
+  .privat-tile:hover {
+    transform: scale(1); /* Originalgröße beim Hover */
+  }
+
+  .privat-tile img {
+    height: 110px !important; /* Bildhöhe leicht reduziert */
+    width: 100% !important;
+  }
+
+  .privat-tiles-content {
+    margin-top: 15px !important;
+    width: 95% !important; /* Content-Breite angepasst */
+    padding: 10px !important; /* Innenabstand reduziert */
+    border: 2px solid navy !important;
+  }
+
+  .privat-toggle-button {
+    width: 5vw; /* Button schmaler */
+    height: 50vh;
+    font-size: 1.5vw;
+    top: 0;
+  }
+
+  .privat-scroll-button {
+    margin-left: -80px !important;
   }
 }

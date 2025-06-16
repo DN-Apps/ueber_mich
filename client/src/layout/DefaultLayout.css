@@ -2,6 +2,9 @@
   background: linear-gradient(to top, #7fa8bc, #bfc0c2, #7fa8bc);
   background-size: cover;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
 /* -------- Header -------- */
@@ -56,6 +59,10 @@
   border-radius: 50%;
 }
 
+.intro-text {
+  text-align: center;
+}
+
 .intro-text .portfolio-label {
   font-size: 1.1rem;
   color: #666;
@@ -80,16 +87,32 @@
   top: 20px;
   right: 20px;
   z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
 }
 
-.languages-toggle-btn {
-  background-color: #34778a;
+.dropdown-toggle {
+  background-color: #4595a6;
   color: white;
   border: none;
   border-radius: 8px;
   padding: 6px 12px;
   cursor: pointer;
   font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 160px;
+  justify-content: space-between;
+}
+
+.dropdown-toggle:focus,
+.dropdown-toggle:active,
+.dropdown-toggle:focus-visible {
+  background-color: #4595a6;
+  outline: none;
 }
 
 .languages-list {
@@ -105,7 +128,6 @@
   align-items: flex-start;
   width: 100%;
   max-width: 180px;
-  float: right;
 }
 
 .language-item {
@@ -117,6 +139,7 @@
   gap: 10px;
   border-radius: 6px;
   transition: background 0.2s ease;
+  cursor: pointer;
 }
 
 .language-item:hover {
@@ -136,12 +159,18 @@
   white-space: nowrap;
 }
 
-/* Sprachliste horizontal im Desktop-View */
+.selected-language {
+  border: 2px solid #4595a6;
+  box-shadow: 0 0 8px rgba(0, 122, 204, 0.4);
+  background-color: #eef6fc;
+}
+
 .languages-fixed {
   position: absolute;
   top: 20px;
-  right: 15%;
+  right: 5%;
   z-index: 999;
+  min-width: 21vw;
 }
 
 .languages-list.languages-horizontal {
@@ -162,7 +191,6 @@
 
 .languages-horizontal .language-item:hover {
   background: none;
-  cursor: default;
 }
 
 /* -------- Menü -------- */
@@ -184,6 +212,7 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  white-space: nowrap;
 }
 
 .menu-horizontal .menu-item:hover {
@@ -191,15 +220,22 @@
 }
 
 /* -------- Content -------- */
+.content {
+  flex: 1;
+  padding-bottom: 50px;
+  overflow-y: auto;
+}
+
 #dynamic-content {
   font-size: small;
   text-align: center;
-  max-width: 90vw;
+  max-width: 100vw;
   min-width: 40vw;
-  max-height: 80vh;
   padding: 20px;
-  margin: 3vh auto 0;
+  margin: 3vh auto;
   box-shadow: 5px 8px 8px 8px #888888;
+  background-color: white;
+  border-radius: 8px;
 }
 
 /* -------- Footer -------- */
@@ -211,10 +247,12 @@
   background-color: whitesmoke;
   color: black;
   text-align: center;
+  padding: 10px 0;
+  z-index: 200;
 }
 
-/* -------- Responsive -------- */
-@media (max-width: 768px) {
+/* -------- Mobile Portrait -------- */
+@media (max-width: 768px) and (orientation: portrait) {
   .portrait-wrapper {
     width: 100px;
     height: 125px;
@@ -233,17 +271,19 @@
   }
 
   .languages-list {
-    max-width: 90vw;
+    max-width: 35vw;
   }
 
   .menu-horizontal {
     flex-wrap: wrap;
     gap: 10px;
     top: 0;
+    padding: 8px 10px;
+    position: sticky;
   }
 
   .menu-horizontal .menu-item {
-    font-size: 3vw;
+    font-size: 3.5vw;
     padding: 8px 12px;
     width: 40%;
     text-align: center;
@@ -253,10 +293,114 @@
     max-width: 100%;
     font-size: 4vw;
     box-shadow: none;
+    margin-top: 10px;
+    padding: 15px;
   }
 
   .footer {
     font-size: 3vw;
     padding: 5px;
+  }
+}
+
+/* -------- Mobile Landscape -------- */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .page-container {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Header */
+  .header {
+    height: 15vh;
+    padding: 5px 10px;
+    position: sticky;
+    top: 0;
+  }
+
+  .header-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .portrait-wrapper {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+
+  /* Menü */
+  .menu-horizontal {
+    position: sticky;
+    top: 15vh;
+    padding: 5px;
+    z-index: 1000;
+  }
+
+  .menu-horizontal .menu-item {
+    font-size: 2vw;
+    padding: 5px 8px;
+  }
+
+  /* Content */
+  .content {
+    height: calc(100vh - 15vh - 40px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #dynamic-content {
+    margin: 10px auto;
+    min-height: 60vh;
+    font-size: 2.5vw;
+    padding: 15px;
+  }
+
+  /* Footer */
+  .footer {
+    position: relative;
+    bottom: auto;
+    margin-top: auto;
+  }
+
+  /* Texte */
+  .intro-text {
+    text-align: left;
+  }
+
+  .intro-text .developer-name {
+    font-size: 3.5vw;
+  }
+
+  .intro-text .role-description {
+    font-size: 2.5vw;
+  }
+
+  /* Languages Dropdown */
+  .languages-mobile-dropdown {
+    top: 10px;
+    right: 10px;
+  }
+
+  .dropdown-toggle {
+    width: 140px;
+    padding: 5px 8px;
+    font-size: 2vw;
+  }
+
+  .languages-list {
+    max-width: 140px;
+  }
+}
+
+/* -------- Tablet and Larger Mobile Devices -------- */
+@media (min-width: 481px) and (max-width: 768px) {
+  .menu-horizontal .menu-item {
+    font-size: 2.5vw;
+  }
+
+  #dynamic-content {
+    font-size: 3vw;
   }
 }

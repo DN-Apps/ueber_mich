@@ -6,10 +6,10 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import './Languages.css';
+import { useTranslation } from 'react-i18next';
 
 const COLORS = ['#2ea17b', '#e0e0e0'];
 
-// Angepasste LanguageDonut-Komponente
 function LanguageDonut({ name, level, flag }) {
   const data = [
     { name: 'Level', value: level },
@@ -19,7 +19,7 @@ function LanguageDonut({ name, level, flag }) {
   return (
     <div className="donut-chart">
       <div className="donut-header">
-        <img src={flag} alt={`${name} Flagge`} className="flag-icon" />
+        <img src={flag} alt={`${name} flag`} className="flag-icon" />
         <h4 className="language-name">{name}</h4>
       </div>
       <div className="donut-container">
@@ -46,17 +46,12 @@ function LanguageDonut({ name, level, flag }) {
 }
 
 function Languages() {
-  const skills = [
-    { name: 'Deutsch', level: 100, flag: 'https://flagcdn.com/de.svg' },
-    { name: 'Serbisch (Kyrillisch)', level: 90, flag: 'https://flagcdn.com/rs.svg' },
-    { name: 'Englisch', level: 90, flag: 'https://flagcdn.com/gb.svg' },
-    { name: 'Französisch', level: 40, flag: 'https://flagcdn.com/fr.svg' },
-    { name: 'Italienisch', level: 20, flag: 'https://flagcdn.com/it.svg' },
-  ];
+  const { t } = useTranslation();
+  const skills = t('languages.skills', { returnObjects: true });
 
   return (
     <div className="languages">
-      <h2>Sprachen:</h2>
+      <h2>{t('languages.title')}</h2>
       <div className="donut-wrapper">
         {skills.map((skill, index) => (
           <LanguageDonut

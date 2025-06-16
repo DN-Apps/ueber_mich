@@ -1,13 +1,11 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Timeline.css";
 
 const Timeline = () => {
-  const positions = [
-    { year: "2015 - 2018", location: "Bad Friedrichshall, DE", title: "Ausbildung Informatikkaufmann", company: "Valmet Automotive Holding GmbH & Co. KG" },
-    { year: "2018 - 2019", location: "Bad Friedrichshall, DE", title: "IT-Systemadministrator", company: "Valmet Automotive Holding GmbH & Co. KG" },
-    { year: "2019 - 2021", location: "Neckarsulm, DE", title: "Mitarbeiter IT-Support", company: "Lidl Dienstleistung Dienstleistung GmbH & Co. KG" },
-    { year: "2021 - heute", location: "Bad Wimpfen, DE", title: "Jr. Professional IT", company: "Lidl Dienstleistung Dienstleistung GmbH & Co. KG" },
-  ];
+  const { t } = useTranslation();
+
+  const positions = t("timeline.positions", { returnObjects: true });
 
   return (
     <div className="timeline-container">

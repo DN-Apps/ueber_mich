@@ -1,41 +1,45 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './PortfolioDrawer.css';
 
 const PortfolioDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedTileId, setSelectedTileId] = useState(null);
+  const { t } = useTranslation();
 
   const tiles = [
     {
       id: 1,
-      title: 'Monteurzimmer Nedic',
+      title: t('portfolio.monteur.title'),
       image: '/home_new.jpeg',
-      description: 'Ein Projekt zur Bereitstellung von Monteurunterkünften mit moderner Ausstattung und einfacher Buchungsoption.'
+      description: t('portfolio.monteur.description')
     },
     {
       id: 2,
-      title: 'Digitale Visitenkarte',
+      title: t('portfolio.dgv.title'),
       image: '/dgv.jpeg',
-      description: 'Die digitale Visitenkarte für modernes Netzwerken – schnell, stilvoll und smart.'
+      description: t('portfolio.dgv.description')
     },
     {
       id: 3,
-      title: 'Application Portal',
+      title: t('portfolio.portal.title'),
       image: '/application_portal.jpeg',
-      description: 'Ein Bewerbungsportal zur zentralen Verwaltung und Übersicht von Bewerbungsunterlagen.'
+      description: t('portfolio.portal.description')
     },
     {
       id: 4,
-      title: 'Chogan Parfum',
+      title: t('portfolio.chogan.title'),
       image: '/chogan.jpeg',
-      description: 'Ein E-Commerce-Projekt zur Darstellung und Vermarktung exklusiver Parfümprodukte von Chogan.'
+      description: t('portfolio.chogan.description')
     },
   ];
 
   const toggleDrawer = () => {
-    setIsOpen(!isOpen);
-    setSelectedTileId(null); // Reset on open/close
+    const nextState = !isOpen;
+    setIsOpen(nextState);
+    setSelectedTileId(nextState ? tiles[0].id : null); // Erstes Tile beim Öffnen aktivieren
   };
+
 
   const handleTileClick = (id) => {
     setSelectedTileId(prevId => (prevId === id ? null : id));
@@ -46,13 +50,11 @@ const PortfolioDrawer = () => {
   return (
     <div>
       <button onClick={toggleDrawer} className="toggle-button">
-        <h1>Projekte-Portfolio</h1>
+        <h1>{t('portfolio.button')}</h1>
       </button>
 
       <div className={`portfolio-drawer ${isOpen ? 'open' : ''}`}>
-        <button className="close-button-mobile" onClick={toggleDrawer}>
-          ✕
-        </button>
+        <button className="close-button-mobile" onClick={toggleDrawer}>✕</button>
 
         <div className="tiles-container">
           {tiles.map((tile) => (
@@ -74,9 +76,7 @@ const PortfolioDrawer = () => {
           </div>
         )}
 
-        <button className="scroll-button left" onClick={toggleDrawer}>
-          ⬅
-        </button>
+        <button className="scroll-button left" onClick={toggleDrawer}>⬅</button>
       </div>
     </div>
   );
