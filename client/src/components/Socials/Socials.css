@@ -1,0 +1,82 @@
+.socials-container {
+  position: relative;
+  border-left: 2px #34778a solid;
+  border-right: 2px #34778a solid;
+  border-radius: 8px;
+  width: 150px; /* Schmalere Breite */
+  height: 50px; /* Deutlich reduzierte Höhe */
+  margin-left: 500px;
+  z-index: 9999;
+  float: left;
+  margin-top: -375px;
+  display: flex;
+  align-items: center; /* Vertikale Zentrierung */
+  justify-content: center; /* Horizontale Zentrierung */
+  margin-right: -705px;
+}
+
+.socials-list {
+  display: flex;
+  gap: 20px;
+  align-items: center; /* Wichtig für gleiche Höhe */
+  height: 100%; /* Nutzt die volle Containerhöhe */
+}
+
+.social-link {
+  display: flex;
+  align-items: center; /* Zentriert das Icon vertikal */
+  height: 100%; /* Nutzt die volle Höhe */
+}
+
+.social-icon {
+  width: 30px; /* Etwas kleinere Icons */
+  height: 30px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .socials-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    transform: none;
+    margin: 0;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border-left: 2px solid #34778a;
+    border-right: 2px solid #34778a;
+    border-radius: 12px;
+    z-index: 9999;
+  }
+
+  .socials-list {
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .socials-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    transform: none;
+    margin: 0;
+    width: auto;
+    height: auto;
+    padding: 8px;
+    background-color: #fff;
+    border: 2px solid #34778a;
+    border-radius: 12px;
+    z-index: 9999;
+  }
+
+  .socials-list {
+    gap: 12px;
+  }
+}

@@ -1,0 +1,138 @@
+.certs-container {
+  position: relative;
+  /* border: 2px #34778a solid; */
+  border-radius: 8px;
+  width: 150px; /* Schmalere Breite */
+  height: 200px; /* Deutlich reduzierte Höhe */
+  margin-left: 555px;
+  z-index: 9999;
+  float: left;
+  margin-top: -100px;
+  display: flex;
+  align-items: left; /* Vertikale Zentrierung */
+  justify-content: left; /* Horizontale Zentrierung */
+  margin-right: -705px;
+}
+
+.certs-list {
+  display: flex;
+  flex-direction: column; /* <-- Icons untereinander */
+  gap: 20px;
+  align-items: center;
+  height: 100%;
+}
+
+.certs-link {
+  display: flex;
+  align-items: center; /* Zentriert das Icon vertikal */
+  height: 100%; /* Nutzt die volle Höhe */
+}
+
+.certs-icon {
+  width: 80px; /* etwas größer */
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  border: 2px solid #34778a; /* Rahmenfarbe */
+  border-radius: 50%; /* macht es rund */
+  padding: 5px; /* Abstand zum Rand */
+  background-color: white; /* optional für besseren Kontrast */
+  cursor: pointer;
+}
+
+.certs-icon:hover {
+  transform: scale(1.1);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 80%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.modal-content img {
+  width: 100%;
+  max-width: 500px;
+  max-height: 70vh;
+  height: auto;
+  margin-bottom: 20px;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #34778a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #245865;
+}
+
+.modal-image {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+  max-width: 500px;
+  max-height: 70vh;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.modal-image.zoomed {
+  transform: scale(2);
+  cursor: zoom-out;
+  z-index: 10001;
+}
+
+@media (max-width: 768px) {
+  .certs-container {
+    position: fixed;
+    top: 85px; /* direkt unter den Socials */
+    left: 20px;
+    margin: 0;
+    width: 80px;
+    height: 150px;
+    padding: 10px;
+    z-index: 9998;
+  }
+
+  .certs-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .certs-list {
+    gap: 15px;
+    align-items: center;
+  }
+}

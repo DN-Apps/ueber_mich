@@ -215,7 +215,7 @@
     "skills": [
       { "name": "Nemački", "level": 100, "flag": "https://flagcdn.com/de.svg" },
       {
-        "name": "Srpski (latinica)",
+        "name": "Srpski (cirilica)",
         "level": 90,
         "flag": "https://flagcdn.com/rs.svg"
       },
@@ -279,5 +279,14 @@
       "title": "Planirano: PWA, native aplikacije, AI...",
       "description": "Moj cilj je da se posvetim najsavremenijim tehnologijama za razvoj inovativnih digitalnih rešenja."
     }
-  }
+  },
+  "imprintTitle": "Impresum",
+  "name": "Ime",
+  "address": "Adresa",
+  "email": "E-mail",
+  "responsible": "Odgovorno lice prema § 55 st. 2 RStV",
+  "close": "Zatvori",
+  "privacyTitle": "Obaveštenje o privatnosti",
+  "privacyText": "Ova veb stranica ne koristi kolačiće za praćenje, ali zahteva tvoju saglasnost za osnovne tehničke funkcije.",
+  "understood": "Razumem"
 }

@@ -8,17 +8,33 @@ import Portrait from '../components/Portrait/Portrait';
 import Languages from '../components/languages/Languages';
 import PortfolioDrawer from '../components/PortfolioDrawer/PortfolioDrawer';
 import PrivatPortfolioDrawer from '../components/PrivatPortfolioDrawer/PrivatPortfolioDrawer';
+import Socials from '../components/Socials/Socials';
+import Certs from '../components/Certs/Certs';
+import PrivacyNotice from '../components/PrivacyNotice/PrivacyNotice';
+import ImpressumModal from '../components/ImpressumModal/ImpressumModal';
 import './DefaultLayout.css';
 
 function Defaultlayout() {
   const [activeSection, setActiveSection] = useState('about-me');
   const [showLanguagesMobile, setShowLanguagesMobile] = useState(false);
-  const [isMobile, setIsMobile] = useState(
-    window.innerWidth <= 768 ||
-    (window.innerWidth <= 1024 && window.matchMedia("(orientation: landscape)").matches)
-  );
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [currentLanguage, setCurrentLanguage] = useState('de');
+  const [showPrivacy, setShowPrivacy] = useState(false);
+  const [showImpressum, setShowImpressum] = useState(false);
   const { i18n, t } = useTranslation();
+
+  // Datenschutz
+  useEffect(() => {
+    const accepted = localStorage.getItem('privacyAccepted');
+    if (!accepted) {
+      setShowPrivacy(true);
+    }
+  }, []);
+
+  const handleAcceptPrivacy = () => {
+    localStorage.setItem('privacyAccepted', 'true');
+    setShowPrivacy(false);
+  };
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -34,7 +50,6 @@ function Defaultlayout() {
         (window.innerWidth <= 1024 && !isPortrait)
       );
     };
-
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -81,7 +96,12 @@ function Defaultlayout() {
 
   return (
     <div className="page-container animated-background">
+      {showPrivacy && <PrivacyNotice onAccept={handleAcceptPrivacy} />}
+      {showImpressum && <ImpressumModal onClose={() => setShowImpressum(false)} />}
+
       <header className="header">
+        <Socials />
+        <Certs />
         {!isMobile && <div className="languages-fixed">{languageList}</div>}
 
         <div className="header-inner">
@@ -131,7 +151,7 @@ function Defaultlayout() {
       </main>
 
       <footer className="footer">
-        <p>© 2025 Daniel Nedic</p>
+        <p>© 2025 Daniel Nedic | <span style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={() => setShowImpressum(true)}>Impressum</span></p>
       </footer>
     </div>
   );

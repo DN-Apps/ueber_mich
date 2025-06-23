@@ -276,5 +276,14 @@
       "title": "Prévu : PWA, natif, IA...",
       "description": "Mon objectif est de me consacrer aux technologies de pointe pour développer des solutions numériques innovantes."
     }
-  }
+  },
+  "imprintTitle": "Mentions légales",
+  "name": "Nom",
+  "address": "Adresse",
+  "email": "E-mail",
+  "responsible": "Responsable selon § 55 al. 2 RStV",
+  "close": "Fermer",
+  "privacyTitle": "Avis de confidentialité",
+  "privacyText": "Ce site n'utilise pas de cookies de suivi, mais nécessite votre consentement pour les fonctions techniques de base.",
+  "understood": "Compris"
 }

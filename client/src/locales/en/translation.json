@@ -272,5 +272,14 @@
       "title": "Planned: PWA, native, AI...",
       "description": "My goal is to deeply engage with cutting-edge technologies to develop innovative digital solutions."
     }
-  }
+  },
+  "imprintTitle": "Imprint",
+  "name": "Name",
+  "address": "Address",
+  "email": "Email",
+  "responsible": "Responsible according to § 55 para. 2 RStV",
+  "close": "Close",
+  "privacyTitle": "Privacy Notice",
+  "privacyText": "This website does not use tracking cookies, but requires your consent for basic technical functions.",
+  "understood": "Understood"
 }

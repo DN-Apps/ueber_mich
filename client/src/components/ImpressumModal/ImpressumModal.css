@@ -1,0 +1,27 @@
+.imprint-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imprint-modal {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+.imprint-modal button {
+  margin-top: 15px;
+  background-color: #34778a;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

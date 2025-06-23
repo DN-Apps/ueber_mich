@@ -280,5 +280,14 @@
       "title": "Geplant: PWA, native, KI...",
       "description": "Mein Ziel ist es, mich intensiv mit zukunftsweisenden Technologien auseinanderzusetzen, um innovative digitale Lösungen zu entwickeln"
     }
-  }
+  },
+  "imprintTitle": "Impressum",
+  "name": "Name",
+  "address": "Adresse",
+  "email": "E-Mail",
+  "responsible": "Verantwortlich gemäß § 55 Abs. 2 RStV",
+  "close": "Schließen",
+  "privacyTitle": "Datenschutzhinweis",
+  "privacyText": "Diese Webseite verwendet keine Cookies zur Nachverfolgung, benötigt jedoch deine Zustimmung für grundlegende technische Funktionen.",
+  "understood": "Verstanden"
 }
