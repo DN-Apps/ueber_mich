@@ -15,7 +15,7 @@ import ImpressumModal from '../components/ImpressumModal/ImpressumModal';
 import './DefaultLayout.css';
 
 function Defaultlayout() {
-  const [activeSection, setActiveSection] = useState('about-me');
+  const [activeSection, setActiveSection] = useState('career');
   const [showLanguagesMobile, setShowLanguagesMobile] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [currentLanguage, setCurrentLanguage] = useState('de');

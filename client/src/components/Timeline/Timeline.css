@@ -123,7 +123,7 @@
   .timeline-item:not(:last-child)::before {
     content: "";
     position: absolute;
-    top: 50px;
+    top: 100px;
     bottom: -40px;
     left: 50%;
     width: 2px;

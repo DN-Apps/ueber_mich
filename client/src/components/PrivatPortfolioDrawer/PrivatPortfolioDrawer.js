@@ -34,7 +34,16 @@ const PrivatPortfolioDrawer = () => {
     },
   ];
 
-  const toggleDrawer = () => setIsOpen(!isOpen);
+  const toggleDrawer = () => {
+    const newIsOpen = !isOpen;
+    setIsOpen(newIsOpen);
+    if (newIsOpen && tiles.length > 0) {
+      setActiveTileId(tiles[0].id);
+    } else {
+      setActiveTileId(null);
+    }
+  };
+
   const handleTileClick = (id) => setActiveTileId(id === activeTileId ? null : id);
 
   return (
