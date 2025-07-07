@@ -12,7 +12,8 @@ const PortfolioDrawer = () => {
       id: 1,
       title: t('portfolio.monteur.title'),
       image: '/home_new.jpeg',
-      description: t('portfolio.monteur.description')
+      description: t('portfolio.monteur.description'),
+      insights: t('portfolio.monteur.insights')
     },
     {
       id: 2,
@@ -73,6 +74,7 @@ const PortfolioDrawer = () => {
           <div className="tile-content">
             <h2>{selectedTile.title}</h2>
             <p>{selectedTile.description}</p>
+            <p>{selectedTile.insights}</p>
           </div>
         )}
 

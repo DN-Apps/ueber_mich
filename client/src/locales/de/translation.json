@@ -266,7 +266,8 @@
     "button": "Projekte",
     "monteur": {
       "title": "Monteurzimmer Nedic",
-      "description": "Ein Projekt zur Bereitstellung von Monteurunterkünften mit moderner Ausstattung und einfacher Buchungsoption."
+      "description": "Ein Projekt zur Bereitstellung von Monteurunterkünften mit moderner Ausstattung und einfacher Buchungsoption.",
+      "insights": "\nFrontend: ReactJS\nBackend: NodeJS"
     },
     "dgv": {
       "title": "Digitale Visitenkarte",

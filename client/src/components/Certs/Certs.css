@@ -3,11 +3,11 @@
   /* border: 2px #34778a solid; */
   border-radius: 8px;
   width: 150px; /* Schmalere Breite */
-  height: 200px; /* Deutlich reduzierte Höhe */
+  height: 290px; /* Deutlich reduzierte Höhe */
   margin-left: 555px;
   z-index: 9999;
   float: left;
-  margin-top: -100px;
+  margin-top: 70px;
   display: flex;
   align-items: left; /* Vertikale Zentrierung */
   justify-content: left; /* Horizontale Zentrierung */
@@ -118,17 +118,18 @@
   .certs-container {
     position: fixed;
     top: 85px; /* direkt unter den Socials */
-    left: 20px;
+    left: 10px;
     margin: 0;
     width: 80px;
-    height: 150px;
+    height: 190px;
     padding: 10px;
     z-index: 9998;
+    /* border: 2px #34778a solid; */
   }
 
   .certs-icon {
-    width: 55px;
-    height: 55px;
+    width: 40px;
+    height: 40px;
   }
 
   .certs-list {

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Certs.css'
 import Mendix from '../../assets/logos/rad_mendix.png'
 import Stanley from '../../assets/logos/stanley.png'
+import KMK from '../../assets/logos/kmk.PNG'
 
 function Certs() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -30,6 +31,11 @@ function Certs() {
             id: 2,
             title: "Stanley Security",
             img: Stanley
+        },
+        {
+            id: 3,
+            title: "KMK English B2",
+            img: KMK
         }
     ];
 
