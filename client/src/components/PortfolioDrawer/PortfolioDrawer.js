@@ -13,25 +13,36 @@ const PortfolioDrawer = () => {
       title: t('portfolio.monteur.title'),
       image: '/home_new.jpeg',
       description: t('portfolio.monteur.description'),
-      insights: t('portfolio.monteur.insights')
+      target: t('portfolio.monteur.target'),
+      functionalities: t('portfolio.monteur.functionalities'),
+      stack: t('portfolio.monteur.stack')
     },
     {
       id: 2,
       title: t('portfolio.dgv.title'),
       image: '/dgv.jpeg',
-      description: t('portfolio.dgv.description')
+      description: t('portfolio.dgv.description'),
+      target: t('portfolio.dgv.target'),
+      functionalities: t('portfolio.dgv.functionalities'),
+      stack: t('portfolio.dgv.stack')
     },
     {
       id: 3,
       title: t('portfolio.portal.title'),
       image: '/application_portal.jpeg',
-      description: t('portfolio.portal.description')
+      description: t('portfolio.portal.description'),
+      target: t('portfolio.portal.target'),
+      functionalities: t('portfolio.portal.functionalities'),
+      stack: t('portfolio.portal.stack')
     },
     {
       id: 4,
       title: t('portfolio.chogan.title'),
       image: '/geplant.jpg',
-      description: t('portfolio.chogan.description')
+      description: t('portfolio.chogan.description'),
+      target: t('portfolio.chogan.target'),
+      functionalities: t('portfolio.chogan.functionalities'),
+      stack: t('portfolio.chogan.stack')
     },
   ];
 
@@ -74,7 +85,9 @@ const PortfolioDrawer = () => {
           <div className="tile-content">
             <h2>{selectedTile.title}</h2>
             <p>{selectedTile.description}</p>
-            <p>{selectedTile.insights}</p>
+            <p>{selectedTile.target}</p>
+            <p>{selectedTile.functionalities}</p>
+            <p>{selectedTile.stack}</p>
           </div>
         )}
 

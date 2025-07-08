@@ -267,19 +267,30 @@
     "monteur": {
       "title": "Monteurzimmer Nedic",
       "description": "Ein Projekt zur Bereitstellung von Monteurunterkünften mit moderner Ausstattung und einfacher Buchungsoption.",
-      "insights": "\nFrontend: ReactJS\nBackend: NodeJS"
+      "target": "\nZielgruppe: Baufirmen & Mitarbeiter, Studenten",
+      "functionalities": "\nFunktionalitäten: Buchungsformular, Mediathek, unkomplizierte Kontaktaufnahme",
+      "stack": "\nTechnologien: ReactJS, NodeJS, Datenbankanbindung"
     },
     "dgv": {
       "title": "Digitale Visitenkarte",
-      "description": "Die digitale Visitenkarte für modernes Netzwerken – schnell, stilvoll und smart."
+      "description": "Die digitale Visitenkarte für modernes Netzwerken – schnell, stilvoll und smart.",
+      "target": "\nZielgruppe: An Digitalisierung Interessierte",
+      "functionalities": "\nFunktionalitäten: Kontaktdateneingabe, Firmenauswahl, Visualisierung im Browser, Scan to phone",
+      "stack": "\nTechnologien: ReactJS, NodeJS, Datenbankanbindung"
     },
     "portal": {
-      "title": "In Entwicklung: Applicationmanager",
-      "description": "Ein Applikationsportal, das zentralisiert über einen Apllikationspool wacht, in dem man Werte hinzufügen, lesen, aktualisieren und löschen kann."
+      "title": "In dev: \nApp-Manager",
+      "description": "Ein Applikationsportal, das zentralisiert über einen Apllikationspool wacht, in dem man Werte hinzufügen, lesen, aktualisieren und löschen kann.",
+      "target": "\nZielgruppe: Eigener Application-Pool",
+      "functionalities": "\nFunktionalitäten: CRUD- und Reportingfunktionen",
+      "stack": "\nTechnologien: ReactJS, NodeJS, Datenbankanbindung"
     },
     "chogan": {
-      "title": "Geplant: PWA, native, KI...",
-      "description": "Mein Ziel ist es, mich intensiv mit zukunftsweisenden Technologien auseinanderzusetzen, um innovative digitale Lösungen zu entwickeln"
+      "title": "Geplant: \nPWA, native, KI...",
+      "description": "Mein Ziel ist es, mich intensiv mit zukunftsweisenden Technologien auseinanderzusetzen, um innovative digitale Lösungen zu entwickeln",
+      "target": "\nZielgruppe: Künftige Interessenten und Kunden",
+      "functionalities": "\nFunktionalitäten: Offlinefähigkeit(en), GPT-Integration(en), Systemkomponenten integrieren, Datenanalysen, etc.",
+      "stack": "\nInteressante Technologien u. A.: Service Worker & Web App Manifest, Open AI & Anthropic, .js-Distributionen & Python, etc. "
     }
   },
   "imprintTitle": "Impressum",
