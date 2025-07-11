@@ -243,38 +243,62 @@
     "button": "Privé",
     "sport": {
       "title": "Sport",
-      "content": "Je pratique régulièrement des sports d’endurance comme la course à pied et le vélo pour rester en forme."
+      "content": "Je pratique régulièrement la musculation et le cardio, et j’apprécie les longues promenades.",
+      "target": "\nObjectifs : Documenter mes progrès et m'améliorer là où je le peux.",
+      "functionalities": "\nPourquoi : J’accorde de l’importance à ma santé mentale et physique.",
+      "stack": "\nMes favoris : Courses dans les vignes, séances de musculation intensives, football sur petit terrain, etc."
     },
     "woods": {
       "title": "Travaux forestiers",
-      "content": "Travailler avec une tronçonneuse et être dans la nature m’apporte un bon équilibre face au travail de bureau."
+      "content": "Avoir grandi avec des week-ends à travailler le bois en forêt municipale pour se chauffer en hiver me remplit de fierté.",
+      "target": "\nObjectif : À plusieurs, c’était toujours plus rapide et plus amusant.",
+      "functionalities": "\nUtile : J’ai beaucoup appris sur le travail et la rémunération. Le bois réchauffe au moins deux fois : en travaillant et en se chauffant.",
+      "stack": "\nOutils : Ma propre tronçonneuse avec équipement nécessaire, certificat de tronçonneuse, etc."
     },
     "diy": {
       "title": "Bricolage",
-      "content": "J’aime construire moi-même des meubles, réparer des choses à la maison et être actif manuellement."
+      "content": "J’aime réparer les choses à la maison et être actif manuellement.",
+      "target": "\nObjectif : Les choses cassent, ça arrive. Sortir de la société du jetable vers le recyclage et l’upcycling.",
+      "functionalities": "\nUtile : La durabilité et la compréhension technique m’intéressent depuis l’enfance.",
+      "stack": "\nJ’utilise l’IA, des guides écrits et des tutoriels YouTube pour réparer. Si c’est trop risqué, je consulte les pros."
     },
     "adventure": {
       "title": "Action & Aventure",
-      "content": "J’adore les aventures comme le saut en parachute ou l’escalade – l’adrénaline est mon amie !"
+      "content": "J’adore les aventures comme le saut en parachute ou le saut de falaise – l’adrénaline est mon amie !",
+      "target": "\nObjectifs : Sortir de ma zone de confort.",
+      "functionalities": "\nCela m’aide à redécouvrir mes limites. Cela m’incite à réfléchir et à me fixer constamment de nouveaux objectifs.",
+      "stack": "\nUne condition physique de base et la curiosité pour l’inconnu me poussent à essayer de nouvelles choses."
     }
   },
   "portfolio": {
     "button": "Projets",
     "monteur": {
-      "title": "Chambres pour ouvriers Nedic",
-      "description": "Un projet pour proposer des hébergements modernes aux ouvriers avec une option de réservation simple."
+      "title": "Chambres de chantier Nedic",
+      "description": "Un projet visant à fournir des logements pour les ouvriers avec un équipement moderne et une option de réservation simple.",
+      "target": "\nPublic cible : Entreprises de construction & employés, étudiants",
+      "functionalities": "\nFonctionnalités : Formulaire de réservation, médiathèque, contact simplifié",
+      "stack": "\nTechnologies : ReactJS, NodeJS, intégration base de données"
     },
     "dgv": {
       "title": "Carte de visite numérique",
-      "description": "La carte de visite numérique pour un réseautage moderne – rapide, élégante et intelligente."
+      "description": "La carte de visite numérique pour un réseautage moderne – rapide, stylée et intelligente.",
+      "target": "\nPublic cible : Intéressés par la numérisation",
+      "functionalities": "\nFonctionnalités : Saisie des contacts, choix de l’entreprise, affichage dans le navigateur, scan vers téléphone",
+      "stack": "\nTechnologies : ReactJS, NodeJS, intégration base de données"
     },
     "portal": {
-      "title": "En développement: Gestionnaire d'applications",
-      "description": "Un portail d'application qui surveille centralement un pool d'applications, où vous pouvez ajouter, lire, mettre à jour et supprimer des valeurs."
+      "title": "En dev : \nGestionnaire d’apps",
+      "description": "Un portail d’applications qui supervise un pool d’applications centralisé avec des fonctions d’ajout, lecture, mise à jour et suppression.",
+      "target": "\nPublic cible : Pool d’applications interne",
+      "functionalities": "\nFonctionnalités : Fonctions CRUD et reporting",
+      "stack": "\nTechnologies : ReactJS, NodeJS, intégration base de données"
     },
     "chogan": {
-      "title": "Prévu : PWA, natif, IA...",
-      "description": "Mon objectif est de me consacrer aux technologies de pointe pour développer des solutions numériques innovantes."
+      "title": "Prévu : \nPWA, natif, IA...",
+      "description": "Mon objectif est de me plonger dans des technologies d’avenir afin de développer des solutions numériques innovantes.",
+      "target": "\nPublic cible : Clients et intéressés futurs",
+      "functionalities": "\nFonctionnalités : Fonctions hors ligne, intégration de GPT, composants système, analyses de données, etc.",
+      "stack": "\nTechnos intéressantes : Service Worker & Web App Manifest, OpenAI & Anthropic, distributions .js & Python, etc."
     }
   },
   "imprintTitle": "Mentions légales",

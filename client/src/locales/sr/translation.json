@@ -246,38 +246,62 @@
     "button": "Privatno",
     "sport": {
       "title": "Sport",
-      "content": "Redovno se bavim sportovima izdržljivosti kao što su trčanje i vožnja bicikla da bih ostao u formi."
+      "content": "Redovno se bavim treningom snage i izdržljivosti i uživam u dugim šetnjama.",
+      "target": "\nCiljevi: Dokumentovati svoj napredak i poboljšavati se gde god mogu.",
+      "functionalities": "\nZašto: Cenim svoje mentalno i fizičko zdravlje.",
+      "stack": "\nMoji favoriti: Trčanje kroz vinograde, trening velikog obima, mali fudbal itd."
     },
     "woods": {
       "title": "Rad u šumi",
-      "content": "Rad sa motornom testerom i u prirodi mi predstavlja odličnu ravnotežu u odnosu na kancelarijski posao."
+      "content": "Odrastao sam provodeći vikende u pripremi drva sa porodicom u gradskog šumi za grejanje zimi, što me ispunjava ponosom.",
+      "target": "\nCilj: Zajedno je uvek bilo brže i zabavnije.",
+      "functionalities": "\nKorisno: Mnogo sam naučio o radu i nagradi. Rad s drvetom greje najmanje dva puta: dok radiš i dok se greješ.",
+      "stack": "\nAlati: Vlastita motorna testera sa potrebnom opremom, sertifikat za testeru itd."
     },
     "diy": {
-      "title": "Sam svoj majstor",
-      "content": "Volim sam da pravim nameštaj, popravljam stvari u kući i uživam u ručnom radu."
+      "title": "Uradi sam",
+      "content": "Volim da popravljam stvari u domaćinstvu i uživam u praktičnom radu.",
+      "target": "\nCilj: Stvari se kvare, to se dešava. Dalje od potrošačkog društva ka reciklaži i prenameni.",
+      "functionalities": "\nKorisno: Održivost i tehničko razumevanje me zanimaju još od detinjstva.",
+      "stack": "\nKoristim veštačku inteligenciju, pisana i YouTube uputstva za popravke. Ako je previše rizično, konsultujem profesionalce."
     },
     "adventure": {
       "title": "Akcija i avantura",
-      "content": "Volim avanture poput padobranstva i penjanja – adrenalin mi prija!"
+      "content": "Volim avanture kao što su skakanje padobranom ili s litice – adrenalin mi je prijatelj!",
+      "target": "\nCiljevi: Izaći iz zone komfora.",
+      "functionalities": "\nTako stalno iznova upoznajem svoje granice. To me tera da reflektujem i postavljam nove ciljeve.",
+      "stack": "\nOsnovna atletika i radoznalost prema nepoznatom me podstiču da probam nove stvari."
     }
   },
   "portfolio": {
     "button": "Projekti",
     "monteur": {
-      "title": "Sobe za radnike Nedić",
-      "description": "Projekat za pružanje modernog smeštaja za radnike sa jednostavnom mogućnošću rezervacije."
+      "title": "Radnički smeštaj Nedić",
+      "description": "Projekat za obezbeđivanje radničkog smeštaja sa modernom opremom i jednostavnom opcijom rezervacije.",
+      "target": "\nCiljna grupa: Građevinske firme i radnici, studenti",
+      "functionalities": "\nFunkcionalnosti: Formular za rezervaciju, medijateka, jednostavan kontakt",
+      "stack": "\nTehnologije: ReactJS, NodeJS, povezivanje sa bazom podataka"
     },
     "dgv": {
       "title": "Digitalna vizit karta",
-      "description": "Digitalna vizit karta za moderno umrežavanje – brza, elegantna i pametna."
+      "description": "Digitalna vizitka za moderno umrežavanje – brzo, moderno i pametno.",
+      "target": "\nCiljna grupa: Zainteresovani za digitalizaciju",
+      "functionalities": "\nFunkcionalnosti: Unos kontakta, izbor firme, prikaz u pregledaču, skeniranje na telefon",
+      "stack": "\nTehnologije: ReactJS, NodeJS, povezivanje sa bazom podataka"
     },
     "portal": {
-      "title": "U razvoju: Portal za prijavu",
-      "description": "Aplikacioni portal koji centralizovano nadgleda bazu aplikacija gde možete dodavati, čitati, ažurirati i brisati vrednosti."
+      "title": "U razvoju: \nApp menadžer",
+      "description": "Portal za aplikacije koji centralizovano upravlja aplikacionim bazenom u kojem se vrednosti mogu dodavati, čitati, ažurirati i brisati.",
+      "target": "\nCiljna grupa: Vlastiti aplikacioni bazen",
+      "functionalities": "\nFunkcionalnosti: CRUD i izveštajne funkcije",
+      "stack": "\nTehnologije: ReactJS, NodeJS, povezivanje sa bazom podataka"
     },
     "chogan": {
-      "title": "Planirano: PWA, native aplikacije, AI...",
-      "description": "Moj cilj je da se posvetim najsavremenijim tehnologijama za razvoj inovativnih digitalnih rešenja."
+      "title": "Planirano: \nPWA, nativno, veštačka inteligencija...",
+      "description": "Cilj mi je intenzivno se baviti budućim tehnologijama kako bih razvio inovativna digitalna rešenja.",
+      "target": "\nCiljna grupa: Budući klijenti i zainteresovani",
+      "functionalities": "\nFunkcionalnosti: Offline mogućnosti, GPT integracije, integracija sistemskih komponenti, analiza podataka itd.",
+      "stack": "\nZanimljive tehnologije: Service Worker & Web App Manifest, OpenAI & Anthropic, .js distribucije i Python, itd."
     }
   },
   "imprintTitle": "Impresum",

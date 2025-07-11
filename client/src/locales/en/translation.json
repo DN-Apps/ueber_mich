@@ -239,38 +239,62 @@
     "button": "Private",
     "sport": {
       "title": "Sports",
-      "content": "I regularly do endurance sports like running and cycling to stay fit."
+      "content": "I regularly engage in strength and endurance training and enjoy long walks.",
+      "target": "\nGoals: To document my progress and improve wherever I can.",
+      "functionalities": "\nWhy: I value my mental and physical health.",
+      "stack": "\nMy favorites: Vineyard runs, high-volume strength workouts, small-field football, etc."
     },
     "woods": {
-      "title": "Forestry Work",
-      "content": "Working with chainsaws and being in nature is a great balance to office life for me."
+      "title": "Woodwork",
+      "content": "Growing up with weekends spent preparing wood together in the city forest for winter heating fills me with pride.",
+      "target": "\nGoal: Working together was always faster and made the work more enjoyable.",
+      "functionalities": "\nUseful: I learned a lot about work and compensation. Woodwork warms you at least twice: while working and while heating.",
+      "stack": "\nTools: Own chainsaw with necessary equipment, chainsaw certification, etc."
     },
     "diy": {
       "title": "DIY",
-      "content": "I enjoy building furniture myself, fixing things around the house, and being hands-on."
+      "content": "I like repairing things around the house and love being hands-on.",
+      "target": "\nGoal: Things break, it happens. Moving away from a throwaway society toward recycling and upcycling.",
+      "functionalities": "\nUseful: Sustainability and technical understanding have interested me since childhood.",
+      "stack": "\nI use AI, written guides and YouTube tutorials to fix things. If it’s too tricky, I consult professionals."
     },
     "adventure": {
       "title": "Action & Adventure",
-      "content": "I love adventures like skydiving or climbing – adrenaline is my friend!"
+      "content": "I love adventures like skydiving or cliff jumping – adrenaline is my friend!",
+      "target": "\nGoals: Getting out of my comfort zone.",
+      "functionalities": "\nI get to know my limits again and again. This drives me to reflect on my abilities and to keep setting new goals.",
+      "stack": "\nA base level of athleticism and curiosity for the unknown drive me to try new things."
     }
   },
   "portfolio": {
     "button": "Projects",
     "monteur": {
       "title": "Monteur Rooms Nedic",
-      "description": "A project providing worker accommodations with modern facilities and easy booking."
+      "description": "A project for providing worker accommodations with modern equipment and simple booking options.",
+      "target": "\nTarget group: Construction companies & workers, students",
+      "functionalities": "\nFeatures: Booking form, media library, easy contact options",
+      "stack": "\nTechnologies: ReactJS, NodeJS, database integration"
     },
     "dgv": {
       "title": "Digital Business Card",
-      "description": "The digital business card for modern networking – fast, stylish, and smart."
+      "description": "The digital business card for modern networking – fast, stylish and smart.",
+      "target": "\nTarget group: People interested in digitalization",
+      "functionalities": "\nFeatures: Contact entry, company selection, browser visualization, scan to phone",
+      "stack": "\nTechnologies: ReactJS, NodeJS, database integration"
     },
     "portal": {
-      "title": "In developmet: Application Manager",
-      "description": "An application portal that centrally monitors an application pool, where you can add, read, update, and delete values."
+      "title": "In dev: \nApp Manager",
+      "description": "An application portal that centrally manages an app pool where values can be added, read, updated, and deleted.",
+      "target": "\nTarget group: Own application pool",
+      "functionalities": "\nFeatures: CRUD and reporting functions",
+      "stack": "\nTechnologies: ReactJS, NodeJS, database integration"
     },
     "chogan": {
-      "title": "Planned: PWA, native, AI...",
-      "description": "My goal is to deeply engage with cutting-edge technologies to develop innovative digital solutions."
+      "title": "Planned: \nPWA, native, AI...",
+      "description": "My goal is to work intensively with future-oriented technologies to develop innovative digital solutions.",
+      "target": "\nTarget group: Future clients and interested users",
+      "functionalities": "\nFeatures: Offline capabilities, GPT integrations, system component integration, data analysis, etc.",
+      "stack": "\nInteresting technologies include: Service Worker & Web App Manifest, OpenAI & Anthropic, .js distributions & Python, etc."
     }
   },
   "imprintTitle": "Imprint",
