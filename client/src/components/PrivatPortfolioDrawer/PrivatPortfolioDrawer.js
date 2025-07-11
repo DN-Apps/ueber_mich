@@ -13,24 +13,36 @@ const PrivatPortfolioDrawer = () => {
       title: t('privat.sport.title'),
       image: '/sport_laufen.jpg',
       content: t('privat.sport.content'),
+      target: t('privat.sport.target'),
+      functionalities: t('privat.sport.functionalities'),
+      stack: t('privat.sport.stack')
     },
     {
       id: 2,
       title: t('privat.woods.title'),
       image: '/wald_kettensaege.jpg',
       content: t('privat.woods.content'),
+      target: t('privat.woods.target'),
+      functionalities: t('privat.woods.functionalities'),
+      stack: t('privat.woods.stack')
     },
     {
       id: 3,
       title: t('privat.diy.title'),
       image: '/werkzeugkoffer.png',
       content: t('privat.diy.content'),
+      target: t('privat.diy.target'),
+      functionalities: t('privat.diy.functionalities'),
+      stack: t('privat.diy.stack')
     },
     {
       id: 4,
       title: t('privat.adventure.title'),
       image: '/skydive.jpg',
       content: t('privat.adventure.content'),
+      target: t('privat.adventure.target'),
+      functionalities: t('privat.adventure.functionalities'),
+      stack: t('privat.adventure.stack')
     },
   ];
 
@@ -73,6 +85,9 @@ const PrivatPortfolioDrawer = () => {
           <div className="privat-tiles-content">
             <h2>{tiles.find((tile) => tile.id === activeTileId).title}</h2>
             <p>{tiles.find((tile) => tile.id === activeTileId).content}</p>
+            <p>{tiles.find((tile) => tile.id === activeTileId).target}</p>
+            <p>{tiles.find((tile) => tile.id === activeTileId).functionalities}</p>
+            <p>{tiles.find((tile) => tile.id === activeTileId).stack}</p>
           </div>
         )}
 

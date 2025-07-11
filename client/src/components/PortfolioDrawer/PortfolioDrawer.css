@@ -170,10 +170,6 @@
     padding-left: 10px;
   }
 
-  .tile-content {
-    margin-top: 50px;
-  }
-
   .tile {
     width: 35%;
     min-width: unset;
@@ -211,6 +207,10 @@
     padding: 15px;
     width: 90%;
     margin-top: 0.5vh;
+  }
+
+  .tile-content p {
+    font-size: 11px;
   }
 }
 

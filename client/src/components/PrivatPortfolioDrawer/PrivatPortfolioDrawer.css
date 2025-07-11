@@ -113,6 +113,7 @@
 .privat-tiles-content p {
   font-size: 16px;
   color: #555;
+  white-space: pre-line;
 }
 
 /* Pfeil-Button */
@@ -170,32 +171,40 @@
   }
 
   .privat-tiles-container {
-    margin-top: 5vh;
+    margin-top: 0;
     flex-wrap: wrap;
     justify-content: center;
     overflow-x: hidden;
     width: 100%;
     padding: 10px;
     gap: 10px;
-    padding-left: 10px; /* weniger padding auf Mobilgeräten */
+    padding-left: 10px;
   }
 
   .privat-tile {
-    width: 45%;
+    width: 35%;
     min-width: unset;
-    min-height: 200px;
+    min-height: 100px;
+    max-height: 120px;
   }
 
   .privat-tile img {
-    height: 120px;
+    height: 60px;
   }
 
   .privat-tile p {
     font-size: 14px;
+    white-space: pre-line;
   }
 
   .privat-tiles-content {
-    margin-top: 50px;
+    padding: 15px;
+    width: 90%;
+    margin-top: 0.5vh;
+  }
+
+  .privat-tiles-content p {
+    font-size: 11px;
   }
 
   .privat-scroll-button {
@@ -205,13 +214,13 @@
   .privat-close-button-mobile {
     display: block;
     position: absolute;
-    top: 5vh;
+    top: 0.2vh;
     right: 5px;
     background-color: transparent;
     border: none;
-    font-size: 50px;
+    font-size: 20px;
+    font-weight: bold;
     color: #333;
-    z-index: 1001;
     cursor: pointer;
   }
 }

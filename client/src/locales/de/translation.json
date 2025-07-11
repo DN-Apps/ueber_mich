@@ -247,19 +247,31 @@
     "button": "Privat",
     "sport": {
       "title": "Sport",
-      "content": "Ich betreibe regelmäßig Ausdauersport wie Laufen und Radfahren, um fit zu bleiben."
+      "content": "Ich betreibe regelmäßig Kraft- und Ausdauersport und genieße ausgiebige Spaziergänge",
+      "target": "\nZiele: Meinen Fortschritt zu dokumentieren und mich verbessern zu können, wo ich mich verbessern kann",
+      "functionalities": "\nWarum: Ich schätze meine geistige und körperliche Gesundheit",
+      "stack": "\nMeine Favoriten: Weinbergläufe, hochvoluminöse Kraftsporteinheit, Kleinfeld-Fußball, etc."
     },
     "woods": {
       "title": "Waldarbeiten",
-      "content": "Arbeiten mit der Motorsäge und in der Natur sind für mich ein schöner Ausgleich zum Büroalltag."
+      "content": "Aufgewachsen mit Wochenenden, an denen alle gemeinsam im städtischen Wald Holz aufbereiten, um über den Winter heizen zu können, erfüllt mich mit Stolz",
+      "target": "\nZiel: Gemeinsam ging es immer schneller und bereitete zusätzlich mehr Spaß an der Arbeit",
+      "functionalities": "\nNützliches: Ich habe viel über Arbeit und Lohn lernen können. Holzarbeit wärmt zusätzlich mindestens zwei Mal: Beim Arbeiten und beim Heizen",
+      "stack": "\nTools: Eigene Kettensäge mit nötigem Equipment, Sägekettenschein, etc."
     },
     "diy": {
       "title": "Heimwerken",
-      "content": "Ich baue gerne Möbel selbst, repariere Dinge im Haushalt und liebe es, handwerklich aktiv zu sein."
+      "content": "Ich repariere gerne Dinge im Haushalt und liebe es, handwerklich aktiv zu sein.",
+      "target": "\nZiel: Dinge gehen kaputt, das passiert. Weg von der Wegwerfgesellschaft, hin zu Recycling und Upcycling",
+      "functionalities": "\nNützliches: Nachaltigkeit und techniches Verständnis für ein breites Feld an Dingen interessieren mich seit Kindheitstagen",
+      "stack": "\nIch nutze KI und schriftliche- sowie Youtube-Anleitungen, um Dinge zu reparieren. Wenn es zu heikel ist konsultiere ich die Profis"
     },
     "adventure": {
       "title": "Action & Abenteuer",
-      "content": "Ich liebe Abenteuer wie Fallschirmspringen oder Klettern – Adrenalin ist mein Freund!"
+      "content": "Ich liebe Abenteuer wie Fallschirmspringen oder Klippenspringen – Adrenalin ist mein Freund!",
+      "target": "\nZiele: Raus aus der eigenen Kommfortzone",
+      "functionalities": "\nDamit lerne ich meine Grenzen immer wieder neu kennen. Das treibt meine Fähigkeiten zu reflektieren an und bringt mich dazu mir immer wieder neue Ziele zu setzen",
+      "stack": "\nEine Grundanthletik und die Neugier am Ungewissen treiben mich dazu neue Dinge auszuprobieren"
     }
   },
   "portfolio": {
