@@ -35,12 +35,12 @@ jobs:
               --build-arg API_PUBLIC_URL=https://qa.ned-it.de/api/ \
               -t ${{ steps.meta.outputs.image }}:qa \
               -t ${{ steps.meta.outputs.image }}:${{ github.sha }} \
-              ./frontend
+              ./client
           else
             docker build \
               -t ${{ steps.meta.outputs.image }}:qa \
               -t ${{ steps.meta.outputs.image }}:${{ github.sha }} \
-              ./backend
+              ./server
           fi
 
       - name: Push ${{ matrix.service }}
