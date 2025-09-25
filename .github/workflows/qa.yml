@@ -73,24 +73,24 @@ jobs:
             docker compose -f docker-compose.qa.yml up -d
 
             echo "Apply DB schema (idempotent)"
-            # Variablen werden erst IM CONTAINER expandiert (einfaches Quoting + Heredoc)
-            docker exec qa-portfolio-db sh -lc 'cat << "SQL" | mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" "$MYSQL_DATABASE"
-            CREATE TABLE IF NOT EXISTS firmen (
-              id INT PRIMARY KEY AUTO_INCREMENT,
-              name VARCHAR(255) NOT NULL,
-              created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            );
-            CREATE TABLE IF NOT EXISTS benutzerdaten (
-              id INT PRIMARY KEY AUTO_INCREMENT,
-              firma_id INT,
-              email VARCHAR(255) UNIQUE,
-              passhash VARCHAR(255),
-              created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-              INDEX (email),
-              FOREIGN KEY (firma_id) REFERENCES firmen(id)
-                ON DELETE SET NULL ON UPDATE CASCADE
-            );
-            SQL'
+            # Variablen werden erst IM CONTAINER expandiert; SQL via -e in EINEM String
+            docker exec qa-portfolio-db sh -lc 'mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" "$MYSQL_DATABASE" -e "
+              CREATE TABLE IF NOT EXISTS firmen (
+                id INT PRIMARY KEY AUTO_INCREMENT,
+                name VARCHAR(255) NOT NULL,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+              );
+              CREATE TABLE IF NOT EXISTS benutzerdaten (
+                id INT PRIMARY KEY AUTO_INCREMENT,
+                firma_id INT,
+                email VARCHAR(255) UNIQUE,
+                passhash VARCHAR(255),
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                INDEX (email),
+                FOREIGN KEY (firma_id) REFERENCES firmen(id)
+                  ON DELETE SET NULL ON UPDATE CASCADE
+              );
+            "'
 
       - name: Smoke tests
         run: |
