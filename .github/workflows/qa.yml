@@ -23,7 +23,10 @@ jobs:
       - name: Set image name
         id: meta
         run: |
-          echo "image=ghcr.io/${{ github.repository_owner }}/portfolio-${{ matrix.service }}" >> $GITHUB_OUTPUT
+          OWNER_LC=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          echo "owner_lc=$OWNER_LC" >> $GITHUB_OUTPUT
+          echo "image=ghcr.io/${OWNER_LC}/portfolio-${{ matrix.service }}" >> $GITHUB_OUTPUT
+
 
       - name: Build ${{ matrix.service }}
         run: |
