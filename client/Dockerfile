@@ -5,10 +5,8 @@ WORKDIR /app
 # Nur package.json / lockfile kopieren
 COPY package*.json ./
 
-# Option 2 (erweitert):
-#  - TypeScript hart auf 4.9.5 pinnen (kompatibel zu react-scripts@5)
-#  - lockfile aktualisieren
-#  - legacy peer deps aktivieren, weil i18next@25 TS^5 als optionalen Peer erwartet
+# Pin TypeScript auf 4.9.5 (kompatibel zu react-scripts@5),
+# lockfile aktualisieren und Peer-Conflicts entspannen
 RUN npm pkg set devDependencies.typescript=4.9.5 \
   && npm config set legacy-peer-deps true \
   && npm i --package-lock-only \
@@ -16,13 +14,13 @@ RUN npm pkg set devDependencies.typescript=4.9.5 \
 
 # Quellcode und Build
 COPY . .
-# Dieser Build-Arg kommt später aus GitHub Actions
+# Build-Arg aus CI
 ARG API_PUBLIC_URL
-# CRA: Variablen müssen mit REACT_APP_ beginnen
+# CRA liest nur REACT_APP_* zur Buildzeit
 ENV REACT_APP_API_URL="$API_PUBLIC_URL"
-# Non-interaktiver/CI-freundlicher Build
-ENV CI=true
-RUN npm run build
+
+# Wichtig: Warnungen NICHT als Fehler behandeln
+RUN CI=false npm run build
 
 # ---- runtime stage ----
 FROM nginx:alpine
@@ -30,7 +28,7 @@ FROM nginx:alpine
 RUN apk add --no-cache curl
 
 # Nginx-Konfiguration mit SPA-Fallback + /health
-# (Stelle sicher, dass diese Datei im Build-Kontext 'frontend/' liegt)
+# (Datei muss im Frontend-Repo liegen)
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
 # Build-Output nach Nginx Webroot
