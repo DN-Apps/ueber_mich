@@ -2,9 +2,14 @@
 FROM node:18-alpine AS build
 WORKDIR /app
 
-# Abhängigkeiten installieren
+# Nur package.json / lockfile kopieren
 COPY package*.json ./
-RUN npm ci
+
+# Option 2: Typescript im Build auf 4.9.5 pinnen,
+# Lockfile entsprechend aktualisieren und dann sauber mit npm ci installieren
+RUN npm pkg set devDependencies.typescript=4.9.5 \
+  && npm i --package-lock-only \
+  && npm ci
 
 # Quellcode und Build
 COPY . .
