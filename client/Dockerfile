@@ -19,7 +19,7 @@ FROM nginx:alpine
 # curl für Healthcheck
 RUN apk add --no-cache curl
 # Nginx-Konfiguration mit SPA-Fallback + /health
-COPY ./ops/nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 # Build-Output nach Nginx Webroot
 COPY --from=build /app/build /usr/share/nginx/html
 
