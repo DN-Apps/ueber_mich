@@ -10,7 +10,7 @@
 Dies ist meine persönliche **Portfolio-Webseite**, die meine Leidenschaft für Softwareentwicklung präsentiert.  
 Sie bietet Einblicke in meinen beruflichen Werdegang, meine technischen Fähigkeiten und meine Projekte.  
 
-**Live-Link:** [https://deine-domain.de](https://deine-domain.de)
+**Live-Link:** [https://ned-it.de](https://ned-it.de)
 
 ---
 
@@ -57,7 +57,7 @@ Der Fokus liegt auf **Klarheit, Mehrsprachigkeit und moderner Präsentation**.
 This is my personal **portfolio website**, showcasing my passion for software development.  
 It provides insights into my career path, technical skills, and software projects.  
 
-**Live Link:** [https://your-domain.com](https://your-domain.com)
+**Live Link:** [https://ned-it.de](https://ned-it.de)
 
 ---
 
