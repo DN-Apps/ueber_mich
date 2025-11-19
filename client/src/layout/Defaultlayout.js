@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import AboutMe from '../components/AboutMe/AboutMe';
-import Career from '../components/Career/Career';
+import Timeline from '../components/Timeline/Timeline'
 import TechSkills from '../components/TechSkills/TechSkills';
 import OtherSkills from '../components/OtherSkills/OtherSkills';
 import Portrait from '../components/Portrait/Portrait';
@@ -85,12 +84,11 @@ function Defaultlayout() {
 
   const renderContent = () => {
     switch (activeSection) {
-      case 'about-me': return <AboutMe />;
-      case 'career': return <Career />;
+      case 'career': return <Timeline />;
       case 'tech-skills': return <TechSkills />;
       case 'other-skills': return <OtherSkills />;
       case 'languages': return <Languages />;
-      default: return <AboutMe />;
+      default: return <Timeline />;
     }
   };
 

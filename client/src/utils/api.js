@@ -1,1 +1,0 @@
-/*Enthält Funktionen für API-Aufrufe (z. B. fetch- oder axios-Anfragen).*/

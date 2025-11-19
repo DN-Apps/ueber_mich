@@ -1,1 +1,0 @@
-/*Enthält Funktionen zur Formatierung von Datums- und Zeitangaben.*/

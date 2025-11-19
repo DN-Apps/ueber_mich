@@ -1,1 +1,0 @@
-/*Definiert feste Werte, die in der gesamten Anwendung verwendet werden (z. B. API-Endpunkte oder Konfigurationsdaten).*/

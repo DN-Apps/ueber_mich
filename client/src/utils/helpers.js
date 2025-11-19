@@ -1,1 +1,0 @@
-/*Enthält kleinere Hilfsfunktionen, die oft verwendet werden.*/

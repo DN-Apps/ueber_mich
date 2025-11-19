@@ -1,1 +1,0 @@
-/*Enthält Funktionen zur Validierung von Benutzereingaben.*/
