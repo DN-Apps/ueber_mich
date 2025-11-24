@@ -576,12 +576,14 @@ body {
 ========================================= */
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
+  /* Seite soll scrollen dürfen, nicht „eingesperrt“ werden */
   .page-container {
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
-  /* Header gestapelt, Höhe automatisch */
+  /* Header stapeln, aber volle Breite nutzen */
   .header {
     position: sticky;
     top: 0;
@@ -592,42 +594,55 @@ body {
     height: auto;
   }
 
+  /* WICHTIG: keine schmale Spalte mehr – volle Breite */
   .header-inner {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
     gap: 10px;
     width: 100%;
-    max-width: 420px;
+    max-width: 100%;
   }
 
+  /* Portrait + Intro bleiben in einer Zeile, füllen aber die Breite aus */
   .intro-row {
-    gap: 10px;
-  }
-
-  .profile-summary {
-    max-width: 95vw;
-    font-size: 0.85rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
   }
 
   .portrait-wrapper {
     width: 60px;
     height: 60px;
-    margin-right: 10px;
+    margin-right: 8px;
+  }
+
+  .intro-text {
+    flex: 1;
+    padding: 10px 12px;
+  }
+
+  /* Profil-Zusammenfassung soll ebenfalls die ganze Breite nutzen */
+  .profile-summary {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.8rem;
   }
 
   .portfolio-content-selection {
     width: 100%;
-    max-width: 95vw;
+    max-width: 100%;
     margin: 0 auto 8px;
     min-height: auto;
   }
 
-  /* Menü – Position etwas anpassen, weil Header höher sein kann */
   .menu-horizontal {
     position: sticky;
-    top: auto; /* top: 0; würde auch gehen*/
+    top: 0;
     padding: 5px;
     z-index: 1000;
+    flex-wrap: wrap;
   }
 
   .menu-horizontal .menu-item {
@@ -635,41 +650,34 @@ body {
     padding: 5px 8px;
   }
 
-  /* Contenthöhe wird berechnet */
+  /* Content einfach normal scrollen lassen */
   .content {
-    height: calc(100vh - 15vh - 40px);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    height: auto;
+    overflow-y: visible;
   }
 
   #dynamic-content {
     margin: 10px auto;
-    min-height: 60vh;
-    font-size: 2.5vw;
-    padding: 15px;
+    min-height: 50vh;
+    font-size: 2.2vw;
+    padding: 12px;
+    max-width: 100%;
   }
 
-  /* Footer, normal statt fixed */
   .footer {
     position: relative;
     bottom: auto;
     margin-top: auto;
   }
 
-  /* Texte im Intro */
-  .intro-text {
-    text-align: left;
-  }
-
   .intro-text .developer-name {
-    font-size: 3.5vw;
+    font-size: 3.2vw;
   }
 
   .intro-text .role-description {
-    font-size: 2.5vw;
+    font-size: 2.2vw;
   }
 
-  /* Languages Dropdown */
   .languages-mobile-dropdown {
     top: 10px;
     right: 10px;
@@ -697,5 +705,33 @@ body {
 
   #dynamic-content {
     font-size: 3vw;
+  }
+}
+
+/* =========================================
+   LANDSCAPE bis 1024px – Portfolio + Dynamic-Content
+   bündig ausrichten
+========================================= */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  /* Header rechts nicht mehr mit 15% nach innen schieben */
+  .portfolio-content-selection {
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Content bekommt den gleichen Rand wie der Header (4vw) */
+  .content {
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-bottom: 50px;
+  }
+
+  /* Dynamic-Content nicht mehr zentriert mit auto,
+     sondern bündig innerhalb der 4vw-Ränder */
+  #dynamic-content {
+    margin: 10px 0 60px; /* top | horizontal | bottom */
+    max-width: none;
+    width: 100%;
   }
 }
