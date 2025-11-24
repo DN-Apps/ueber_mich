@@ -3,10 +3,22 @@ import { useTranslation } from 'react-i18next';
 import './PrivatPortfolioDrawer.css';
 
 const PrivatPortfolioDrawer = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeTileId, setActiveTileId] = useState(null);
+
+  // Zugriff auf Übersetzungsfunktionen
   const { t } = useTranslation();
 
+  /**
+   * Array der privaten Aktivitäten.
+   * Jede Kachel enthält:
+   *  - Titel
+   *  - Bild
+   *  - Beschreibungstext
+   *  - Zielsetzung
+   *  - Aktivitäten / Funktionen
+   *  - verwendete Tools / Stack (hier eher metaphorisch)
+   *
+   *  Alle Inhalte kommen aus der i18n-Übersetzungsdatei.
+   */
   const tiles = [
     {
       id: 1,
@@ -46,53 +58,50 @@ const PrivatPortfolioDrawer = () => {
     },
   ];
 
-  const toggleDrawer = () => {
-    const newIsOpen = !isOpen;
-    setIsOpen(newIsOpen);
-    if (newIsOpen && tiles.length > 0) {
-      setActiveTileId(tiles[0].id);
-    } else {
-      setActiveTileId(null);
-    }
+  /**
+   * Welcher Tile ist aktuell geöffnet?
+   * Standard: Erste Kachel aktiv.
+   */
+  const [activeTileId, setActiveTileId] = useState(tiles[0].id);
+
+  /**
+   * Toggle-Mechanismus:
+   * - Wenn man erneut auf die geöffnete Kachel klickt → schließen.
+   */
+  const handleTileClick = (id) => {
+    setActiveTileId(id === activeTileId ? null : id);
   };
 
-  const handleTileClick = (id) => setActiveTileId(id === activeTileId ? null : id);
+  // Ausgewählte Kachel extrahieren
+  const activeTile = tiles.find((tile) => tile.id === activeTileId);
 
   return (
-    <div>
-      <button onClick={toggleDrawer} className="privat-toggle-button">
-        <h1>{t('privat.button')}</h1>
-      </button>
-      <div className={`privat-portfolio-drawer ${isOpen ? 'open' : ''}`}>
-        {isOpen && (
-          <button className="privat-close-button-mobile" onClick={toggleDrawer}>✕</button>
-        )}
+    <div className="privat-inline">
 
-        <div className="privat-tiles-container">
-          {tiles.map((tile) => (
-            <div
-              className={`privat-tile ${activeTileId === tile.id ? 'active' : ''}`}
-              key={tile.id}
-              onClick={() => handleTileClick(tile.id)}
-            >
-              <img src={tile.image} alt={tile.title} />
-              <p>{tile.title}</p>
-            </div>
-          ))}
-        </div>
-
-        {activeTileId && (
-          <div className="privat-tiles-content">
-            <h2>{tiles.find((tile) => tile.id === activeTileId).title}</h2>
-            <p>{tiles.find((tile) => tile.id === activeTileId).content}</p>
-            <p>{tiles.find((tile) => tile.id === activeTileId).target}</p>
-            <p>{tiles.find((tile) => tile.id === activeTileId).functionalities}</p>
-            <p>{tiles.find((tile) => tile.id === activeTileId).stack}</p>
+      {/* Grid mit allen privaten Aktivitäten */}
+      <div className="privat-tiles-container">
+        {tiles.map((tile) => (
+          <div
+            className={`privat-tile ${activeTileId === tile.id ? 'active' : ''}`}
+            key={tile.id}
+            onClick={() => handleTileClick(tile.id)}
+          >
+            <img src={tile.image} alt={tile.title} />
+            <p>{tile.title}</p>
           </div>
-        )}
-
-        <button className="privat-scroll-button right" onClick={toggleDrawer}>➡</button>
+        ))}
       </div>
+
+      {/* Detailbereich unterhalb der Tiles – nur sichtbar bei aktiver Kachel */}
+      {activeTile && (
+        <div className="privat-tiles-content">
+          <h2>{activeTile.title}</h2>
+          <p>{activeTile.content}</p>
+          <p>{activeTile.target}</p>
+          <p>{activeTile.functionalities}</p>
+          <p>{activeTile.stack}</p>
+        </div>
+      )}
     </div>
   );
 };

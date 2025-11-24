@@ -233,8 +233,31 @@
     ]
   },
   "layout": {
-    "portfolioLabel": "Zdravo! Moje ime:",
-    "role": "Moja strast: razvoj softvera"
+    "portfolioLabel": "Zdravo! Moje ime je:",
+    "role": "Moja strast: razvoj softvera",
+    "summary": {
+      "headline": "Fullstack developer sa iskustvom u:",
+      "experience": [
+        "React, Node.js, SQL",
+        "Docker, Git, deployovanje na server",
+        "Low-code razvoju (Mendix / OutSystems)",
+        "Agilnim timovima i softverskim projektima (npr. Lidl DE)"
+      ],
+      "bringHeadline": "Šta donosim:",
+      "bring": [
+        "4+ godine iskustva u razvoju softvera u kompanijama",
+        "Samostalno razvijene veb aplikacije (React/Node/MySQL)",
+        "Razumevanje clean code principa, arhitekture i fokusa na korisnika",
+        "Timski rad, jasna komunikacija, pouzdan način rada"
+      ],
+      "focusHeadline": "Trenutni fokus:",
+      "focus": [
+        "Produbljivanje modernog web stack-a i fullstack inženjeringa",
+        "Izgradnja i hosting sopstvenih projekata radi praktične primene",
+        "Jezici: nemački, engleski (B2), srpski, francuski (osnovno)"
+      ],
+      "open": "Otvoren sam za nove prilike u oblasti web razvoja / application engineering-a."
+    }
   },
   "menu": {
     "career": "Karijera",

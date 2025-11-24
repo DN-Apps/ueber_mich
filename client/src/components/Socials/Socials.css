@@ -1,82 +1,82 @@
+/* ===========================================================
+   SOCIAL ICONS – Header-Bereich
+   =========================================================== */
+
+/* Container um die gesamte Social-Bar */
 .socials-container {
-  position: relative;
-  border-left: 2px #34778a solid;
-  border-right: 2px #34778a solid;
-  border-radius: 8px;
-  width: 150px; /* Schmalere Breite */
-  height: 50px; /* Deutlich reduzierte Höhe */
-  margin-left: 500px;
-  z-index: 9999;
-  float: left;
-  margin-top: -375px;
   display: flex;
-  align-items: center; /* Vertikale Zentrierung */
-  justify-content: center; /* Horizontale Zentrierung */
-  margin-right: -705px;
+  align-items: center;
+  justify-content: center; /* Icons innerhalb ihres Bereichs zentrieren */
+  padding: 0.4rem 0.8rem;
+  border-left: 2px solid #34778a; /* Linker Rahmen im Header */
+  border-right: 2px solid #34778a; /* Rechter Rahmen im Header */
+  border-radius: 999px; /* Runde, pillenartige Form */
+  max-width: 100%;
+  /* Wichtig: kein fixed width, kein margin, kein position → flexibel für Layout */
 }
 
+/* Flex-Container für die Social-Icons */
 .socials-list {
   display: flex;
-  gap: 20px;
-  align-items: center; /* Wichtig für gleiche Höhe */
-  height: 100%; /* Nutzt die volle Containerhöhe */
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* Abstand zwischen Icons */
+  flex-wrap: wrap; /* Falls zu wenig Platz: Icons umbrechen */
 }
 
+/* Klickbarer Link (Icon Wrapper) */
 .social-link {
   display: flex;
-  align-items: center; /* Zentriert das Icon vertikal */
-  height: 100%; /* Nutzt die volle Höhe */
+  align-items: center;
+  justify-content: center;
 }
 
+/* Icon selbst */
 .social-icon {
-  width: 30px; /* Etwas kleinere Icons */
-  height: 30px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
+  width: 40px;
+  height: 40px;
+  object-fit: contain; /* Verhindert Verzerrungen */
+  transition: transform 0.3s ease; /* Hover-Animation */
 }
 
+/* Hover-Effekt: kleines Scale-Up */
 .social-icon:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
-@media (max-width: 768px) and (orientation: portrait) {
+/* ===========================================================
+   Media Queries – Tablet Optimierungen
+   =========================================================== */
+@media (max-width: 1024px) {
   .socials-container {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    transform: none;
-    margin: 0;
-    width: auto;
-    height: auto;
-    padding: 10px;
-    border-left: 2px solid #34778a;
-    border-right: 2px solid #34778a;
-    border-radius: 12px;
-    z-index: 9999;
+    padding: 0.3rem 0.6rem; /* Weniger Innenabstand */
   }
 
   .socials-list {
-    gap: 15px;
+    gap: 0.8rem;
+  }
+
+  .social-icon {
+    width: 34px;
+    height: 34px;
   }
 }
 
-@media screen and (max-width: 768px) and (orientation: landscape) {
+/* ===========================================================
+   Media Queries – Kleine Smartphones
+   =========================================================== */
+@media (max-width: 600px) {
   .socials-container {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    transform: none;
-    margin: 0;
-    width: auto;
-    height: auto;
-    padding: 8px;
-    background-color: #fff;
-    border: 2px solid #34778a;
-    border-radius: 12px;
-    z-index: 9999;
+    padding: 0.3rem 0.5rem;
+    border-radius: 12px; /* Weniger rund für kleine Screens */
   }
 
   .socials-list {
-    gap: 12px;
+    gap: 0.6rem;
+  }
+
+  .social-icon {
+    width: 28px;
+    height: 28px;
   }
 }

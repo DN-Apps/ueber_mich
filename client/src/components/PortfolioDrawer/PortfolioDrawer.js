@@ -3,10 +3,22 @@ import { useTranslation } from 'react-i18next';
 import './PortfolioDrawer.css';
 
 const PortfolioDrawer = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedTileId, setSelectedTileId] = useState(null);
+
+  // Zugriff auf die i18n-Übersetzungen
   const { t } = useTranslation();
 
+  /**
+   * Tile-Daten aus der Übersetzungsdatei.
+   * Jede Kachel besteht aus:
+   *  - Titel
+   *  - Bildpfad
+   *  - Beschreibung
+   *  - Zielgruppe
+   *  - Funktionalitäten
+   *  - Tech-Stack
+   * 
+   *  Die Texte kommen aus der translation.json.
+   */
   const tiles = [
     {
       id: 1,
@@ -46,53 +58,50 @@ const PortfolioDrawer = () => {
     },
   ];
 
-  const toggleDrawer = () => {
-    const nextState = !isOpen;
-    setIsOpen(nextState);
-    setSelectedTileId(nextState ? tiles[0].id : null); // Erstes Tile beim Öffnen aktivieren
-  };
+  /**
+   * selectedTileId — kontrolliert, welches Projekt geöffnet ist.
+   * Standard: Erste Kachel geöffnet.
+   */
+  const [selectedTileId, setSelectedTileId] = useState(tiles[0].id);
 
-
+  /**
+   * Klick auf eine Kachel öffnet oder schließt den Inhalt.
+   * Wenn dieselbe Kachel erneut geklickt wird → schließen.
+   */
   const handleTileClick = (id) => {
     setSelectedTileId(prevId => (prevId === id ? null : id));
   };
 
+  // Holt die aktuell ausgewählte Kachel
   const selectedTile = tiles.find((tile) => tile.id === selectedTileId);
 
   return (
-    <div>
-      <button onClick={toggleDrawer} className="toggle-button">
-        <h1>{t('portfolio.button')}</h1>
-      </button>
+    <div className="portfolio-inline">
 
-      <div className={`portfolio-drawer ${isOpen ? 'open' : ''}`}>
-        <button className="close-button-mobile" onClick={toggleDrawer}>✕</button>
-
-        <div className="tiles-container">
-          {tiles.map((tile) => (
-            <div
-              className={`tile ${selectedTileId === tile.id ? 'active' : ''}`}
-              key={tile.id}
-              onClick={() => handleTileClick(tile.id)}
-            >
-              <img src={tile.image} alt={tile.title} />
-              <p>{tile.title}</p>
-            </div>
-          ))}
-        </div>
-
-        {selectedTile && (
-          <div className="tile-content">
-            <h2>{selectedTile.title}</h2>
-            <p>{selectedTile.description}</p>
-            <p>{selectedTile.target}</p>
-            <p>{selectedTile.functionalities}</p>
-            <p>{selectedTile.stack}</p>
+      {/* Grid mit allen Kacheln */}
+      <div className="tiles-container">
+        {tiles.map((tile) => (
+          <div
+            className={`tile ${selectedTileId === tile.id ? 'active' : ''}`}
+            key={tile.id}
+            onClick={() => handleTileClick(tile.id)}
+          >
+            <img src={tile.image} alt={tile.title} />
+            <p>{tile.title}</p>
           </div>
-        )}
-
-        <button className="scroll-button left" onClick={toggleDrawer}>⬅</button>
+        ))}
       </div>
+
+      {/* Inhalt unter dem Grid — nur sichtbar, wenn ein Tile aktiv ist */}
+      {selectedTile && (
+        <div className="tile-content">
+          <h2>{selectedTile.title}</h2>
+          <p>{selectedTile.description}</p>
+          <p>{selectedTile.target}</p>
+          <p>{selectedTile.functionalities}</p>
+          <p>{selectedTile.stack}</p>
+        </div>
+      )}
     </div>
   );
 };

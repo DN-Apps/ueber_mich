@@ -1,3 +1,6 @@
+/* ======================================
+   Container für das kleine Portrait
+   ====================================== */
 .portrait-container {
   margin-top: 25px;
   display: flex;
@@ -5,64 +8,92 @@
   align-items: center;
 }
 
+/* Vorschaubild des Portraits */
 .portrait-thumbnail {
-  width: 90%;
+  width: 100%;
+  max-width: 220px;
   height: auto;
-  cursor: pointer;
-  transition: transform 0.2s;
 }
 
+/* leichter Hover-Zoom für bessere Interaktivität */
 .portrait-thumbnail:hover {
   transform: scale(1.05);
 }
 
+/* ======================================
+   Modal-Overlay — deckt gesamte Seite ab
+   ====================================== */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7); /* Abdunkelung */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000;
+  z-index: 2000; /* über restlichem Content */
 }
 
+/* ======================================
+   Modal-Container
+   ====================================== */
 .modal-content {
   position: relative;
   background-color: white;
   padding: 20px;
-  /* border-radius: 12px; */
   max-width: 90vw;
   max-height: 90vh;
+  border-radius: 12px;
+  box-sizing: border-box;
 }
 
+/* ======================================
+   Großes Portrait im Modal
+   ====================================== */
 .portrait-large {
   margin-left: auto;
   margin-right: auto;
   padding-top: 15px;
   width: 40%;
   height: auto;
-  /* border-radius: 12px; */
+  display: block;
 }
 
-.close-button {
-  position: relative;
-  top: 5px;
-  margin: auto auto;
-  background: transparent;
+/* ======================================
+   Schließen-Button (Style wie im Cert-Modal)
+   ====================================== */
+.portrait-close-button {
+  padding: 10px 20px;
+  margin: 20px auto 0;
+  font-size: 16px;
+  background-color: #34778a;
+  color: white;
   border: none;
-  font-size: 2rem;
+  border-radius: 8px;
   cursor: pointer;
-  color: #333;
+  display: block; /* zentriert */
 }
 
+.portrait-close-button:hover {
+  background-color: #245865;
+}
+
+/* ======================================
+   Mobile Anpassungen
+   ====================================== */
 @media (max-width: 768px) {
+  /* kleines Portrait soll mobil kompakter sein */
   .portrait-thumbnail {
     width: 20vw;
     height: auto;
     cursor: pointer;
     transition: transform 0.2s;
+  }
+
+  /* großes Portrait im Modal wird mobil breiter */
+  .portrait-large {
+    width: 80%;
   }
 }

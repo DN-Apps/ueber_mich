@@ -1,281 +1,166 @@
-/* Hauptbutton */
-.privat-toggle-button {
-  position: fixed;
-  top: 0vh;
-  margin-left: 95vw;
-  z-index: 1000;
-  width: 5vw;
-  height: 50vh;
-  background-color: #216477;
-  color: white;
-  cursor: pointer;
-  font-size: 1.5vw;
+/* =========================================================================
+   PRIVATBEREICH – Wrapper für Grid + Content
+   ========================================================================= */
+
+.privat-inline {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 5px 8px 8px 8px #888888;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.privat-toggle-button:hover {
-  background-color: #34778a;
+/* =========================================================================
+   GRID-LAYOUT: Für die privaten Aktivitäts-Kacheln
+   ========================================================================= */
+
+.privat-tiles-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
 }
 
-.privat-toggle-button h1 {
-  transform: rotate(90deg);
-  margin: 0;
-  font-size: inherit;
-}
+/* =========================================================================
+   TILE – Optik der privaten Kacheln
+   ========================================================================= */
 
-/* Drawer */
-.privat-portfolio-drawer {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 90%;
-  height: 100vh;
-  background-color: #f3f3f3;
-  transition: right 0.5s ease;
-  z-index: 999;
-  overflow: hidden;
+.privat-tile {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #d0d0d0;
+
+  padding: 10px;
+  cursor: pointer;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0.95;
+
+  transition: 0.15s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
-.privat-portfolio-drawer.open {
-  right: 0;
-}
-
-/* Kacheln-Container */
-.privat-tiles-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  width: 100%;
-  padding: 20px;
-  padding-left: 260px; /* eine Kachelbreite rechts verschoben */
-  gap: 100px;
-  margin-top: 6.5vh;
-}
-
-.privat-tile {
-  min-width: 200px;
-  background: white;
-  border: 3px solid navy;
-  border-radius: 10px;
-  text-align: center;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, border-color 0.2s;
-}
-
+/* Hover-Effekt */
 .privat-tile:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Aktive Kachel – warmes Farbschema */
 .privat-tile.active {
-  border: 3px solid #ff9900;
+  border: 2px solid #ff9900;
   background-color: #fffaf0;
 }
 
+/* Kachelbild */
 .privat-tile img {
   width: 100%;
-  height: 150px;
+  height: 160px; /* gleiche Höhe wie im Portfolio */
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
+  border-radius: 8px;
+  margin-bottom: 8px;
 }
 
+/* Titel unter dem Bild */
 .privat-tile p {
-  margin: 10px 0;
-  font-size: 14px;
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+
+  min-height: 2.4em; /* Platz für zwei Zeilen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Inhalt unterhalb der Kacheln */
+/* =========================================================================
+   INHALTSBEREICH UNTER DEN KACHELN
+   ========================================================================= */
+
 .privat-tiles-content {
-  padding: 20px 40px;
-  max-width: 80%;
-  margin: 0 auto;
-  background-color: #ffffff;
+  margin-top: 4px;
+  padding: 16px 18px;
+
   border-radius: 10px;
-  border: 2px solid #ff9900;
-  margin-top: 150px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ffd39b;
+
+  background: #fffaf3;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+
+  max-height: 40vh;
+  overflow-y: auto;
 }
 
+/* Titel im Contentbereich */
 .privat-tiles-content h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
+  margin: 0 0 8px;
+  color: #b25d00;
+  font-size: clamp(1.1rem, 0.8rem + 0.4vw, 1.4rem);
 }
 
+/* Textabsätze */
 .privat-tiles-content p {
-  font-size: 16px;
-  color: #555;
-  white-space: pre-line;
+  margin: 4px 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
-/* Pfeil-Button */
-.privat-scroll-button {
-  position: absolute;
-  top: 80vh;
-  left: 10%;
-  transform: translateY(-50%);
-  background-color: navy;
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  font-size: 18px;
-  z-index: 10;
-  width: 10vw;
-}
+/* =========================================================================
+   RESPONSIVE – Tablet
+   ========================================================================= */
 
-.privat-close-button-mobile {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .privat-toggle-button {
-    position: fixed;
-    top: 50vh;
-    margin-left: 88vw;
-    z-index: 1000;
-    width: 10vw;
-    height: 27vh;
-    background-color: #216477;
-    color: white;
-    cursor: pointer;
-    font-size: 5vw;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    text-align: center;
-  }
-
-  .privat-toggle-button h1 {
-    margin: 0;
-    font-size: inherit;
-    white-space: nowrap;
-  }
-
-  .privat-portfolio-drawer {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 80px;
-    overflow-y: auto;
-  }
-
+@media (max-width: 1024px) {
   .privat-tiles-container {
-    margin-top: 0;
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow-x: hidden;
-    width: 100%;
-    padding: 10px;
-    gap: 10px;
-    padding-left: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
   }
 
-  .privat-tile {
-    width: 40%;
-    min-width: unset;
-    min-height: 110px;
+  .privat-tile img {
     max-height: 140px;
   }
 
-  .privat-tile img {
-    height: 60px;
-  }
-
-  .privat-tile p {
-    font-size: 12px;
-    white-space: pre-line;
-  }
-
   .privat-tiles-content {
-    padding: 15px;
-    width: 90%;
-    margin-top: 0.5vh;
-  }
-
-  .privat-tiles-content p {
-    font-size: 11px;
-  }
-
-  .privat-scroll-button {
-    display: none;
-  }
-
-  .privat-close-button-mobile {
-    display: block;
-    position: absolute;
-    top: 0.2vh;
-    right: 5px;
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
+    max-height: 50vh;
   }
 }
 
-@media screen and (max-width: 1000px) and (orientation: landscape) {
-  .privat-portfolio-drawer {
-    padding-top: 5px;
-    overflow-y: auto;
-  }
+/* =========================================================================
+   RESPONSIVE – Mobile
+   ========================================================================= */
 
+@media (max-width: 768px) {
   .privat-tiles-container {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    column-gap: 5px !important; /* Horizontaler Abstand reduziert */
-    row-gap: 5px !important; /* Vertikaler Abstand bleibt etwas größer */
-    width: 95% !important; /* Container etwas breiter machen */
-    margin: 0 115px !important;
-    padding: 5px !important; /* Innenabstand reduziert */
-    overflow-x: hidden !important;
-  }
-
-  .privat-tile {
-    width: calc(20% - 3px) !important; /* Breite leicht reduziert */
-    height: auto !important;
-    min-height: 150px !important;
-    margin: 0 !important;
-    border: 3px solid navy !important;
-    transform: scale(0.98); /* Kacheln leicht verkleinern */
-    transition: transform 0.2s;
-  }
-
-  .privat-tile:hover {
-    transform: scale(1); /* Originalgröße beim Hover */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .privat-tile img {
-    height: 110px !important; /* Bildhöhe leicht reduziert */
-    width: 100% !important;
+    max-height: 110px;
+  }
+
+  .privat-tile p {
+    font-size: 0.8rem;
   }
 
   .privat-tiles-content {
-    margin-top: 15px !important;
-    width: 95% !important; /* Content-Breite angepasst */
-    padding: 10px !important; /* Innenabstand reduziert */
-    border: 2px solid navy !important;
+    width: 100%;
+    padding: 12px 14px;
+    max-height: 55vh;
+  }
+}
+
+/* =========================================================================
+   RESPONSIVE – Sehr kleine Smartphones
+   ========================================================================= */
+
+@media (max-width: 480px) {
+  .privat-tiles-container {
+    grid-template-columns: 1fr; /* nur eine Kachel pro Zeile */
   }
 
-  .privat-toggle-button {
-    width: 5vw; /* Button schmaler */
-    height: 50vh;
-    font-size: 1.5vw;
-    top: 0;
+  .privat-tile img {
+    max-height: 150px;
   }
 
-  .privat-scroll-button {
-    margin-left: -80px !important;
+  .privat-tiles-content {
+    max-height: none; /* Vollhöhe – scrollbar nicht nötig */
   }
 }

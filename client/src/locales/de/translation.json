@@ -235,7 +235,30 @@
 
   "layout": {
     "portfolioLabel": "Hi! Mein Name:",
-    "role": "Meine Leidenschaft: Softwareentwicklung"
+    "role": "Meine Leidenschaft: Softwareentwicklung",
+    "summary": {
+      "headline": "Fullstack Developer mit Erfahrung in:",
+      "experience": [
+        "React, Node.js, SQL",
+        "Docker, Git, Server-Deployment",
+        "Low-Code Entwicklung (Mendix / OutSystems)",
+        "Agilen Projektteams und Softwareprojekten (u.a. Lidl DE)"
+      ],
+      "bringHeadline": "Was ich mitbringe:",
+      "bring": [
+        "4+ Jahre Softwareentwicklung in Unternehmensumgebungen",
+        "Selbstständig entwickelte Webapplikationen (React/Node/MySQL)",
+        "Verständnis für sauberen Code, Architektur und Benutzerfokus",
+        "Teamfähigkeit, klare Kommunikation, zuverlässige Arbeitsweise"
+      ],
+      "focusHeadline": "Aktueller Fokus:",
+      "focus": [
+        "Vertiefung im modernen Web-Stack & Fullstack Engineering",
+        "Aufbau und Hosting eigener Projekte zur praktischen Anwendung",
+        "Sprachen: Deutsch, Englisch (B2), Serbisch, Französisch (Grundkenntnisse)"
+      ],
+      "open": "Offen für neue Möglichkeiten im Bereich Webentwicklung / Application Engineering."
+    }
   },
   "menu": {
     "career": "Werdegang",

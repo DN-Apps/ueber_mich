@@ -1,47 +1,90 @@
+/* =========================================================================
+   Außen-Container der gesamten Timeline
+   ========================================================================= */
 .timeline-container {
   display: flex;
   justify-content: center;
   align-items: center;
+
   margin: 20px;
   padding: 10px;
-  overflow-x: auto;
+
+  overflow-x: auto; /* horizontales Scrollen bei langen Timelines */
   background-color: #333;
 }
 
+/* =========================================================================
+   Haupt-Wrapper – horizontal gestackt auf Desktop
+   ========================================================================= */
 .timeline {
-  display: flex;
-  align-items: center;
-  gap: 50px;
   position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
   padding: 20px 0;
 }
 
+/* =========================================================================
+   Horizontale Linie – Positioning erfolgt dynamisch via JS
+   ========================================================================= */
+.timeline-line {
+  position: absolute;
+  background-color: #ddd;
+  z-index: 0;
+}
+
+/* =========================================================================
+   Timeline Item – 1 Eintrag (Firma + Kreis + Infos)
+   ========================================================================= */
 .timeline-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  z-index: 1; /* Kreise & Content liegen über der Linie */
+}
+
+/* =========================================================================
+   Header über dem Kreis
+   → feste Höhe verhindert, dass Textumbrüche Kreise verschieben
+   ========================================================================= */
+.timeline-header {
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.timeline-company,
+.timeline-location {
+  color: white;
+  text-align: center;
 }
 
 .timeline-company {
   margin-bottom: 5px;
-  color: white;
-  font-size: medium;
+  font-size: 0.95rem;
 }
 
 .timeline-location {
-  color: white;
+  font-size: 0.85rem;
 }
 
+/* =========================================================================
+   Punkt des Zeitstrahls
+   ========================================================================= */
 .timeline-circle {
   width: 20px;
   height: 20px;
   border-radius: 50%;
+
   background-color: #4caf50;
   border: 3px solid #ffffff;
+
   box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
-  z-index: 1;
   margin-top: 8px;
+  z-index: 2;
 }
 
 .timeline-circle:hover {
@@ -50,44 +93,35 @@
   transition: all 0.3s ease;
 }
 
-/* Horizontale Linie Basis-Style */
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 85px; /* Standard-Position */
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: #ddd;
-  z-index: 0;
-}
-
-.timeline-item:last-child::after {
-  content: none;
-}
-
+/* =========================================================================
+   Unterer Bereich: Jahr + Jobtitel
+   ========================================================================= */
 .timeline-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   text-align: center;
   margin-top: 20px;
 }
 
 .timeline-year {
-  font-size: 1.2em;
+  font-size: 1.1rem;
   font-weight: bold;
   color: white;
 }
 
 .timeline-title {
-  font-size: 1em;
+  font-size: 1rem;
   color: white;
   margin-top: 5px;
+
   max-width: 350px;
 }
 
-/* Scrollbar Styling */
+/* =========================================================================
+   Custom Scrollbar für horizontales Scrollen
+   ========================================================================= */
 .timeline-container::-webkit-scrollbar {
   height: 8px;
 }
@@ -101,18 +135,52 @@
   background-color: #f0f0f0;
 }
 
-/* MOBILE PORTRAIT */
+/* =========================================================================
+   Tablet – kleinere Typografie & geringere Höhen
+   ========================================================================= */
+@media (max-width: 1024px) {
+  .timeline {
+    gap: 30px;
+    padding: 15px 0;
+  }
+
+  .timeline-header {
+    min-height: 80px;
+  }
+
+  .timeline-company {
+    font-size: 0.85rem;
+  }
+
+  .timeline-location {
+    font-size: 0.8rem;
+  }
+
+  .timeline-year {
+    font-size: 0.95rem;
+  }
+
+  .timeline-title {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================================================================
+   MOBILE PORTRAIT – Timeline wird vertikal
+   ========================================================================= */
 @media (max-width: 768px) and (orientation: portrait) {
   .timeline {
     flex-direction: column;
     gap: 40px;
     padding: 20px 10px;
+
     max-height: 70vh;
     overflow-y: auto;
   }
 
-  .timeline::before {
-    content: none;
+  /* horizontale Linie wird versteckt */
+  .timeline-line {
+    display: none;
   }
 
   .timeline-item {
@@ -120,6 +188,11 @@
     padding: 0 20px;
   }
 
+  .timeline-header {
+    min-height: 0;
+  }
+
+  /* vertikale gestrichelte Linie */
   .timeline-item:not(:last-child)::before {
     content: "";
     position: absolute;
@@ -127,6 +200,7 @@
     bottom: -40px;
     left: 50%;
     width: 2px;
+
     background-image: repeating-linear-gradient(
       to bottom,
       #ddd,
@@ -134,39 +208,33 @@
       transparent 6px,
       transparent 12px
     );
+
     transform: translateX(-50%);
     z-index: 0;
   }
-
-  .timeline-circle {
-    margin-top: 10px;
-  }
 }
 
-/* MOBILE LANDSCAPE - KORRIGIERTE VERSION */
+/* =========================================================================
+   MOBILE LANDSCAPE – kompaktere Darstellung
+   ========================================================================= */
 @media only screen and (min-width: 481px) and (max-width: 1000px) and (orientation: landscape) {
-  .timeline::before {
-    top: 82px !important; /* Linie weiter unten positioniert */
-  }
-
   .timeline {
     gap: 30px;
     padding: 15px 0;
   }
 
-  .timeline-company {
-    font-size: 0.7rem;
-    margin-bottom: 5px;
+  .timeline-header {
+    min-height: 70px;
   }
 
+  .timeline-company,
   .timeline-location {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
   .timeline-circle {
     width: 16px;
     height: 16px;
-    margin-top: 5px;
   }
 
   .timeline-content {
@@ -174,21 +242,10 @@
   }
 
   .timeline-year {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
   .timeline-title {
-    font-size: 0.7rem;
-  }
-}
-
-/* TABLET STYLES */
-@media (min-width: 1000px) and (max-width: 1024px) {
-  .timeline::before {
-    top: 90px;
-  }
-
-  .timeline {
-    gap: 40px;
+    font-size: 0.8rem;
   }
 }

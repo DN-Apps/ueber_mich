@@ -1,3 +1,11 @@
+/* =========================================
+   GLOBAL / PAGE LAYOUT
+========================================= */
+
+body {
+  margin: 0;
+}
+
 .page-container {
   background: linear-gradient(to top, #7fa8bc, #bfc0c2, #7fa8bc);
   background-size: cover;
@@ -7,31 +15,51 @@
   overflow-x: hidden;
 }
 
+/* =========================================
+   TOP WRAPPER & HEADER
+========================================= */
+
+.top-wrapper {
+  background: url("../assets/logos/header-bg.jpg") no-repeat center/cover;
+  position: relative;
+}
+
+.top-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* links Socials, Mitte Certs, rechts Sprachen */
+  gap: 1rem;
+}
+
 /* -------- Header -------- */
 .header {
   position: sticky;
   top: 0;
   z-index: 800;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
+  align-items: flex-start;
+  justify-content: flex-start; /* statt center */
+  gap: 32px; /* leicht verkleinert */
+  padding: 20px 4vw; /* mehr Rand links/rechts steuerbar */
   border-bottom: 3px solid #333;
-  background-color: #e9eaf0;
   overflow: hidden;
+  border-top: 2px black solid;
 }
 
+/* Hintergrund-Overlay im Header
+   ACHTUNG: steht im Zusammenhang mit pointer-events:none,
+   damit es Klicks auf darunterliegende Elemente nicht blockiert */
 .header::before {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
-  width: 70%;
+  width: 100%;
   height: 100%;
-  background: url("../assets/logos/header-bg.jpg") no-repeat center/cover;
   opacity: 0.3;
   filter: blur(2px);
   z-index: 1;
+  pointer-events: none; /* wichtig, damit Tabs / Menüs anklickbar bleiben */
 }
 
 .header-inner {
@@ -39,28 +67,116 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 16px;
+  /* statt fester Breite: flexibler Anteil links */
+  flex: 0 1 42%;
+  max-width: 650px;
 }
 
+/* Zeile mit Portrait links und Intro-Text rechts */
+.intro-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 100%; /* nutzt die ganze Breite von .header-inner */
+}
+
+/* Neuer Info-Block unter der Intro-Zeile */
+.profile-summary {
+  margin-top: 16px;
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 16px 20px;
+  border-radius: 8px;
+  max-width: 100%; /* statt 900px */
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.profile-summary-title {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f4e5e;
+}
+
+.profile-summary-subtitle {
+  margin: 12px 0 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #34778a;
+}
+
+.profile-summary-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.profile-summary-list li {
+  margin-bottom: 4px;
+}
+
+.profile-summary-open {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* =========================================
+   PORTRAIT & INTRO-BEREICH
+========================================= */
+
+/* Portrait styling */
 .portrait-wrapper {
   width: 150px;
   height: 200px;
   overflow: hidden;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.3);
+  /* border: 5px yellow solid; */
+  cursor: pointer;
 }
 
 #portrait img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
+  /* border-radius: 50%; */
+  /* border: 5px orange dotted; */
 }
 
+/* Personal introduction styling */
 .intro-text {
-  text-align: center;
+  flex: 1; /* füllt ganzen Platz rechts aus */
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 30px;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.intro-extra {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px 30px;
+  border-radius: 12px;
+
+  width: 100%;
+  max-width: 900px;
+
+  line-height: 1.5;
+  font-size: 0.95rem;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.intro-extra h3 {
+  margin: 15px 0 5px;
+  color: #216477;
 }
 
 .intro-text .portfolio-label {
@@ -81,11 +197,65 @@
   margin: 0;
 }
 
-/* -------- Language Dropdown -------- */
+/* =========================================
+   PORTFOLIO-BEREICH MIT TABS
+========================================= */
+
+.portfolio-content-selection {
+  display: flex;
+  flex-direction: column;
+
+  /* rechter Bereich wird etwas breiter und nutzt den gewonnenen Platz */
+  flex: 0 1 50%;
+  max-width: 840px;
+
+  min-height: 40vh;
+  margin: 0 0 0 15%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Tabs oben */
+.portfolio-tabs {
+  display: flex;
+  gap: 10px;
+  padding: 8px 12px;
+  border-bottom: 2px solid #34778a;
+}
+
+/* Basis-Tab-Style */
+.portfolio-tab {
+  background-color: #34778a;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+/* Aktiver Tab überschreibt Teile des Basis-Styles */
+.portfolio-tab.active {
+  opacity: 1;
+  background-color: #216477;
+}
+
+/* Inhalt unter den Tabs (dynamische Komponenten) */
+.portfolio-tab-content {
+  flex: 1;
+  padding: 10px 15px 15px;
+  overflow: auto;
+}
+
+/* =========================================
+   SPRACHWAHL / LANGUAGE DROPDOWN
+========================================= */
+
+/* Mobiles Dropdown */
 .languages-mobile-dropdown {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 16px;
+  right: 16px;
   z-index: 999;
   display: flex;
   flex-direction: column;
@@ -98,13 +268,13 @@
   color: white;
   border: none;
   border-radius: 8px;
-  padding: 6px 12px;
+  padding: 6px 10px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   display: flex;
   align-items: center;
   gap: 8px;
-  width: 160px;
+  width: 150px;
   justify-content: space-between;
 }
 
@@ -115,16 +285,17 @@
   outline: none;
 }
 
+/* Liste für Sprachen (Default = vertikal) */
 .languages-list {
-  margin-top: 0px;
+  margin-top: 0;
   background: rgba(255, 255, 255, 0.95);
-  padding: 10px;
+  padding: 8px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   align-items: flex-start;
   width: 100%;
   max-width: 180px;
@@ -165,35 +336,55 @@
   background-color: #eef6fc;
 }
 
+/* Feste, horizontale Sprachliste (Desktop) */
 .languages-fixed {
-  position: absolute;
-  top: 20px;
-  right: 5%;
-  z-index: 999;
-  min-width: 21vw;
+  margin-left: auto; /* schiebt das Element ganz nach rechts */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 4px 8px;
+  flex: 1; /* nimmt restlichen Platz auf der rechten Seite */
+  max-width: 260px; /* damit es nicht zu breit wird */
+  box-sizing: border-box;
 }
 
+/* Modifizierer für horizontale Darstellung */
 .languages-list.languages-horizontal {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 15px;
+  align-items: center;
+  gap: 12px;
   background: transparent;
   box-shadow: none;
   border: none;
   padding: 0;
+  margin: 0;
 }
 
 .languages-horizontal .language-item {
   background: none;
   padding: 0;
+  width: auto;
 }
 
 .languages-horizontal .language-item:hover {
   background: none;
 }
 
-/* -------- Menü -------- */
+.languages-horizontal .language-name {
+  font-size: 12px;
+}
+
+.languages-horizontal .language-flag {
+  width: 20px;
+  height: 14px;
+}
+
+/* =========================================
+   MAIN MENU (UNTER DEM HEADER)
+========================================= */
+
 .menu-horizontal {
   display: flex;
   justify-content: center;
@@ -203,6 +394,7 @@
   position: sticky;
   top: 300px;
   z-index: 300;
+  /* border: 5px red dotted; */
 }
 
 .menu-horizontal .menu-item {
@@ -213,24 +405,30 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   white-space: nowrap;
+  /* border: 5px red dotted; */
 }
 
 .menu-horizontal .menu-item:hover {
   background-color: #4595a6;
 }
 
-/* -------- Content -------- */
+/* =========================================
+   DYNAMISCHER CONTENT-BEREICH
+========================================= */
+
 .content {
   flex: 1;
   padding-bottom: 50px;
   overflow-y: auto;
+  /* border: 5px blue dotted; */
 }
 
 #dynamic-content {
   font-size: small;
   text-align: center;
-  max-width: 100vw;
-  min-width: 40vw;
+  max-width: 1000px;
+  width: 100%;
+  min-width: 0; /* wichtig: keine Mindestbreite mehr */
   padding: 20px;
   margin: 3vh auto;
   box-shadow: 5px 8px 8px 8px #888888;
@@ -238,7 +436,10 @@
   border-radius: 8px;
 }
 
-/* -------- Footer -------- */
+/* =========================================
+   FOOTER
+========================================= */
+
 .footer {
   position: fixed;
   left: 0;
@@ -249,10 +450,66 @@
   text-align: center;
   padding: 10px 0;
   z-index: 200;
+  /* border: 5px black dotted; */
 }
 
-/* -------- Mobile Portrait -------- */
+/* ====== Tablet / schmalere Desktops: Header stapeln ====== */
+@media (max-width: 1200px) and (min-width: 769px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header-inner {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .portfolio-content-selection {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 10px;
+  }
+}
+
+/* =========================================
+   MEDIA QUERIES – MOBILE PORTRAIT
+========================================= */
+
 @media (max-width: 768px) and (orientation: portrait) {
+  /* Header: Portrait/Intro oben, Portfolio-Bereich darunter */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 10px;
+  }
+
+  .header-inner {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* Intro-Row mobil untereinander */
+  .intro-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .profile-summary {
+    max-width: 100%;
+    font-size: 0.85rem;
+  }
+
+  .portfolio-content-selection {
+    width: 100%;
+    max-width: 95vw;
+    margin: 0 auto 10px;
+    min-height: auto;
+  }
   .portrait-wrapper {
     width: 100px;
     height: 125px;
@@ -262,6 +519,7 @@
     object-fit: contain;
   }
 
+  /* Mobile personal introduction */
   .intro-text .developer-name {
     font-size: 6vw;
   }
@@ -274,6 +532,7 @@
     max-width: 35vw;
   }
 
+  /* Mobile main menu – ÜBERSCHREIBT .menu-horizontal oben */
   .menu-horizontal {
     flex-wrap: wrap;
     gap: 10px;
@@ -289,6 +548,7 @@
     text-align: center;
   }
 
+  /* Mobile dynamic content */
   #dynamic-content {
     max-width: 100%;
     font-size: 4vw;
@@ -297,31 +557,56 @@
     padding: 15px;
   }
 
+  /* Mobile footer */
   .footer {
     font-size: 3vw;
     padding: 5px;
   }
+
+  /* Mobile Anpassungen Portfolio-Bereich + Tiles
+     hängt zusammen mit den tile-Styles in PfDrawer-CSS-Dateien */
+  .portfolio-content-selection {
+    width: 95vw;
+    min-height: 45vh;
+  }
 }
 
-/* -------- Mobile Landscape -------- */
+/* =========================================
+   MEDIA QUERIES – MOBILE LANDSCAPE
+========================================= */
+
 @media screen and (max-width: 768px) and (orientation: landscape) {
   .page-container {
     height: 100vh;
     overflow: hidden;
   }
 
-  /* Header */
+  /* Header gestapelt, Höhe automatisch */
   .header {
-    height: 15vh;
-    padding: 5px 10px;
     position: sticky;
     top: 0;
+    padding: 8px 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: auto;
   }
 
   .header-inner {
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .intro-row {
+    gap: 10px;
+  }
+
+  .profile-summary {
+    max-width: 95vw;
+    font-size: 0.85rem;
   }
 
   .portrait-wrapper {
@@ -330,10 +615,17 @@
     margin-right: 10px;
   }
 
-  /* Menü */
+  .portfolio-content-selection {
+    width: 100%;
+    max-width: 95vw;
+    margin: 0 auto 8px;
+    min-height: auto;
+  }
+
+  /* Menü – Position etwas anpassen, weil Header höher sein kann */
   .menu-horizontal {
     position: sticky;
-    top: 15vh;
+    top: auto; /* top: 0; würde auch gehen*/
     padding: 5px;
     z-index: 1000;
   }
@@ -343,7 +635,7 @@
     padding: 5px 8px;
   }
 
-  /* Content */
+  /* Contenthöhe wird berechnet */
   .content {
     height: calc(100vh - 15vh - 40px);
     overflow-y: auto;
@@ -357,14 +649,14 @@
     padding: 15px;
   }
 
-  /* Footer */
+  /* Footer, normal statt fixed */
   .footer {
     position: relative;
     bottom: auto;
     margin-top: auto;
   }
 
-  /* Texte */
+  /* Texte im Intro */
   .intro-text {
     text-align: left;
   }
@@ -394,7 +686,10 @@
   }
 }
 
-/* -------- Tablet and Larger Mobile Devices -------- */
+/* =========================================
+   MEDIA QUERIES – TABLET / LARGER MOBILE
+========================================= */
+
 @media (min-width: 481px) and (max-width: 768px) {
   .menu-horizontal .menu-item {
     font-size: 2.5vw;

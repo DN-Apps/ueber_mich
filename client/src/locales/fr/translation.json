@@ -230,8 +230,31 @@
   },
 
   "layout": {
-    "portfolioLabel": "Salut! Mon nom:",
-    "role": "Ma passion: le développement logiciel."
+    "portfolioLabel": "Salut ! Je m’appelle :",
+    "role": "Ma passion : le développement logiciel",
+    "summary": {
+      "headline": "Développeur fullstack avec de l’expérience en :",
+      "experience": [
+        "React, Node.js, SQL",
+        "Docker, Git, déploiement sur serveur",
+        "Développement low-code (Mendix / OutSystems)",
+        "Équipes projet agiles et projets logiciels (par ex. Lidl DE)"
+      ],
+      "bringHeadline": "Ce que j’apporte :",
+      "bring": [
+        "Plus de 4 ans de développement logiciel en environnement d’entreprise",
+        "Applications web développées de manière autonome (React/Node/MySQL)",
+        "Compréhension du clean code, de l’architecture et de l’orientation utilisateur",
+        "Esprit d’équipe, communication claire, manière de travailler fiable"
+      ],
+      "focusHeadline": "Focus actuel :",
+      "focus": [
+        "Approfondir le stack web moderne et le fullstack engineering",
+        "Créer et héberger mes propres projets pour la pratique",
+        "Langues : allemand, anglais (B2), serbe, français (notions de base)"
+      ],
+      "open": "Ouvert à de nouvelles opportunités dans le domaine du développement web / application engineering."
+    }
   },
   "menu": {
     "career": "Parcours",

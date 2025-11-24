@@ -226,8 +226,31 @@
   },
 
   "layout": {
-    "portfolioLabel": "Hi! My name:",
-    "role": "My passion: software development."
+    "portfolioLabel": "Hi! My name is:",
+    "role": "My passion: software development",
+    "summary": {
+      "headline": "Fullstack developer experienced in:",
+      "experience": [
+        "React, Node.js, SQL",
+        "Docker, Git, server deployment",
+        "Low-code development (Mendix / OutSystems)",
+        "Agile project teams and software projects (e.g. Lidl DE)"
+      ],
+      "bringHeadline": "What I bring:",
+      "bring": [
+        "4+ years of software development in corporate environments",
+        "Independently developed web applications (React/Node/MySQL)",
+        "Understanding of clean code, architecture and user focus",
+        "Team player, clear communication, reliable way of working"
+      ],
+      "focusHeadline": "Current focus:",
+      "focus": [
+        "Deepening the modern web stack & fullstack engineering",
+        "Building and hosting own projects for hands-on practice",
+        "Languages: German, English (B2), Serbian, French (basic)"
+      ],
+      "open": "Open to new opportunities in web development / application engineering."
+    }
   },
   "menu": {
     "career": "Career",
