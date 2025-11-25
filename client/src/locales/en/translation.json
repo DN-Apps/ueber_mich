@@ -3,27 +3,31 @@
     "positions": [
       {
         "year": "2015 - 2018",
-        "location": "Bad Friedrichshall, DE",
-        "title": "IT Management Assistant Apprentice",
+        "location": "Bad Friedrichshall,",
+        "country": "DE",
+        "title": "Ausbildung Informatikkaufmann",
         "company": "Valmet Automotive Holding GmbH & Co. KG"
       },
       {
         "year": "2018 - 2019",
-        "location": "Bad Friedrichshall, DE",
-        "title": "IT System Administrator",
+        "location": "Bad Friedrichshall",
+        "country": "DE",
+        "title": "IT-Systemadministrator",
         "company": "Valmet Automotive Holding GmbH & Co. KG"
       },
       {
         "year": "2019 - 2021",
-        "location": "Neckarsulm, DE",
-        "title": "IT Support Specialist",
-        "company": "Lidl Dienstleistung Dienstleistung GmbH & Co. KG"
+        "location": "Neckarsulm,",
+        "country": "DE",
+        "title": "Mitarbeiter IT-Support",
+        "company": "Lidl Dienstleistung GmbH & Co. KG"
       },
       {
-        "year": "2021 - present",
-        "location": "Bad Wimpfen, DE",
+        "year": "2021 - heute",
+        "location": "Bad Wimpfen,",
+        "country": "DE",
         "title": "Jr. Professional IT",
-        "company": "Lidl Dienstleistung Dienstleistung GmbH & Co. KG"
+        "company": "Lidl Dienstleistung GmbH & Co. KG"
       }
     ]
   },

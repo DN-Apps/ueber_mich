@@ -1,9 +1,11 @@
 // Portrait.js
 import React, { useState } from "react";
 import "./Portrait.css";
+import { useTranslation } from 'react-i18next'; // Zugriff auf Übersetzungen
 import portraitLarge from "./portrait_transparent.png"; // Import des großen Portrait-Bildes
 
 function Portrait() {
+  const { t } = useTranslation(); // Zugriff auf Übersetzungen
   /**
    * isModalOpen — steuert, ob das Portrait-Modal angezeigt wird
    */
@@ -48,8 +50,8 @@ function Portrait() {
               type="button"
               className="portrait-close-button"
               onClick={closeModal}
-            >
-              Schließen
+            >{/* Close button internationalisiert */}
+              {t('close')}
             </button>
           </div>
         </div>

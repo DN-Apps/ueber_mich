@@ -57,7 +57,8 @@
 }
 
 .timeline-company,
-.timeline-location {
+.timeline-location,
+.timeline-country {
   color: white;
   text-align: center;
 }
@@ -67,7 +68,8 @@
   font-size: 0.95rem;
 }
 
-.timeline-location {
+.timeline-location,
+.timeline-country {
   font-size: 0.85rem;
 }
 
@@ -152,7 +154,8 @@
     font-size: 0.85rem;
   }
 
-  .timeline-location {
+  .timeline-location,
+  .timeline-country {
     font-size: 0.8rem;
   }
 
@@ -228,8 +231,9 @@
   }
 
   .timeline-company,
-  .timeline-location {
-    font-size: 0.8rem;
+  .timeline-location,
+  .timeline-country {
+    font-size: 0.7rem;
   }
 
   .timeline-circle {

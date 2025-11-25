@@ -46,9 +46,7 @@ body {
   border-top: 2px black solid;
 }
 
-/* Hintergrund-Overlay im Header
-   ACHTUNG: steht im Zusammenhang mit pointer-events:none,
-   damit es Klicks auf darunterliegende Elemente nicht blockiert */
+/* Hintergrund-Overlay im Header */
 .header::before {
   content: "";
   position: absolute;
@@ -59,7 +57,7 @@ body {
   opacity: 0.3;
   filter: blur(2px);
   z-index: 1;
-  pointer-events: none; /* wichtig, damit Tabs / Menüs anklickbar bleiben */
+  pointer-events: none; /* Tabs / Menüs bleiben klickbar */
 }
 
 .header-inner {
@@ -70,7 +68,6 @@ body {
   align-items: stretch;
   justify-content: flex-start;
   gap: 16px;
-  /* statt fester Breite: flexibler Anteil links */
   flex: 0 1 42%;
   max-width: 650px;
 }
@@ -81,7 +78,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
-  width: 100%; /* nutzt die ganze Breite von .header-inner */
+  width: 100%;
 }
 
 /* Neuer Info-Block unter der Intro-Zeile */
@@ -90,7 +87,7 @@ body {
   background-color: rgba(255, 255, 255, 0.92);
   padding: 16px 20px;
   border-radius: 8px;
-  max-width: 100%; /* statt 900px */
+  max-width: 100%;
   width: 100%;
   box-sizing: border-box;
   font-size: 0.9rem;
@@ -129,28 +126,29 @@ body {
    PORTRAIT & INTRO-BEREICH
 ========================================= */
 
-/* Portrait styling */
+/* Portrait-Karte (Desktop / Standard) */
 .portrait-wrapper {
   width: 150px;
   height: 200px;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.3);
-  /* border: 5px yellow solid; */
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #portrait img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* border-radius: 50%; */
-  /* border: 5px orange dotted; */
 }
 
 /* Personal introduction styling */
 .intro-text {
-  flex: 1; /* füllt ganzen Platz rechts aus */
+  flex: 1;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 20px 30px;
   border-radius: 12px;
@@ -174,6 +172,7 @@ body {
 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
+
 .intro-extra h3 {
   margin: 15px 0 5px;
   color: #216477;
@@ -204,11 +203,8 @@ body {
 .portfolio-content-selection {
   display: flex;
   flex-direction: column;
-
-  /* rechter Bereich wird etwas breiter und nutzt den gewonnenen Platz */
   flex: 0 1 50%;
   max-width: 840px;
-
   min-height: 40vh;
   margin: 0 0 0 15%;
   background-color: rgba(255, 255, 255, 0.9);
@@ -222,7 +218,6 @@ body {
   border-bottom: 2px solid #34778a;
 }
 
-/* Basis-Tab-Style */
 .portfolio-tab {
   background-color: #34778a;
   color: white;
@@ -234,13 +229,11 @@ body {
   opacity: 0.6;
 }
 
-/* Aktiver Tab überschreibt Teile des Basis-Styles */
 .portfolio-tab.active {
   opacity: 1;
   background-color: #216477;
 }
 
-/* Inhalt unter den Tabs (dynamische Komponenten) */
 .portfolio-tab-content {
   flex: 1;
   padding: 10px 15px 15px;
@@ -256,7 +249,7 @@ body {
   position: absolute;
   top: 16px;
   right: 16px;
-  z-index: 999;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -338,13 +331,13 @@ body {
 
 /* Feste, horizontale Sprachliste (Desktop) */
 .languages-fixed {
-  margin-left: auto; /* schiebt das Element ganz nach rechts */
+  margin-left: auto;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 4px 8px;
-  flex: 1; /* nimmt restlichen Platz auf der rechten Seite */
-  max-width: 260px; /* damit es nicht zu breit wird */
+  flex: 1;
+  max-width: 260px;
   box-sizing: border-box;
 }
 
@@ -394,7 +387,6 @@ body {
   position: sticky;
   top: 300px;
   z-index: 300;
-  /* border: 5px red dotted; */
 }
 
 .menu-horizontal .menu-item {
@@ -405,7 +397,6 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
   white-space: nowrap;
-  /* border: 5px red dotted; */
 }
 
 .menu-horizontal .menu-item:hover {
@@ -420,7 +411,6 @@ body {
   flex: 1;
   padding-bottom: 50px;
   overflow-y: auto;
-  /* border: 5px blue dotted; */
 }
 
 #dynamic-content {
@@ -428,7 +418,7 @@ body {
   text-align: center;
   max-width: 1000px;
   width: 100%;
-  min-width: 0; /* wichtig: keine Mindestbreite mehr */
+  min-width: 0;
   padding: 20px;
   margin: 3vh auto;
   box-shadow: 5px 8px 8px 8px #888888;
@@ -450,7 +440,6 @@ body {
   text-align: center;
   padding: 10px 0;
   z-index: 200;
-  /* border: 5px black dotted; */
 }
 
 /* ====== Tablet / schmalere Desktops: Header stapeln ====== */
@@ -479,7 +468,6 @@ body {
 ========================================= */
 
 @media (max-width: 768px) and (orientation: portrait) {
-  /* Header: Portrait/Intro oben, Portfolio-Bereich darunter */
   .header {
     flex-direction: column;
     align-items: center;
@@ -492,7 +480,6 @@ body {
     max-width: 400px;
   }
 
-  /* Intro-Row mobil untereinander */
   .intro-row {
     flex-direction: column;
     align-items: center;
@@ -510,16 +497,17 @@ body {
     margin: 0 auto 10px;
     min-height: auto;
   }
+
+  /* Portrait hier etwas kleiner */
   .portrait-wrapper {
-    width: 100px;
-    height: 125px;
+    width: 110px;
+    height: 150px;
   }
 
   #portrait img {
-    object-fit: contain;
+    object-fit: cover;
   }
 
-  /* Mobile personal introduction */
   .intro-text .developer-name {
     font-size: 6vw;
   }
@@ -532,7 +520,6 @@ body {
     max-width: 35vw;
   }
 
-  /* Mobile main menu – ÜBERSCHREIBT .menu-horizontal oben */
   .menu-horizontal {
     flex-wrap: wrap;
     gap: 10px;
@@ -548,7 +535,6 @@ body {
     text-align: center;
   }
 
-  /* Mobile dynamic content */
   #dynamic-content {
     max-width: 100%;
     font-size: 4vw;
@@ -557,14 +543,11 @@ body {
     padding: 15px;
   }
 
-  /* Mobile footer */
   .footer {
     font-size: 3vw;
     padding: 5px;
   }
 
-  /* Mobile Anpassungen Portfolio-Bereich + Tiles
-     hängt zusammen mit den tile-Styles in PfDrawer-CSS-Dateien */
   .portfolio-content-selection {
     width: 95vw;
     min-height: 45vh;
@@ -576,14 +559,12 @@ body {
 ========================================= */
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
-  /* Seite soll scrollen dürfen, nicht „eingesperrt“ werden */
   .page-container {
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: auto;
   }
 
-  /* Header stapeln, aber volle Breite nutzen */
   .header {
     position: sticky;
     top: 0;
@@ -594,7 +575,6 @@ body {
     height: auto;
   }
 
-  /* WICHTIG: keine schmale Spalte mehr – volle Breite */
   .header-inner {
     flex-direction: column;
     align-items: stretch;
@@ -603,7 +583,6 @@ body {
     max-width: 100%;
   }
 
-  /* Portrait + Intro bleiben in einer Zeile, füllen aber die Breite aus */
   .intro-row {
     display: flex;
     flex-direction: row;
@@ -612,10 +591,18 @@ body {
     width: 100%;
   }
 
+  /* Portrait in kleinem Landscape etwas größer */
   .portrait-wrapper {
-    width: 60px;
-    height: 60px;
+    flex-shrink: 0;
+    width: 140px;
+    height: 180px;
     margin-right: 8px;
+  }
+
+  #portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .intro-text {
@@ -623,7 +610,6 @@ body {
     padding: 10px 12px;
   }
 
-  /* Profil-Zusammenfassung soll ebenfalls die ganze Breite nutzen */
   .profile-summary {
     width: 100%;
     max-width: 100%;
@@ -650,7 +636,6 @@ body {
     padding: 5px 8px;
   }
 
-  /* Content einfach normal scrollen lassen */
   .content {
     height: auto;
     overflow-y: visible;
@@ -709,28 +694,59 @@ body {
 }
 
 /* =========================================
+   LANDSCAPE 769–1024px – Portrait größer
+   (z.B. iPhone XR, iPhone 12 Pro quer)
+========================================= */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  .intro-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+  }
+
+  /* hier wird das Portrait deutlich größer */
+  .portrait-wrapper {
+    flex-shrink: 0;
+    width: 190px;
+    height: 240px;
+    margin-right: 14px;
+  }
+
+  #portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .intro-text {
+    flex: 1;
+    padding: 20px 26px;
+  }
+}
+
+/* =========================================
    LANDSCAPE bis 1024px – Portfolio + Dynamic-Content
    bündig ausrichten
 ========================================= */
+
 @media screen and (max-width: 1024px) and (orientation: landscape) {
-  /* Header rechts nicht mehr mit 15% nach innen schieben */
   .portfolio-content-selection {
     margin-left: 0;
     width: 100%;
     max-width: 100%;
   }
 
-  /* Content bekommt den gleichen Rand wie der Header (4vw) */
   .content {
     padding-left: 4vw;
     padding-right: 4vw;
     padding-bottom: 50px;
   }
 
-  /* Dynamic-Content nicht mehr zentriert mit auto,
-     sondern bündig innerhalb der 4vw-Ränder */
   #dynamic-content {
-    margin: 10px 0 60px; /* top | horizontal | bottom */
+    margin: 10px 0 60px;
     max-width: none;
     width: 100%;
   }

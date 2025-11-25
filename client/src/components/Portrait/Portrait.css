@@ -11,7 +11,7 @@
 /* Vorschaubild des Portraits */
 .portrait-thumbnail {
   width: 100%;
-  max-width: 220px;
+  max-width: 500px;
   height: auto;
 }
 
@@ -42,23 +42,30 @@
 .modal-content {
   position: relative;
   background-color: white;
-  padding: 20px;
+  padding: 16px 20px; /* etwas weniger */
   max-width: 90vw;
-  max-height: 90vh;
+  max-height: 90vh; /* nie höher als Viewport */
   border-radius: 12px;
   box-sizing: border-box;
+  overflow: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ======================================
    Großes Portrait im Modal
    ====================================== */
+/* Großes Portrait */
 .portrait-large {
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 15px;
-  width: 40%;
-  height: auto;
   display: block;
+  width: auto; /* Höhe regelt die Größe */
+  max-width: 70vw; /* nicht breiter als 70% der Breite */
+  max-height: calc(90vh - 110px); /* Platz für Padding + Button lassen */
+  height: auto;
+  margin-bottom: 12px; /* kleinerer Abstand zum Button */
+  object-fit: contain;
 }
 
 /* ======================================
@@ -66,16 +73,15 @@
    ====================================== */
 .portrait-close-button {
   padding: 10px 20px;
-  margin: 20px auto 0;
   font-size: 16px;
   background-color: #34778a;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  display: block; /* zentriert */
-}
 
+  margin: 0 auto 5px; /* horizontal zentriert, kleiner Abstand nach unten */
+}
 .portrait-close-button:hover {
   background-color: #245865;
 }
@@ -94,6 +100,47 @@
 
   /* großes Portrait im Modal wird mobil breiter */
   .portrait-large {
-    width: 80%;
+    width: 50%;
+  }
+}
+
+/* =========================================
+   LANDSCAPE bis 1024px – Portfolio + Dynamic-Content
+   bündig ausrichten
+========================================= */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .portrait-container {
+    width: 10vw;
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .portrait-container {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .portrait-thumbnail {
+    width: 18vw;
+    max-width: 500px;
+  }
+
+  /* NEU: Modal & großes Portrait für Landscape-Phones anpassen */
+  .modal-content {
+    padding: 10px 14px; /* weniger Innenabstand */
+    max-height: 86vh; /* noch etwas kleiner als Viewport */
+  }
+
+  .portrait-large {
+    max-width: 65vw; /* etwas schmaler */
+    max-height: calc(86vh - 80px); /* kleinere Reserve, damit alles reinpasst */
+    margin-bottom: 8px;
+  }
+  .portrait-close-button {
+    padding: 200px 30px; /* kompakter Button */
+    font-size: 14px;
+    margin-bottom: 4px;
   }
 }

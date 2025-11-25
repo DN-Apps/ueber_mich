@@ -81,6 +81,7 @@ const Timeline = () => {
             <div className="timeline-header">
               <div className="timeline-company">{pos.company}</div>
               <div className="timeline-location">{pos.location}</div>
+              <div className="timeline-country">{pos.country}</div>
             </div>
 
             {/* Kreis – erhält ref, wenn erster oder letzter */}
