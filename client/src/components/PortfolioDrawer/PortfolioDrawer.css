@@ -167,3 +167,18 @@
     max-height: none; /* Inhalte auf sehr kleinen Screens komplett sichtbar */
   }
 }
+
+/* Inline-Details unter der Kachel (nur Mobile genutzt) */
+.tile-content-inline {
+  margin-top: 8px;
+  max-height: none;
+  overflow: visible;
+  box-shadow: none;
+}
+
+/* auf kleinen Screens etwas kompakter */
+@media (max-width: 768px) {
+  .tile-content-inline {
+    padding: 10px 8px;
+  }
+}

@@ -2,23 +2,9 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './PrivatPortfolioDrawer.css';
 
-const PrivatPortfolioDrawer = () => {
-
-  // Zugriff auf Übersetzungsfunktionen
+const PrivatPortfolioDrawer = ({ isMobile = false }) => {
   const { t } = useTranslation();
 
-  /**
-   * Array der privaten Aktivitäten.
-   * Jede Kachel enthält:
-   *  - Titel
-   *  - Bild
-   *  - Beschreibungstext
-   *  - Zielsetzung
-   *  - Aktivitäten / Funktionen
-   *  - verwendete Tools / Stack (hier eher metaphorisch)
-   *
-   *  Alle Inhalte kommen aus der i18n-Übersetzungsdatei.
-   */
   const tiles = [
     {
       id: 1,
@@ -58,42 +44,46 @@ const PrivatPortfolioDrawer = () => {
     },
   ];
 
-  /**
-   * Welcher Tile ist aktuell geöffnet?
-   * Standard: Erste Kachel aktiv.
-   */
   const [activeTileId, setActiveTileId] = useState(tiles[0].id);
 
-  /**
-   * Toggle-Mechanismus:
-   * - Wenn man erneut auf die geöffnete Kachel klickt → schließen.
-   */
   const handleTileClick = (id) => {
     setActiveTileId(id === activeTileId ? null : id);
   };
 
-  // Ausgewählte Kachel extrahieren
   const activeTile = tiles.find((tile) => tile.id === activeTileId);
 
   return (
     <div className="privat-inline">
-
-      {/* Grid mit allen privaten Aktivitäten */}
       <div className="privat-tiles-container">
-        {tiles.map((tile) => (
-          <div
-            className={`privat-tile ${activeTileId === tile.id ? 'active' : ''}`}
-            key={tile.id}
-            onClick={() => handleTileClick(tile.id)}
-          >
-            <img src={tile.image} alt={tile.title} />
-            <p>{tile.title}</p>
-          </div>
-        ))}
+        {tiles.map((tile) => {
+          const isActive = activeTileId === tile.id;
+
+          return (
+            <div
+              className={`privat-tile ${isActive ? 'active' : ''}`}
+              key={tile.id}
+              onClick={() => handleTileClick(tile.id)}
+            >
+              <img src={tile.image} alt={tile.title} />
+              <p>{tile.title}</p>
+
+              {/* MOBILE: Details direkt unter der aktiven Kachel */}
+              {isMobile && isActive && (
+                <div className="privat-tiles-content privat-tiles-content-inline">
+                  <h2>{tile.title}</h2>
+                  <p>{tile.content}</p>
+                  <p>{tile.target}</p>
+                  <p>{tile.functionalities}</p>
+                  <p>{tile.stack}</p>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
 
-      {/* Detailbereich unterhalb der Tiles – nur sichtbar bei aktiver Kachel */}
-      {activeTile && (
+      {/* DESKTOP: alter Detailbereich bleibt wie gehabt */}
+      {!isMobile && activeTile && (
         <div className="privat-tiles-content">
           <h2>{activeTile.title}</h2>
           <p>{activeTile.content}</p>

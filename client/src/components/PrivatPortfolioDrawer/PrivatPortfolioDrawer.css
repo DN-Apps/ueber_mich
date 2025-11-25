@@ -164,3 +164,18 @@
     max-height: none; /* Vollhöhe – scrollbar nicht nötig */
   }
 }
+
+/* Inline-Details unter der Kachel (Mobile) */
+.privat-tiles-content-inline {
+  margin-top: 8px;
+  max-height: none;
+  overflow: visible;
+  box-shadow: none;
+}
+
+/* kompakter auf kleinen Screens */
+@media (max-width: 768px) {
+  .privat-tiles-content-inline {
+    padding: 10px 8px;
+  }
+}

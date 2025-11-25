@@ -110,16 +110,22 @@ body {
 
 .profile-summary-list {
   margin: 0;
-  padding-left: 18px;
+  padding-left: 0; /* wir setzen selbst Einrückung im li */
+  list-style: none; /* Standard-Marker aus */
 }
 
 .profile-summary-list li {
   margin-bottom: 4px;
+  padding-left: 1.2rem; /* Platz für Strich */
+  position: relative;
 }
 
-.profile-summary-open {
-  margin-top: 10px;
-  font-weight: 500;
+.profile-summary-list li::before {
+  content: "–"; /* Spiegelstrich */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #34778a; /* gleiche Farbe wie deine Subtitles */
 }
 
 /* =========================================

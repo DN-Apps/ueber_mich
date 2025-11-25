@@ -2,23 +2,9 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './PortfolioDrawer.css';
 
-const PortfolioDrawer = () => {
-
-  // Zugriff auf die i18n-Übersetzungen
+const PortfolioDrawer = ({ isMobile = false }) => {
   const { t } = useTranslation();
 
-  /**
-   * Tile-Daten aus der Übersetzungsdatei.
-   * Jede Kachel besteht aus:
-   *  - Titel
-   *  - Bildpfad
-   *  - Beschreibung
-   *  - Zielgruppe
-   *  - Funktionalitäten
-   *  - Tech-Stack
-   * 
-   *  Die Texte kommen aus der translation.json.
-   */
   const tiles = [
     {
       id: 1,
@@ -58,42 +44,46 @@ const PortfolioDrawer = () => {
     },
   ];
 
-  /**
-   * selectedTileId — kontrolliert, welches Projekt geöffnet ist.
-   * Standard: Erste Kachel geöffnet.
-   */
   const [selectedTileId, setSelectedTileId] = useState(tiles[0].id);
 
-  /**
-   * Klick auf eine Kachel öffnet oder schließt den Inhalt.
-   * Wenn dieselbe Kachel erneut geklickt wird → schließen.
-   */
   const handleTileClick = (id) => {
     setSelectedTileId(prevId => (prevId === id ? null : id));
   };
 
-  // Holt die aktuell ausgewählte Kachel
   const selectedTile = tiles.find((tile) => tile.id === selectedTileId);
 
   return (
     <div className="portfolio-inline">
-
-      {/* Grid mit allen Kacheln */}
       <div className="tiles-container">
-        {tiles.map((tile) => (
-          <div
-            className={`tile ${selectedTileId === tile.id ? 'active' : ''}`}
-            key={tile.id}
-            onClick={() => handleTileClick(tile.id)}
-          >
-            <img src={tile.image} alt={tile.title} />
-            <p>{tile.title}</p>
-          </div>
-        ))}
+        {tiles.map((tile) => {
+          const isActive = selectedTileId === tile.id;
+
+          return (
+            <div
+              className={`tile ${isActive ? 'active' : ''}`}
+              key={tile.id}
+              onClick={() => handleTileClick(tile.id)}
+            >
+              <img src={tile.image} alt={tile.title} />
+              <p>{tile.title}</p>
+
+              {/* MOBILE: Details direkt unter der aktiven Kachel */}
+              {isMobile && isActive && (
+                <div className="tile-content tile-content-inline">
+                  <h2>{tile.title}</h2>
+                  <p>{tile.description}</p>
+                  <p>{tile.target}</p>
+                  <p>{tile.functionalities}</p>
+                  <p>{tile.stack}</p>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
 
-      {/* Inhalt unter dem Grid — nur sichtbar, wenn ein Tile aktiv ist */}
-      {selectedTile && (
+      {/* DESKTOP / TABLET: alter Detailbereich bleibt erhalten */}
+      {!isMobile && selectedTile && (
         <div className="tile-content">
           <h2>{selectedTile.title}</h2>
           <p>{selectedTile.description}</p>

@@ -258,9 +258,15 @@ function Defaultlayout() {
 
             <div className="portfolio-tab-content">
               {activePortfolioTab === "projects" ? (
-                <PortfolioDrawer />
+                // ALT:
+                // <PortfolioDrawer />
+                // NEU:
+                <PortfolioDrawer isMobile={isMobile} />
               ) : (
-                <PrivatPortfolioDrawer />
+                // ALT:
+                // <PrivatPortfolioDrawer />
+                // NEU:
+                <PrivatPortfolioDrawer isMobile={isMobile} />
               )}
             </div>
           </div>
