@@ -34,7 +34,7 @@
   "techStacksTitle": "TECH STACKs",
   "techStacks": [
     {
-      "category": "MERN",
+      "category": "Fullstack Web Development (MERN)",
       "layers": [
         {
           "title": "Frontend",
@@ -45,42 +45,43 @@
           "technologies": ["NodeJS", "Express"]
         },
         {
-          "title": "Datenbank",
-          "technologies": ["MySQL", "MongoDB"]
+          "title": "Datenbanken",
+          "technologies": ["MySQL", "MongoDB", "PostgreSQL"]
         }
       ]
     },
     {
-      "category": "OutSystems 11",
+      "category": "Low-Code Development",
       "layers": [
         {
-          "title": "IDE",
-          "technologies": ["Service Studio"]
+          "title": "OutSystems 11",
+          "technologies": ["Service Studio", "Service Center", "LifeTime"]
         },
         {
-          "title": "Umgebungsverwaltung",
-          "technologies": ["Service Center"]
-        },
-        {
-          "title": "Applikationsmanagement",
-          "technologies": ["LifeTime"]
-        }
-      ]
-    },
-    {
-      "category": "Mendix 10",
-      "layers": [
-        {
-          "title": "IDE",
+          "title": "Mendix 10",
           "technologies": ["Studio Pro"]
+        }
+      ]
+    },
+    {
+      "category": "DevOps & Versionierung",
+      "layers": [
+        {
+          "title": "Containerisierung",
+          "technologies": ["Docker"]
         },
         {
-          "title": "Datenbank",
-          "technologies": ["PostgreSQL"]
-        },
-        {
-          "title": "Versionsverwaltung",
+          "title": "Versionsverwaltung & CI/CD",
           "technologies": ["GIT", "Azure DevOps"]
+        }
+      ]
+    },
+    {
+      "category": "Tools & Technologien",
+      "layers": [
+        {
+          "title": "Testing & APIs",
+          "technologies": ["Express", "Postman"]
         }
       ]
     }
@@ -97,118 +98,73 @@
     "Studio Pro": "Studio Pro",
     "PostgreSQL": "PostgreSQL",
     "GIT": "GIT",
-    "Azure DevOps": "Azure DevOps"
+    "Azure DevOps": "Azure DevOps",
+    "Docker": "Docker",
+    "Postman": "Postman"
   },
   "agileMethods": {
-    "title": "AGILE METHODEN",
+    "title": "Sonstige Fähigkeiten",
     "stacks": [
       {
-        "title": "Produktvision & Backlog-Erstellung",
+        "title": "Software Engineering & Architektur",
         "technologies": [
           {
-            "name": "Grobe Zieldefinition",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg"
-          },
-          {
-            "name": "Epics",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
-          },
-          {
-            "name": "User Stories",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg"
-          },
-          {
-            "name": "Priorisierung",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
-          }
-        ]
-      },
-      {
-        "title": "Sprint Planning, Review & Retrospektive",
-        "technologies": [
-          {
-            "name": "Product Backlog",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
-          },
-          {
-            "name": "Aufteilung in Tasks",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
-          },
-          {
-            "name": "Vorstellung der Ergebnisse",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-          },
-          {
-            "name": "Feedback einholen",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-          },
-          {
-            "name": "Reflexion über Zusammenarbeit",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg"
-          }
-        ]
-      },
-      {
-        "title": "Implementierung & Feedback (Sprints)",
-        "technologies": [
-          {
-            "name": "Umsetzung der User Stories mit Clean Code",
+            "name": "Clean Code & SOLID Prinzipien",
             "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
           },
           {
-            "name": "Tests",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
+            "name": "REST-API Design",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
           },
           {
-            "name": "kontinuierliche Integration",
+            "name": "Schichten- & Service-Architektur",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+          },
+          {
+            "name": "Unit- & Integrationstests",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
+          }
+        ]
+      },
+      {
+        "title": "Agile Zusammenarbeit",
+        "technologies": [
+          {
+            "name": "Scrum & Kanban",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
+          },
+          {
+            "name": "User Stories & Reviews",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg"
+          },
+          {
+            "name": "Abstimmung mit Fachbereichen",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg"
+          },
+          {
+            "name": "Code Reviews & Pair Programming",
             "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
           }
         ]
       },
       {
-        "title": "Daily Stand-up (täglich)",
+        "title": "Betrieb & DevOps Basics",
         "technologies": [
           {
-            "name": "Abgleich: Was wurde getan",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg"
+            "name": "Deployment auf Linux-Servern",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
           },
           {
-            "name": "Was steht an",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
+            "name": "Docker Containerisierung",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
           },
           {
-            "name": "Wo gibt es Blocker",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-          }
-        ]
-      },
-      {
-        "title": "Release / Deployment (kontinuierlich oder sprintweise)",
-        "technologies": [
-          {
-            "name": "Software-Auslieferung nach Bedarf",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
-          },
-          {
-            "name": "Automatisiert",
+            "name": "CI/CD & Versionsverwaltung",
             "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-plain.svg"
-          }
-        ]
-      },
-      {
-        "title": "Wartung & Weiterentwicklung (laufend)",
-        "technologies": [
-          {
-            "name": "Bugfixing",
-            "logo": "https://raw.githubusercontent.com/primer/octicons/main/icons/bug-16.svg"
           },
           {
-            "name": "Neue Anforderungen",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg"
-          },
-          {
-            "name": "Technische Verbesserungen",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+            "name": "Monitoring & Log-Analyse",
+            "logo": "https://raw.githubusercontent.com/primer/octicons/main/icons/eye-16.svg"
           }
         ]
       }
@@ -308,14 +264,18 @@
       "description": "Ein Projekt zur Bereitstellung von Monteurunterkünften mit moderner Ausstattung und einfacher Buchungsoption.",
       "target": "\nZielgruppe: Baufirmen & Mitarbeiter, Studenten",
       "functionalities": "\nFunktionalitäten: Buchungsformular, Mediathek, unkomplizierte Kontaktaufnahme",
-      "stack": "\nTechnologien: ReactJS, NodeJS, Datenbankanbindung"
+      "stack": "\nTechnologien: ReactJS, NodeJS, Datenbankanbindung",
+      "url": "https://rent.ned-it.de",
+      "cta": "Hier geht es zum Projekt"
     },
     "dgv": {
       "title": "Digitale Visitenkarte",
       "description": "Die digitale Visitenkarte für modernes Netzwerken – schnell, stilvoll und smart.",
       "target": "\nZielgruppe: An Digitalisierung Interessierte",
       "functionalities": "\nFunktionalitäten: Kontaktdateneingabe, Firmenauswahl, Visualisierung im Browser, Scan to phone",
-      "stack": "\nTechnologien: ReactJS, NodeJS, Datenbankanbindung"
+      "stack": "\nTechnologien: ReactJS, NodeJS, Datenbankanbindung",
+      "url": "https://dgv.ned-it.de",
+      "cta": "Hier geht es zum Projekt"
     },
     "portal": {
       "title": "In dev: \nApp-Manager",

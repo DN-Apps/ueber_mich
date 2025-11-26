@@ -60,10 +60,14 @@
 @media (max-width: 768px) {
   .tech-stacks-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 0 10px;
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: 1fr;
+    gap: 8px; /* Weniger Abstand */
+    padding: 0 5px; /* Mehr Platz für die Boxen */
+    /* padding: 0 10px; */
     overflow-x: hidden;
+    /* border: 2px black solid; */
+    width: 100%;
   }
 
   .tech-stack-column {
@@ -77,9 +81,10 @@
   }
 
   .tech-item {
-    padding: 6px;
+    /* padding: 6px; */
     flex-wrap: wrap;
     justify-content: flex-start;
+    border: 2px black solid;
   }
 
   .tech-item img {

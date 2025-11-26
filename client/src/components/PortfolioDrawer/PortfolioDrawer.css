@@ -104,6 +104,31 @@
   line-height: 1.4;
 }
 
+.project-link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px 18px;
+  background-color: #34778a;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.25s ease, transform 0.1s ease;
+}
+
+.project-link-button:hover {
+  background-color: #245865;
+  transform: translateY(-1px);
+}
+
+.external-icon {
+  width: 18px;
+  height: 18px;
+}
+
 /* =========================================================================
    RESPONSIVE – Tablet
    ========================================================================= */

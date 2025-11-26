@@ -13,7 +13,10 @@ const PortfolioDrawer = ({ isMobile = false }) => {
       description: t('portfolio.monteur.description'),
       target: t('portfolio.monteur.target'),
       functionalities: t('portfolio.monteur.functionalities'),
-      stack: t('portfolio.monteur.stack')
+      stack: t('portfolio.monteur.stack'),
+      url: t('portfolio.monteur.url'),
+      cta: t('portfolio.monteur.cta')
+
     },
     {
       id: 2,
@@ -22,7 +25,9 @@ const PortfolioDrawer = ({ isMobile = false }) => {
       description: t('portfolio.dgv.description'),
       target: t('portfolio.dgv.target'),
       functionalities: t('portfolio.dgv.functionalities'),
-      stack: t('portfolio.dgv.stack')
+      stack: t('portfolio.dgv.stack'),
+      url: t('portfolio.dgv.url'),
+      cta: t('portfolio.dgv.cta')
     },
     {
       id: 3,
@@ -75,6 +80,8 @@ const PortfolioDrawer = ({ isMobile = false }) => {
                   <p>{tile.target}</p>
                   <p>{tile.functionalities}</p>
                   <p>{tile.stack}</p>
+
+
                 </div>
               )}
             </div>
@@ -90,6 +97,33 @@ const PortfolioDrawer = ({ isMobile = false }) => {
           <p>{selectedTile.target}</p>
           <p>{selectedTile.functionalities}</p>
           <p>{selectedTile.stack}</p>
+          {selectedTile.url && (
+            <a
+              className="project-link-button"
+              href={selectedTile.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {selectedTile.cta}
+              <svg
+                className="external-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
+
+          )}
         </div>
       )}
     </div>

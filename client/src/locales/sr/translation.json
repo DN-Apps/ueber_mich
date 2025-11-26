@@ -5,36 +5,36 @@
         "year": "2015 - 2018",
         "location": "Bad Friedrichshall,",
         "country": "DE",
-        "title": "Ausbildung Informatikkaufmann",
+        "title": "Stručno obrazovanje za informatičkog komercijalistu",
         "company": "Valmet Automotive Holding GmbH & Co. KG"
       },
       {
         "year": "2018 - 2019",
         "location": "Bad Friedrichshall,",
         "country": "DE",
-        "title": "IT-Systemadministrator",
+        "title": "IT sistem administrator",
         "company": "Valmet Automotive Holding GmbH & Co. KG"
       },
       {
         "year": "2019 - 2021",
         "location": "Neckarsulm,",
         "country": "DE",
-        "title": "Mitarbeiter IT-Support",
+        "title": "IT podrška",
         "company": "Lidl Dienstleistung GmbH & Co. KG"
       },
       {
-        "year": "2021 - heute",
+        "year": "2021 - danas",
         "location": "Bad Wimpfen,",
         "country": "DE",
-        "title": "Jr. Professional IT",
+        "title": "Junior IT Professional",
         "company": "Lidl Dienstleistung GmbH & Co. KG"
       }
     ]
   },
-  "techStacksTitle": "TEHNIČKI STACK-ovi",
+  "techStacksTitle": "TECH STACK-ovi",
   "techStacks": [
     {
-      "category": "MERN",
+      "category": "Fullstack veb razvoj (MERN)",
       "layers": [
         {
           "title": "Frontend",
@@ -45,42 +45,43 @@
           "technologies": ["NodeJS", "Express"]
         },
         {
-          "title": "Baza podataka",
-          "technologies": ["MySQL", "MongoDB"]
+          "title": "Baze podataka",
+          "technologies": ["MySQL", "MongoDB", "PostgreSQL"]
         }
       ]
     },
     {
-      "category": "OutSystems 11",
+      "category": "Low-code razvoj",
       "layers": [
         {
-          "title": "IDE",
-          "technologies": ["Service Studio"]
+          "title": "OutSystems 11",
+          "technologies": ["Service Studio", "Service Center", "LifeTime"]
         },
         {
-          "title": "Upravljanje okruženjem",
-          "technologies": ["Service Center"]
-        },
-        {
-          "title": "Upravljanje aplikacijama",
-          "technologies": ["LifeTime"]
-        }
-      ]
-    },
-    {
-      "category": "Mendix 10",
-      "layers": [
-        {
-          "title": "IDE",
+          "title": "Mendix 10",
           "technologies": ["Studio Pro"]
+        }
+      ]
+    },
+    {
+      "category": "DevOps i kontrola verzija",
+      "layers": [
+        {
+          "title": "Kontejnerizacija",
+          "technologies": ["Docker"]
         },
         {
-          "title": "Baza podataka",
-          "technologies": ["PostgreSQL"]
-        },
-        {
-          "title": "Kontrola verzija",
+          "title": "Kontrola verzija i CI/CD",
           "technologies": ["GIT", "Azure DevOps"]
+        }
+      ]
+    },
+    {
+      "category": "Alati i tehnologije",
+      "layers": [
+        {
+          "title": "Testiranje i API-ji",
+          "technologies": ["Express", "Postman"]
         }
       ]
     }
@@ -97,118 +98,73 @@
     "Studio Pro": "Studio Pro",
     "PostgreSQL": "PostgreSQL",
     "GIT": "GIT",
-    "Azure DevOps": "Azure DevOps"
+    "Azure DevOps": "Azure DevOps",
+    "Docker": "Docker",
+    "Postman": "Postman"
   },
   "agileMethods": {
-    "title": "AGILNE METODE",
+    "title": "Ostale veštine",
     "stacks": [
       {
-        "title": "Vizija proizvoda i kreiranje backlog-a",
+        "title": "Softversko inženjerstvo i arhitektura",
         "technologies": [
           {
-            "name": "Definisanje ciljeva",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg"
-          },
-          {
-            "name": "Epici",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
-          },
-          {
-            "name": "Korisničke priče",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg"
-          },
-          {
-            "name": "Postavljanje prioriteta",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
-          }
-        ]
-      },
-      {
-        "title": "Planiranje sprinta, pregled i retrospektiva",
-        "technologies": [
-          {
-            "name": "Backlog proizvoda",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
-          },
-          {
-            "name": "Podela zadataka",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
-          },
-          {
-            "name": "Prezentacija rezultata",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-          },
-          {
-            "name": "Prikupljanje povratnih informacija",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-          },
-          {
-            "name": "Refleksija o saradnji",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg"
-          }
-        ]
-      },
-      {
-        "title": "Implementacija i povratne informacije (sprintovi)",
-        "technologies": [
-          {
-            "name": "Implementacija korisničkih priča sa čistim kodom",
+            "name": "Clean Code i SOLID principi",
             "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
           },
           {
-            "name": "Testiranje",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
+            "name": "Dizajn REST API-ja",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
           },
           {
-            "name": "Kontinuirana integracija",
+            "name": "Slojna i servisno-orijentisana arhitektura",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+          },
+          {
+            "name": "Unit i integracioni testovi",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
+          }
+        ]
+      },
+      {
+        "title": "Agilna saradnja",
+        "technologies": [
+          {
+            "name": "Scrum i Kanban",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
+          },
+          {
+            "name": "Korisničke priče i pregledi",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg"
+          },
+          {
+            "name": "Usklađivanje sa poslovnim odeljenjima",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg"
+          },
+          {
+            "name": "Pregled koda i pair programming",
             "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
           }
         ]
       },
       {
-        "title": "Dnevni stand-up (svakodnevno)",
+        "title": "Operacije i osnove DevOps-a",
         "technologies": [
           {
-            "name": "Šta je urađeno",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg"
+            "name": "Deployment na Linux serverima",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
           },
           {
-            "name": "Šta sledi",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
+            "name": "Docker kontejnerizacija",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
           },
           {
-            "name": "Gde su prepreke",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-          }
-        ]
-      },
-      {
-        "title": "Izdavanje / Uvođenje (kontinuirano ili po sprintu)",
-        "technologies": [
-          {
-            "name": "Isporuka softvera po potrebi",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
-          },
-          {
-            "name": "Automatizovano",
+            "name": "CI/CD i kontrola verzija",
             "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-plain.svg"
-          }
-        ]
-      },
-      {
-        "title": "Održavanje i dalji razvoj (kontinuirano)",
-        "technologies": [
-          {
-            "name": "Ispravka grešaka",
-            "logo": "https://raw.githubusercontent.com/primer/octicons/main/icons/bug-16.svg"
           },
           {
-            "name": "Novi zahtevi",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg"
-          },
-          {
-            "name": "Tehnička poboljšanja",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+            "name": "Monitoring i analiza logova",
+            "logo": "https://raw.githubusercontent.com/primer/octicons/main/icons/eye-16.svg"
           }
         ]
       }
@@ -217,13 +173,21 @@
   "languages": {
     "title": "Jezici",
     "skills": [
-      { "name": "Nemački", "level": 100, "flag": "https://flagcdn.com/de.svg" },
       {
-        "name": "Srpski (cirilica)",
+        "name": "Nemački",
+        "level": 100,
+        "flag": "https://flagcdn.com/de.svg"
+      },
+      {
+        "name": "Srpski (ćirilica)",
         "level": 90,
         "flag": "https://flagcdn.com/rs.svg"
       },
-      { "name": "Engleski", "level": 90, "flag": "https://flagcdn.com/gb.svg" },
+      {
+        "name": "Engleski",
+        "level": 90,
+        "flag": "https://flagcdn.com/gb.svg"
+      },
       {
         "name": "Francuski",
         "level": 40,
@@ -243,16 +207,16 @@
       "headline": "Fullstack developer sa iskustvom u:",
       "experience": [
         "React, Node.js, SQL",
-        "Docker, Git, deployovanje na server",
+        "Docker, Git, postavljanje aplikacija na server",
         "Low-code razvoju (Mendix / OutSystems)",
         "Agilnim timovima i softverskim projektima (npr. Lidl DE)"
       ],
       "bringHeadline": "Šta donosim:",
       "bring": [
-        "4+ godine iskustva u razvoju softvera u kompanijama",
+        "4+ godine iskustva u razvoju softvera u korporativnom okruženju",
         "Samostalno razvijene veb aplikacije (React/Node/MySQL)",
         "Razumevanje clean code principa, arhitekture i fokusa na korisnika",
-        "Timski rad, jasna komunikacija, pouzdan način rada"
+        "Timski rad, jasna komunikacija, pouzdan stil rada"
       ],
       "focusHeadline": "Trenutni fokus:",
       "focus": [
@@ -274,61 +238,65 @@
     "sport": {
       "title": "Sport",
       "content": "Redovno se bavim treningom snage i izdržljivosti i uživam u dugim šetnjama.",
-      "target": "\nCiljevi: Dokumentovati svoj napredak i poboljšavati se gde god mogu.",
-      "functionalities": "\nZašto: Cenim svoje mentalno i fizičko zdravlje.",
-      "stack": "\nMoji favoriti: Trčanje kroz vinograde, trening velikog obima, mali fudbal itd."
+      "target": "\nCiljevi: Da zabeležim svoj napredak i unapredim se gde god mogu.",
+      "functionalities": "\nZašto: Mnogo mi znači mentalno i fizičko zdravlje.",
+      "stack": "\nMoji favoriti: Trčanje kroz vinograde, treninzi velikog obima, mali fudbal itd."
     },
     "woods": {
       "title": "Rad u šumi",
-      "content": "Odrastao sam provodeći vikende u pripremi drva sa porodicom u gradskog šumi za grejanje zimi, što me ispunjava ponosom.",
+      "content": "Odrastao sam provodeći vikende sa porodicom u gradskoj šumi pripremajući drva za grejanje preko zime, što me ispunjava ponosom.",
       "target": "\nCilj: Zajedno je uvek bilo brže i zabavnije.",
-      "functionalities": "\nKorisno: Mnogo sam naučio o radu i nagradi. Rad s drvetom greje najmanje dva puta: dok radiš i dok se greješ.",
-      "stack": "\nAlati: Vlastita motorna testera sa potrebnom opremom, sertifikat za testeru itd."
+      "functionalities": "\nŠta sam naučio: Mnogo sam naučio o radu, vrednovanju i nagradi. Rad sa drvetom greje najmanje dva puta: dok radiš i dok se greješ.",
+      "stack": "\nAlati: Vlastita motorna testera sa potrebnom opremom, sertifikat za rad sa testerom itd."
     },
     "diy": {
       "title": "Uradi sam",
       "content": "Volim da popravljam stvari u domaćinstvu i uživam u praktičnom radu.",
-      "target": "\nCilj: Stvari se kvare, to se dešava. Dalje od potrošačkog društva ka reciklaži i prenameni.",
-      "functionalities": "\nKorisno: Održivost i tehničko razumevanje me zanimaju još od detinjstva.",
-      "stack": "\nKoristim veštačku inteligenciju, pisana i YouTube uputstva za popravke. Ako je previše rizično, konsultujem profesionalce."
+      "target": "\nCilj: Stvari se kvare – to se dešava. Odmak od potrošačkog društva ka reciklaži i prenameni.",
+      "functionalities": "\nŠta mi znači: Održivost i tehničko razumevanje zanimaju me još od detinjstva.",
+      "stack": "\nKoristim veštačku inteligenciju, pisana uputstva i YouTube tutorijale za popravke. Ako je nešto previše rizično, obraćam se profesionalcima."
     },
     "adventure": {
       "title": "Akcija i avantura",
-      "content": "Volim avanture kao što su skakanje padobranom ili s litice – adrenalin mi je prijatelj!",
+      "content": "Volim avanture kao što su skakanje padobranom ili skakanje sa stena – adrenalin mi je prijatelj!",
       "target": "\nCiljevi: Izaći iz zone komfora.",
-      "functionalities": "\nTako stalno iznova upoznajem svoje granice. To me tera da reflektujem i postavljam nove ciljeve.",
-      "stack": "\nOsnovna atletika i radoznalost prema nepoznatom me podstiču da probam nove stvari."
+      "functionalities": "\nKorist: Na taj način stalno iznova upoznajem svoje granice. To podstiče moju refleksiju i motiviše me da postavljam nove ciljeve.",
+      "stack": "\nOsnovna fizička spremnost i radoznalost prema nepoznatom podstiču me da isprobavam nove stvari."
     }
   },
   "portfolio": {
     "button": "Projekti",
     "monteur": {
       "title": "Radnički smeštaj Nedić",
-      "description": "Projekat za obezbeđivanje radničkog smeštaja sa modernom opremom i jednostavnom opcijom rezervacije.",
-      "target": "\nCiljna grupa: Građevinske firme i radnici, studenti",
+      "description": "Projekat za obezbeđivanje smeštaja za radnike sa modernom opremom i jednostavnom opcijom rezervacije.",
+      "target": "\nCiljna grupa: Građevinske firme, radnici, studenti",
       "functionalities": "\nFunkcionalnosti: Formular za rezervaciju, medijateka, jednostavan kontakt",
-      "stack": "\nTehnologije: ReactJS, NodeJS, povezivanje sa bazom podataka"
+      "stack": "\nTehnologije: ReactJS, NodeJS, povezivanje sa bazom podataka",
+      "url": "https://rent.ned-it.de",
+      "cta": "Pogledaj projekat"
     },
     "dgv": {
       "title": "Digitalna vizit karta",
-      "description": "Digitalna vizitka za moderno umrežavanje – brzo, moderno i pametno.",
+      "description": "Digitalna vizit karta za moderno umrežavanje – brzo, moderno i pametno.",
       "target": "\nCiljna grupa: Zainteresovani za digitalizaciju",
-      "functionalities": "\nFunkcionalnosti: Unos kontakta, izbor firme, prikaz u pregledaču, skeniranje na telefon",
-      "stack": "\nTehnologije: ReactJS, NodeJS, povezivanje sa bazom podataka"
+      "functionalities": "\nFunkcionalnosti: Unos kontakt podataka, izbor firme, prikaz u pregledaču, skeniranje na telefon",
+      "stack": "\nTehnologije: ReactJS, NodeJS, povezivanje sa bazom podataka",
+      "url": "https://dgv.ned-it.de",
+      "cta": "Pogledaj projekat"
     },
     "portal": {
       "title": "U razvoju: \nApp menadžer",
       "description": "Portal za aplikacije koji centralizovano upravlja aplikacionim bazenom u kojem se vrednosti mogu dodavati, čitati, ažurirati i brisati.",
-      "target": "\nCiljna grupa: Vlastiti aplikacioni bazen",
+      "target": "\nCiljna grupa: Interni aplikacioni bazen",
       "functionalities": "\nFunkcionalnosti: CRUD i izveštajne funkcije",
       "stack": "\nTehnologije: ReactJS, NodeJS, povezivanje sa bazom podataka"
     },
     "chogan": {
-      "title": "Planirano: \nPWA, nativno, VI...",
-      "description": "Cilj mi je intenzivno se baviti budućim tehnologijama kako bih razvio inovativna digitalna rešenja.",
-      "target": "\nCiljna grupa: Budući klijenti i zainteresovani",
+      "title": "Planirano: \nPWA, native, VI...",
+      "description": "Cilj mi je da se intenzivno bavim savremenim tehnologijama kako bih razvijao inovativna digitalna rešenja.",
+      "target": "\nCiljna grupa: Budući klijenti i zainteresovani korisnici",
       "functionalities": "\nFunkcionalnosti: Offline mogućnosti, GPT integracije, integracija sistemskih komponenti, analiza podataka itd.",
-      "stack": "\nZanimljive tehnologije: Service Worker & Web App Manifest, OpenAI & Anthropic, .js distribucije i Python, itd."
+      "stack": "\nZanimljive tehnologije: Service Worker & Web App Manifest, OpenAI & Anthropic, .js distribucije i Python itd."
     }
   },
   "imprintTitle": "Impresum",

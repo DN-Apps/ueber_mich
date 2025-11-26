@@ -5,36 +5,37 @@
         "year": "2015 - 2018",
         "location": "Bad Friedrichshall,",
         "country": "DE",
-        "title": "Ausbildung Informatikkaufmann",
+        "title": "IT Management Assistant Apprenticeship",
         "company": "Valmet Automotive Holding GmbH & Co. KG"
       },
       {
         "year": "2018 - 2019",
         "location": "Bad Friedrichshall,",
         "country": "DE",
-        "title": "IT-Systemadministrator",
+        "title": "IT System Administrator",
         "company": "Valmet Automotive Holding GmbH & Co. KG"
       },
       {
         "year": "2019 - 2021",
         "location": "Neckarsulm,",
         "country": "DE",
-        "title": "Mitarbeiter IT-Support",
+        "title": "IT Support Specialist",
         "company": "Lidl Dienstleistung GmbH & Co. KG"
       },
       {
-        "year": "2021 - heute",
+        "year": "2021 - present",
         "location": "Bad Wimpfen,",
         "country": "DE",
-        "title": "Jr. Professional IT",
+        "title": "Junior Professional IT",
         "company": "Lidl Dienstleistung GmbH & Co. KG"
       }
     ]
   },
-  "techStacksTitle": "TECH STACKs",
+
+  "techStacksTitle": "TECH STACKS",
   "techStacks": [
     {
-      "category": "MERN",
+      "category": "Fullstack Web Development (MERN)",
       "layers": [
         {
           "title": "Frontend",
@@ -45,46 +46,48 @@
           "technologies": ["NodeJS", "Express"]
         },
         {
-          "title": "Database",
-          "technologies": ["MySQL", "MongoDB"]
+          "title": "Databases",
+          "technologies": ["MySQL", "MongoDB", "PostgreSQL"]
         }
       ]
     },
     {
-      "category": "OutSystems 11",
+      "category": "Low-Code Development",
       "layers": [
         {
-          "title": "IDE",
-          "technologies": ["Service Studio"]
+          "title": "OutSystems 11",
+          "technologies": ["Service Studio", "Service Center", "LifeTime"]
         },
         {
-          "title": "Environment Management",
-          "technologies": ["Service Center"]
-        },
-        {
-          "title": "Application Management",
-          "technologies": ["LifeTime"]
-        }
-      ]
-    },
-    {
-      "category": "Mendix 10",
-      "layers": [
-        {
-          "title": "IDE",
+          "title": "Mendix 10",
           "technologies": ["Studio Pro"]
+        }
+      ]
+    },
+    {
+      "category": "DevOps & Version Control",
+      "layers": [
+        {
+          "title": "Containerization",
+          "technologies": ["Docker"]
         },
         {
-          "title": "Database",
-          "technologies": ["PostgreSQL"]
-        },
-        {
-          "title": "Version Control",
+          "title": "Version Control & CI/CD",
           "technologies": ["GIT", "Azure DevOps"]
+        }
+      ]
+    },
+    {
+      "category": "Tools & Technologies",
+      "layers": [
+        {
+          "title": "Testing & APIs",
+          "technologies": ["Express", "Postman"]
         }
       ]
     }
   ],
+
   "techLabels": {
     "ReactJS": "ReactJS",
     "NodeJS": "NodeJS",
@@ -97,123 +100,80 @@
     "Studio Pro": "Studio Pro",
     "PostgreSQL": "PostgreSQL",
     "GIT": "GIT",
-    "Azure DevOps": "Azure DevOps"
+    "Azure DevOps": "Azure DevOps",
+    "Docker": "Docker",
+    "Postman": "Postman"
   },
+
   "agileMethods": {
-    "title": "AGILE METHODS",
+    "title": "OTHER SKILLS",
     "stacks": [
       {
-        "title": "Product Vision & Backlog Creation",
+        "title": "Software Engineering & Architecture",
         "technologies": [
           {
-            "name": "High-level goal definition",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg"
-          },
-          {
-            "name": "Epics",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
-          },
-          {
-            "name": "User Stories",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg"
-          },
-          {
-            "name": "Prioritization",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
-          }
-        ]
-      },
-      {
-        "title": "Sprint Planning, Review & Retrospective",
-        "technologies": [
-          {
-            "name": "Product Backlog",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
-          },
-          {
-            "name": "Task Breakdown",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
-          },
-          {
-            "name": "Presentation of results",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-          },
-          {
-            "name": "Gathering feedback",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-          },
-          {
-            "name": "Team collaboration reflection",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg"
-          }
-        ]
-      },
-      {
-        "title": "Implementation & Feedback (Sprints)",
-        "technologies": [
-          {
-            "name": "Implementing user stories with clean code",
+            "name": "Clean Code & SOLID principles",
             "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
           },
           {
-            "name": "Testing",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
+            "name": "REST API design",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
           },
           {
-            "name": "Continuous Integration",
+            "name": "Layered & service-oriented architecture",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+          },
+          {
+            "name": "Unit & integration testing",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
+          }
+        ]
+      },
+      {
+        "title": "Agile Collaboration",
+        "technologies": [
+          {
+            "name": "Scrum & Kanban",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
+          },
+          {
+            "name": "User stories & reviews",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg"
+          },
+          {
+            "name": "Cross-team coordination",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg"
+          },
+          {
+            "name": "Code reviews & pair programming",
             "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
           }
         ]
       },
       {
-        "title": "Daily Stand-up (daily)",
+        "title": "Operations & DevOps Basics",
         "technologies": [
           {
-            "name": "What was done",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg"
+            "name": "Deployment on Linux servers",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
           },
           {
-            "name": "What’s next",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
+            "name": "Docker containerization",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
           },
           {
-            "name": "Any blockers",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-          }
-        ]
-      },
-      {
-        "title": "Release / Deployment (continuous or per sprint)",
-        "technologies": [
-          {
-            "name": "Software delivery as needed",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
-          },
-          {
-            "name": "Automated",
+            "name": "CI/CD & version control",
             "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-plain.svg"
-          }
-        ]
-      },
-      {
-        "title": "Maintenance & Further Development (ongoing)",
-        "technologies": [
-          {
-            "name": "Bug fixing",
-            "logo": "https://raw.githubusercontent.com/primer/octicons/main/icons/bug-16.svg"
           },
           {
-            "name": "New requirements",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg"
-          },
-          {
-            "name": "Technical improvements",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+            "name": "Monitoring & log analysis",
+            "logo": "https://raw.githubusercontent.com/primer/octicons/main/icons/eye-16.svg"
           }
         ]
       }
     ]
   },
+
   "languages": {
     "title": "Languages",
     "skills": [
@@ -244,86 +204,94 @@
       "bring": [
         "4+ years of software development in corporate environments",
         "Independently developed web applications (React/Node/MySQL)",
-        "Understanding of clean code, architecture and user focus",
-        "Team player, clear communication, reliable way of working"
+        "Strong understanding of clean code, architecture and user-centric design",
+        "Team-oriented, clear communicator, reliable working style"
       ],
       "focusHeadline": "Current focus:",
       "focus": [
-        "Deepening the modern web stack & fullstack engineering",
-        "Building and hosting own projects for hands-on practice",
+        "Deepening modern web stack & fullstack engineering",
+        "Building and hosting my own projects for hands-on learning",
         "Languages: German, English (B2), Serbian, French (basic)"
       ],
       "open": "Open to new opportunities in web development / application engineering."
     }
   },
+
   "menu": {
     "career": "Career",
     "techSkills": "Tech Skills",
     "otherSkills": "Other Skills",
     "languages": "Languages"
   },
+
   "privat": {
     "button": "Private",
     "sport": {
       "title": "Sports",
-      "content": "I regularly engage in strength and endurance training and enjoy long walks.",
-      "target": "\nGoals: To document my progress and improve wherever I can.",
+      "content": "I regularly do strength and endurance training and enjoy long walks.",
+      "target": "\nGoals: Documenting my progress and improving wherever possible.",
       "functionalities": "\nWhy: I value my mental and physical health.",
-      "stack": "\nMy favorites: Vineyard runs, high-volume strength workouts, small-field football, etc."
+      "stack": "\nFavorites: Vineyard runs, high-volume strength workouts, small-field football, etc."
     },
     "woods": {
       "title": "Woodwork",
-      "content": "Growing up with weekends spent preparing wood together in the city forest for winter heating fills me with pride.",
-      "target": "\nGoal: Working together was always faster and made the work more enjoyable.",
-      "functionalities": "\nUseful: I learned a lot about work and compensation. Woodwork warms you at least twice: while working and while heating.",
-      "stack": "\nTools: Own chainsaw with necessary equipment, chainsaw certification, etc."
+      "content": "Growing up working together in the local forest to prepare wood for winter heating has shaped me deeply.",
+      "target": "\nGoal: Working together made the process faster and more enjoyable.",
+      "functionalities": "\nUseful: I learned a lot about work, value and responsibility. Woodwork warms you twice: while working and while heating.",
+      "stack": "\nTools: Own chainsaw with full equipment, certification, etc."
     },
     "diy": {
       "title": "DIY",
-      "content": "I like repairing things around the house and love being hands-on.",
-      "target": "\nGoal: Things break, it happens. Moving away from a throwaway society toward recycling and upcycling.",
-      "functionalities": "\nUseful: Sustainability and technical understanding have interested me since childhood.",
-      "stack": "\nI use AI, written guides and YouTube tutorials to fix things. If it’s too tricky, I consult professionals."
+      "content": "I enjoy fixing things around the house and love hands-on work.",
+      "target": "\nGoal: Things break — it happens. Moving away from a throwaway culture toward recycling and upcycling.",
+      "functionalities": "\nUseful: Sustainability and technical curiosity have motivated me since childhood.",
+      "stack": "\nI use AI, written guides and YouTube tutorials to repair things. If something is too risky, I seek professional help."
     },
     "adventure": {
       "title": "Action & Adventure",
       "content": "I love adventures like skydiving or cliff jumping – adrenaline is my friend!",
-      "target": "\nGoals: Getting out of my comfort zone.",
-      "functionalities": "\nI get to know my limits again and again. This drives me to reflect on my abilities and to keep setting new goals.",
-      "stack": "\nA base level of athleticism and curiosity for the unknown drive me to try new things."
+      "target": "\nGoals: Stepping outside my comfort zone.",
+      "functionalities": "\nBy doing so, I continually rediscover my limits. This helps me reflect and motivates me to set new goals.",
+      "stack": "\nA base level of athleticism and curiosity for the unknown pushes me to try new things."
     }
   },
+
   "portfolio": {
     "button": "Projects",
     "monteur": {
       "title": "Monteur Rooms Nedic",
-      "description": "A project for providing worker accommodations with modern equipment and simple booking options.",
-      "target": "\nTarget group: Construction companies & workers, students",
+      "description": "A project offering worker accommodations with modern equipment and simple booking options.",
+      "target": "\nTarget group: Construction companies, workers, students",
       "functionalities": "\nFeatures: Booking form, media library, easy contact options",
-      "stack": "\nTechnologies: ReactJS, NodeJS, database integration"
+      "stack": "\nTechnologies: ReactJS, NodeJS, database integration",
+      "url": "https://rent.ned-it.de",
+      "cta": "Visit project"
     },
     "dgv": {
       "title": "Digital Business Card",
-      "description": "The digital business card for modern networking – fast, stylish and smart.",
-      "target": "\nTarget group: People interested in digitalization",
-      "functionalities": "\nFeatures: Contact entry, company selection, browser visualization, scan to phone",
-      "stack": "\nTechnologies: ReactJS, NodeJS, database integration"
+      "description": "A digital business card for modern networking – fast, stylish and smart.",
+      "target": "\nTarget group: Digitally interested users",
+      "functionalities": "\nFeatures: Contact entry, company selection, browser preview, scan-to-phone",
+      "stack": "\nTechnologies: ReactJS, NodeJS, database integration",
+      "url": "https://dgv.ned-it.de",
+      "cta": "Visit project"
     },
     "portal": {
-      "title": "In dev: \nApp Manager",
-      "description": "An application portal that centrally manages an app pool where values can be added, read, updated, and deleted.",
-      "target": "\nTarget group: Own application pool",
+      "title": "In development: \nApp Manager",
+      "description": "An application portal that centrally manages an app pool, allowing values to be created, read, updated and deleted.",
+      "target": "\nTarget group: Internal application pool",
       "functionalities": "\nFeatures: CRUD and reporting functions",
       "stack": "\nTechnologies: ReactJS, NodeJS, database integration"
     },
     "chogan": {
       "title": "Planned: \nPWA, native, AI...",
-      "description": "My goal is to work intensively with future-oriented technologies to develop innovative digital solutions.",
+      "description": "My goal is to work intensively with future-oriented technologies to build innovative digital solutions.",
       "target": "\nTarget group: Future clients and interested users",
       "functionalities": "\nFeatures: Offline capabilities, GPT integrations, system component integration, data analysis, etc.",
-      "stack": "\nInteresting technologies include: Service Worker & Web App Manifest, OpenAI & Anthropic, .js distributions & Python, etc."
+      "stack": "\nInteresting technologies include: Service Worker & Web App Manifest, OpenAI & Anthropic, JavaScript distributions & Python, etc."
     }
   },
+
   "imprintTitle": "Imprint",
   "name": "Name",
   "address": "Address",
@@ -331,6 +299,6 @@
   "responsible": "Responsible according to § 55 para. 2 RStV",
   "close": "Close",
   "privacyTitle": "Privacy Notice",
-  "privacyText": "This website does not use tracking cookies, but requires your consent for basic technical functions.",
+  "privacyText": "This website does not use tracking cookies but requires your consent for basic technical functions.",
   "understood": "Understood"
 }
