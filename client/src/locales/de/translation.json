@@ -71,11 +71,20 @@
           "technologies": ["Docker"]
         },
         {
+          "title": "Reverse Proxy & Routing",
+          "technologies": ["Nginx Proxy Manager"]
+        },
+        {
+          "title": "Monitoring & Observability",
+          "technologies": ["Grafana"]
+        },
+        {
           "title": "Versionsverwaltung & CI/CD",
           "technologies": ["GIT", "Azure DevOps"]
         }
       ]
     },
+
     {
       "category": "Tools & Technologien",
       "layers": [
@@ -100,7 +109,9 @@
     "GIT": "GIT",
     "Azure DevOps": "Azure DevOps",
     "Docker": "Docker",
-    "Postman": "Postman"
+    "Postman": "Postman",
+    "Grafana": "Grafana",
+    "NPM": "Nginx Proxy Manager"
   },
   "agileMethods": {
     "title": "Sonstige Fähigkeiten",
@@ -151,7 +162,7 @@
         "title": "Betrieb & DevOps Basics",
         "technologies": [
           {
-            "name": "Deployment auf Linux-Servern",
+            "name": "Deployment auf Linux-Servern (Ubuntu, IONOS VPS)",
             "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
           },
           {
@@ -159,12 +170,12 @@
             "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
           },
           {
-            "name": "CI/CD & Versionsverwaltung",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-plain.svg"
+            "name": "Reverse Proxy & SSL mit Nginx Proxy Manager",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg"
           },
           {
-            "name": "Monitoring & Log-Analyse",
-            "logo": "https://raw.githubusercontent.com/primer/octicons/main/icons/eye-16.svg"
+            "name": "Monitoring der Container mit Grafana",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg"
           }
         ]
       }

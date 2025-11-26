@@ -20,7 +20,9 @@ const logoMap = {
   GIT: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
   'Azure DevOps': AzureDevOpsLogo,
   Docker: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
-  Postman: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+  Postman: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+  Grafana: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg',
+  'Nginx Proxy Manager': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg',
 };
 
 function TechSkills() {

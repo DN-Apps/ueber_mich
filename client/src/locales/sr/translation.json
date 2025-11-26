@@ -64,11 +64,19 @@
       ]
     },
     {
-      "category": "DevOps i kontrola verzija",
+      "category": "DevOps i verzionisanje",
       "layers": [
         {
           "title": "Kontejnerizacija",
           "technologies": ["Docker"]
+        },
+        {
+          "title": "Reverse proxy i rutiranje",
+          "technologies": ["Nginx Proxy Manager"]
+        },
+        {
+          "title": "Monitoring i observability",
+          "technologies": ["Grafana"]
         },
         {
           "title": "Kontrola verzija i CI/CD",
@@ -100,7 +108,9 @@
     "GIT": "GIT",
     "Azure DevOps": "Azure DevOps",
     "Docker": "Docker",
-    "Postman": "Postman"
+    "Postman": "Postman",
+    "Grafana": "Grafana",
+    "NPM": "Nginx Proxy Manager"
   },
   "agileMethods": {
     "title": "Ostale veštine",
@@ -148,10 +158,10 @@
         ]
       },
       {
-        "title": "Operacije i osnove DevOps-a",
+        "title": "Operacije i DevOps osnove",
         "technologies": [
           {
-            "name": "Deployment na Linux serverima",
+            "name": "Deployment na Linux serverima (Ubuntu, IONOS VPS)",
             "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
           },
           {
@@ -159,12 +169,12 @@
             "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
           },
           {
-            "name": "CI/CD i kontrola verzija",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-plain.svg"
+            "name": "Reverse proxy i SSL pomoću Nginx Proxy Manager-a",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg"
           },
           {
-            "name": "Monitoring i analiza logova",
-            "logo": "https://raw.githubusercontent.com/primer/octicons/main/icons/eye-16.svg"
+            "name": "Monitoring kontejnera pomoću Grafana-e",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg"
           }
         ]
       }

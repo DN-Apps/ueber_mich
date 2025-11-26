@@ -3,8 +3,12 @@ import './Certs.css'
 import Mendix from '../../assets/logos/rad_mendix.png'
 import Stanley from '../../assets/logos/stanley.png'
 import KMK from '../../assets/logos/kmk.PNG'
+import { useTranslation } from 'react-i18next'; // Zugriff auf Übersetzungen
+
 
 function Certs() {
+
+    const { t } = useTranslation(); // Zugriff auf Übersetzungen
 
     /** 
      * UI-State:
@@ -96,7 +100,8 @@ function Certs() {
                         />
 
                         {/* Schließen-Button */}
-                        <button onClick={closeModal}>Schließen</button>
+                        <button onClick={closeModal}>{/* Close button internationalisiert */}
+                            {t('close')}</button>
                     </div>
                 </div>
             )}

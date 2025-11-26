@@ -64,11 +64,19 @@
       ]
     },
     {
-      "category": "DevOps & gestion de versions",
+      "category": "DevOps & Gestion des versions",
       "layers": [
         {
           "title": "Conteneurisation",
           "technologies": ["Docker"]
+        },
+        {
+          "title": "Reverse proxy & routage",
+          "technologies": ["Nginx Proxy Manager"]
+        },
+        {
+          "title": "Monitoring & observabilité",
+          "technologies": ["Grafana"]
         },
         {
           "title": "Gestion de versions & CI/CD",
@@ -100,7 +108,9 @@
     "GIT": "GIT",
     "Azure DevOps": "Azure DevOps",
     "Docker": "Docker",
-    "Postman": "Postman"
+    "Postman": "Postman",
+    "Grafana": "Grafana",
+    "NPM": "Nginx Proxy Manager"
   },
   "agileMethods": {
     "title": "Autres compétences",
@@ -151,7 +161,7 @@
         "title": "Exploitation & bases DevOps",
         "technologies": [
           {
-            "name": "Déploiement sur serveurs Linux",
+            "name": "Déploiement sur serveurs Linux (Ubuntu, IONOS VPS)",
             "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
           },
           {
@@ -159,12 +169,12 @@
             "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
           },
           {
-            "name": "CI/CD & gestion de versions",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-plain.svg"
+            "name": "Reverse proxy & SSL avec Nginx Proxy Manager",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg"
           },
           {
-            "name": "Supervision & analyse des logs",
-            "logo": "https://raw.githubusercontent.com/primer/octicons/main/icons/eye-16.svg"
+            "name": "Monitoring des conteneurs avec Grafana",
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg"
           }
         ]
       }
